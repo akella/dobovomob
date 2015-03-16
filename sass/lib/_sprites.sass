@@ -9,7 +9,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 //for retina
 =image-sizer($path)
 	width: image-width($path) / 2
-	height: image-height($path) / 2
+	height: ceil(image-height($path) / 2) + 2
 
 =sized-sprite($map, $sprite)
 	background: sprite($map, $sprite) no-repeat

@@ -1,0 +1,181 @@
+// ELEMENTS
+
+//btn
+.btn 
+	width: 100%
+	color: #fff
+	font-size: 21px
+	text-transform: uppercase
+	text-decoration: none
+	cursor: pointer
+	text-align: center
+	display: inline-block
+	+border-radius(7px)
+	+suib
+	&.btn_red
+		font-size: 18px
+		height: 43px
+		line-height: 43px
+		+border-radius(2.5px)
+		+gt(#F31A42 0%, #FF4F32 100%)
+		&:hover
+			+gt(#FF6761 0%, #FF6761 100%)
+	&.btn_white
+		height: 46px
+		font-size: 16px
+		color: $blue
+		line-height: 46px
+		border: 1px solid $blue
+		+border-radius(6px)
+		background-color: #FFF
+		&:hover
+			color: #fff
+			background: $blue
+	&.btn_green
+		height: 49px
+		line-height: 49px
+		background-color: #6DAE10
+		+gt(#229A00 0%, #2CBD00 100%)
+		border: 1px solid #5D9A07
+		+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 2px rgba(171, 230, 85, 0.27))
+		&:hover
+			background-color: #6DAE10
+			+gt(#4AC726 0%, #72E64E 100%)
+			border: 1px solid #5D9A07
+			+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 2px rgba(171, 230, 85, 0.27))
+	&.btn_green-small
+		position: relative
+		height: 37px
+		background-color: #6DAE10
+		font-size: 15px
+		+border-radius(4px)
+		+box-shadow(0.5px 0.9px 0 #467306)
+		&:hover
+			background-color: #4D8004
+		&:before
+			position: absolute
+			content: ''
+			right: 26px
+			top: 50%
+			margin-top: -11px
+			+sr(add-ap)
+	&.btn_orange
+		height: 49px
+		line-height: 49px
+		background-color: #6DAE10
+		+gt(#FD8F00 0%, #FFB400 100%)
+		&:hover
+			background-color: #6DAE10
+			+gt(#DB7C00 0%, #EA8F02 100%)
+
+// height + border-radius
+
+// input
+.input
+	input
+		padding: 0 14px
+		color: #25292D
+		font-size: 18px
+		height: 40px
+		width: 100%
+		border: 1px solid #BDBDBD
+		+border-radius(5px)
+		+box-shadow(0.5px 0.9px 0 #FFF)
+		+box
+		background-color: #FFF
+		+background-image(linear-gradient(to top, #FFF 0%, #FFF 1%, #FDFCFC 77%, #ECECEC 100%))
+		display: block
+		+suir
+
+
+// ico
+.ico
+	display: inline-block
+	&.ico_from
+		+sr(ico-from)
+		// background-position: 0 -491px
+	&.ico_to
+		+sr(ico-to)
+		// background-position: 0 -612px
+	&.ico_people
+		+sr(ico-people)
+		// background-position: 0 -587px
+	&.ico_f
+		+sr(f)
+	&.ico_tw
+		+sr(tw)
+		// background-position: 0 -772px
+	&.ico_vk
+		+sr(vk)
+		// background-position: 0 -800px
+	&.ico_od
+		+sr(od)
+	&.ico_g
+		+sr(g)
+	&.ico_ap
+		+sr(ico-ap)
+	&.ico_owners
+		+sr(ico-owners)
+	&.ico_bed
+		+sr(ico-bed)
+
+
+// choose
+.choose
+	padding: 4px 0
+	text-align: center
+	font-size: 0
+	background: #fff
+	.choose__input
+	.choose__plus,
+	.choose__minus,
+	.choose__text
+		height: 25px
+		vertical-align: top
+		border-left: 1px solid #ccc
+		display: inline-block
+		+box
+		&:first-child
+			border: none
+	.choose__text
+		width: 48%
+		line-height: 25px
+		font-size: 18px
+	.choose__input
+		font-size: 18px
+		width: 15px
+		text-align: center
+		display: inline-block
+	.choose__plus,
+	.choose__minus
+		width: 26%
+		color: #27ab00
+		background: none
+		i
+			line-height: 0.4
+			font-size: 42px
+			font-style: normal
+			display: inline-block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

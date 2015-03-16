@@ -45,36 +45,725 @@
 // span
 // 	+png(blabla)
 // p
-// 	+jpg(bla)
+// 	+jpg(bla
+	
 
+// FONTS
+
++font(SegoeUI, SegoeUI)  
+=suir
+	font-family: "SegoeUI", Arial, sans-serif 
+	font-weight: normal
+
++font(SegoeUI-Bold, SegoeUI-Bold)  
+=suib
+	font-family: "SegoeUI-Bold", Arial, sans-serif 
+	font-weight: normal
+
++font(SegoeUI-Light, SegoeUI-Light)  
+=suil
+	font-family: "SegoeUI-Light", Arial, sans-serif 
+	font-weight: normal
+
++font(SegoeUI-SemiBold, SegoeUI-SemiBold)  
+=suisb
+	font-family: "SegoeUI-SemiBold", Arial, sans-serif 
+	font-weight: normal	
+
++font(SegoeUI-Italic, SegoeUI-Italic)  
+=suii
+	font-family: "SegoeUI-Italic", Arial, sans-serif 
+	font-weight: normal	
+
+// VARIABLES
+
+$blue: #5f86be
+$light-blue: #8ab4f1
+
+$red: #fa3939
+$light-red: #ff6761
+
+$grey: #efefef
+$light-grey: #f8f8f8
+
+$brown: #6e635f
+$dark-brown: #493f3b
+$light-brown: #b6a9a1
+$gray-brown: #ddd5d0
+
+$yellow: #fffdbc
+$yellow-text: #FF9000
+
+$green: #48bf0d
+$dark-green: #2b4824
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-size: 13px 
 	line-height: 1.4
+	+suir
+    
+//in
+%in
+	padding: 0 10px
 
+// header
+.header
+	position: relative
+	padding: 0 7px 3px 0
+	background: #f8f5f3
+	+clr
+	&:before
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 0
+		right: 0
+		height: 3px
+		opacity: 0.19
+		+background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49%, #000 100%))
+.btn-menu
+	float: left
+	position: relative
+	width: 50px
+	height: 50px
+	vertical-align: top
+	+box-shadow(inset 1px 1px 0 0 rgba(#fff, .5), inset -1px -1px 0 0 rgba(#a99e99, .5))
+	+background-image(linear-gradient(to bottom, #EEEAE7 0%, #EEEAE7 1%, #E5E0DD 47%, #DAD1CB 100%))
+	display: inline-block
+	&:hover
+		+background-image(linear-gradient(to bottom, #F8F1EB 0%, #F8F1EB 1%, #F8F1EB 47%, #F8F1EB 100%))
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		margin: -14px 0 0 -16px 
+		+sr(ico-btn-menu)
+		// background-position: 0 -423px
+.btn-login
+	float: right
+	margin-top: 7px
+	padding: 0 17.5px
+	height: 36px
+	line-height: 36px
+	color: white
+	font-size: 19px
+	text-decoration: none
+	display: inline-block
+	background: $blue
+	+box-shadow(inset 1px 1px 0 0 rgba(#fff, .6), inset -1px -1px 0 0 rgba(#4669a3, .9))
+	+suir
+	&:hover
+		background: $light-blue
 
-// common blocks      
+//logo
+.logo
+	margin: 7px 0 0 17px
+	vertical-align: top
+	+sr(logo)
+	// background-position: 0 -634px
+	display: inline-block
 
+// filter
+.filter
+	margin-bottom: 10px
+	text-align: center
+	background-color: #F1F1F1
+	&.filter_bg
+		padding: 5px 10px 18px
+		background: url('../img/bg-filter.png') repeat
+		.filter__inf
+			margin-bottom: 13px
+	.filter__title
+		color: #F9353A
+		font-size: 21px
+		+suil
+	.filter__text
+		font-size: 12px
+		+suisb
+	.search
+		margin-top: 12px
+	.search,
+	.dropdown
+		margin-bottom: 20px
+	.filter__inf
+		font-size: 18px
+	.filter__item
+		+box
+		&.is-active
+			.filter__block
+				display: block
+			.filter__why
+				&:before
+					+rotate(0)
+	.filter__why
+		position: relative
+		padding: 0 30px 0 22px
+		height: 47px
+		font-size: 18px
+		line-height: 45px
+		text-align: left
+		cursor: pointer
+		border-top: 1px solid #ccc
+		border-bottom: 1px solid #ccc
+		+user-select(none)
+		background: #fff
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 15px
+			margin-top: -6px
+			+rotate(180)
+			+sr(arr-top)
+		.filter__guests
+			font-size: 14px
+			color: #797979
+		.filter__inf
+			width: 186px
+			vertical-align: top
+			display: inline-block
+		input
+			width: 10px
+			font-size: 14px
+			color: #797979
+			text-align: center
+	.filter__guest
+		display: inline-block
+	.filter__block
+		padding: 10px
+		display: none
+		.dropdown__col
+			width: 50%
+			.ico
+				position: initial
+		&.is-active
+			padding-bottom: 303px
+			.datepicker
+				position: relative
+				.ui-datepicker-inline
+					position: absolute
+					width: 305px
+					top: 54px
+					left: -11px
+					z-index: 20
+					+box
+					*
+						+box
+	
+// search
+.search
+	position: relative
+	padding-right: 55px
+	font-size: 0
+	text-align: left
+	+clr
+	.search__chosen
+		position: relative
+		.chzn-choices .search-choice .search-choice-close
+			top: 11px
+			right: 26px
+	.search__input-btn
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -15px
+		cursor: pointer
+		z-index: 1203
+		+sr(search-input-btn)
+		// background-position: 0 -741px
+	.search__btn
+		position: absolute
+		top: 0
+		right: 0
+		height: 40px
+		width: 45px
+		background-color: #FFF
+		+gb(#FFF 0%, #EAEAEA 62%, #EAEAEA 100%)
+		border: 1px solid #BDBDBD
+		+border-radius(2.5px)
+		+box-shadow(0.5px 0.9px 0 #FFF)
+		&:hover
+			background-color: #fefefe
+			+gb(#fefefe 0%, #fefefe 62%, #fefefe 100%)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			margin: -13px 0 0 -13px
+			+sr(search-ico)
+			// background-position: 0 -710px
 
+// drop-town
+.drop-town
+	position: absolute
+	top: 100%
+	left: 0
+	right: 55px
+	margin-top: -1px
+	padding: 0 8px
+	max-height: 236px
+	overflow-y: auto
+	z-index: 2
+	text-align: left
+	background-color: #FFF
+	border: 1px solid #CAC7C5
+	+border-radius(0 0 5px 5px)
+	display: none
+	&.is-active
+		display: block
+	.drop-town__title
+		padding-left: 5px
+		height: 33px
+		line-height: 31px
+		color: #25292D
+		font-size: 12px
+	ul
+		li
+			padding-left: 20px
+			display: block
+			height: 30px
+			line-height: 30px
+			color: #517DBA
+			cursor: pointer
+			font-size: 13px
+			border-bottom: 1px solid #dadada
+			+box
+			&:first-child
+				border-top: 1px solid #dadada
+			span
+				margin-left: 3px
+				color: #B2B2B2
+				font-size: 10px
+				display: inline-block
 
+// tags
+.tags
+	margin: 20px 0 10px
+	font-size: 0
+	.tags__item
+		margin: 0 0 10px 20px
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	a
+		font-size: 18px
+		color: #517dba
+		line-height: 1
+		text-decoration: none
+		border-bottom: 1px dotted #517dba
+		display: block
+		&:hover
+			border: none
 
+// dropdown
+.dropdown
+	font-size: 0
+	border: 1px solid #BDBDBD
+	+border-radius(6px)
+	+box
+	+box-shadow(0.5px 0.9px 0 #FFF)
+	+gb(#FFF 0%, #EAEAEA 62%, #EAEAEA 100%)
+	background-color: #FFF
+	.dropdown__col
+		position: relative
+		height: 40px
+		line-height: 40px
+		width: 35%
+		font-size: 22px
+		color: #25292D
+		vertical-align: top
+		display: inline-block
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			margin-top: -10px
+			height: 21px
+			width: 1px
+			background: #bdbdbd
+		&:first-child
+			&:before
+				display: none
+		&.dropdown__col_people
+			width: 30%
 
+// 	datepicker		
+.datepicker
+	position: relative
+	padding-left: 30px
+	cursor: pointer
+	+box
+	.ico
+		position: absolute
+		top: 50%
+		left: 13px
+		margin-top: -10px
+	.ui-datepicker .ui-datepicker-prev span
+		left: 20px
+		+sr(arr-left)
+	.ui-datepicker .ui-datepicker-next span
+		left: 22px
+		+sr(arr-right)
 
+// back
+.back
+	position: relative
+	padding-left: 40px
+	height: 57px
+	font-size: 19px
+	color: #000
+	text-decoration: none
+	line-height: 57px
+	+suisb
+	display: block
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		right: 0
+		bottom: -2px
+		height: 3px
+		opacity: 0.19
+		+background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49%, #000 100%))
+	&:after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 15px
+		margin-top: -11px
+		+sr(arr-back)
 
+// people
+.people
+	position: relative
+	vertical-align: top
+	line-height: 40px
+	cursor: pointer
+	.people__number
+		display: inline-block
+	.ico
+		margin-bottom: -2px
+		margin-left: 3px
 
+//title
+.title
+	padding: 15px 0 10px
+	text-align: center
+	color: #25292D
+	font-size: 22px
 
+// apartment
+.apartment
+	margin-bottom: 14px
+	padding-bottom: 9px
+	background-color: #FCFAF9
+	+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+	.apartment__bottom,
+	.apartment__top
+		@extend %in
+		+clr
+	.apartment__left
+		float: left
+	.apartment__town
+		color: #517DBA
+		font-size: 21px
+		+suisb
+	.apartment__amount
+		color: $yellow-text
+		font-size: 15px
+	.apartment__town,
+	.apartment__amount
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	.apartment__price-from
+		float: right
+		padding: 15px 0 0
+		font-size: 16px
+	.apartment__photo
+		position: relative
+		margin: 8px 0
+		img
+			width: 100%
+			display: block
+	.apartment__title
+		position: relative
+		color: #25292D
+		font-size: 16px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		+suisb
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			right: 0
+			bottom: 0
+			width: 105px
+			background: #FCFAF9
+			z-index: 1
+			+box-shadow(0 0 25px 14px #fcfaf9)
+	.apartment__inf
+		margin: 7px 0
+		color: #656B70
+		font-size: 14px
+		+suii
 
+// price
+.price
+	position: absolute
+	bottom: -25px
+	right: 25px
+	padding: 5px 0 0 16px
+	height: 51px
+	line-height: 1
+	color: white
+	font-size: 25px
+	background: $green
+	z-index: 2
+	+box
+	&:before
+		position: absolute
+		content: ''
+		right: -20px
+		top: 0
+		+arr(20, 51, $green, r)
+	span
+		font-size: 12px
+		& + span
+			line-height: 0.8
+			font-size: 11px
+			display: block
+	&.price_old
+		padding-top: 18px
+		height: 55px
+		bottom: -27px
+		&:before
+			+arr(20, 55, $green, r)
+		.price__old
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			height: 20px
+			line-height: 20px
+			padding: 0 0 0 16px
+			font-size: 13px
+			text-decoration: line-through
+			z-index: 2
+			background: $dark-green
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				right: -15px
+				+arr(20, 15, $dark-green, bl)
 
+// rating
+.rating
+	.rating__estimate
+		margin-left: 3px
+		font-size: 14px
+		text-decoration: none
+		cursor: pointer
+		color: $blue
+		+suib
+		display: inline-block
 
+//slider
+.slider
+	margin-top: 5px
+	padding-bottom: 50px
+	border-bottom: 1px solid #B1C3C3
+	overflow: hidden
+	width: 100%
+	.slick-dots
+		bottom: 15px
+		li
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			button
+				width: 22px
+				height: 23px
+				background-color: #A1ACAC
+				+border-radius(50%)
+				+box-shadow(none)
+			&.slick-active
+				button
+					+opacity(1)
+					background-color: #517DBA
+	.price
+		z-index: 1000
+	.apartment
+		width: 100%
+		margin-bottom: 2px
+		display: none
+		&.slick-active
+			display: block
+	.apartment__photo
+		margin-top: 0
 
+// more
+.more
+	margin: 15px 0
+	@extend %in
 
+//stat
+.stat
+	padding-bottom: 32px
+	+box
+	@extend %in
+	.stat__row
+		margin-top: 18px
+		font-size: 0
+		+clr
+		&:first-child
+			margin-top: 0
+	.stat__col
+		width: 50%
+		text-align: center
+		font-size: 12px
+		vertical-align: top
+		display: inline-block
+	.stat__all
+		position: relative
+		margin-top: 12px
+		padding-top: 35px
+		width: 112px
+		height: 132px
+		line-height: 132px
+		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			+sr(ico-all-comm)
+		.stat__text
+			position: relative
+			color: #fff
+			z-index: 1
+		.stat__text-top
+			font-size: 30px
+	.stat__text
+		color: #656B70
+		line-height: 1
+		&.stat__text-nights
+			margin-top: 8px
+		.stat__text-top
+			font-size: 32px
+	.stat__comm
+		position: relative
+		margin: 6px 0 0 14px
+		padding-left: 34px
+		text-align: left
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			+sr(ico-comm)
+		&:first-child
+			margin-top: 0
+		p
+			width: 75px
+		.stat__text-top
+			color: #f52041
 
+// links
+.links
+	padding-left: 22px
+	vertical-align: top
+	width: 50%
+	+box
+	display: inline-block
+	li
+		margin-top: 5px
+		&:first-child
+			margin-top: 0
+		a
+			color: $blue
+			font-size: 12px
+			text-decoration: underline
 
+//phone
+.phone
+	padding: 17px 0 9px
+	color: #25292D
+	text-align: center
+	font-size: 24px
 
+// soc
+.soc
+	margin-bottom: 13px
+	font-size: 0
+	.soc__item
+		margin-left: 9px
+		display: inline-block
+		&:first-child
+			margin-left: 0
+		a
+			height: 46px
+			width: 46px
+			line-height: 46px
+			text-align: center
+			+border-radius(50%)
+			display: block
+			&:hover
+				+opacity(.8)
+			.ico
+				vertical-align: middle
+	.soc__f
+		background: #295d9a
+	.soc__tw
+		background: #41adf2
+	.soc__vk
+		background: #356887
+	.soc__od
+		background: #ed9731
+	.soc__g
+		background: #ca442b
 
-
-
+// footer
+.footer
+	padding: 17px 0
+	background: #f8f5f3
+	border-top: 1px solid #dadee1
+	.footer__top
+		@extend %in
+	.footer__row
+		font-size: 0
+		+clr
+	.footer__bottom
+		position: relative
+		margin-top: 18px
+		padding: 25px 18px 0
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+			right: 0
+			opacity: 0.19
+			height: 3px
+			z-index: 1
+			+background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49%, #000 100%))
+	.footer__logo
+		float: left
+		+sr(footer-logo)
+	.footer__copy
+		float: right
+		padding: 8px 12px 0 0
+		color: #8E8E8E
+		font-family: "Arial"
+		font-size: 9px
+		font-weight: normal
 
 
 
