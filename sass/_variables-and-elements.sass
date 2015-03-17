@@ -67,47 +67,54 @@
 		&:hover
 			background-color: #6DAE10
 			+gt(#DB7C00 0%, #EA8F02 100%)
+	&.btn_gray
+		height: 49px
+		background-color: #A1A1A1
+		border: 1px solid #969696
+		+box-shadow(0.5px 0.9px 1px rgba(77, 77, 77, 0.34))
+		&:hover
+			color: #000
+			background-color: #0BADFF
+			+background-image(linear-gradient(to top, #F2F2F2 0%, #F7F7F7 99%, #F7F7F7 100%))
+			+box-shadow(0.5px 0.9px 0 #AAAFAF)
 
 // height + border-radius
 
 // input
 .input
 	input
-		padding: 0 14px
-		color: #25292D
-		font-size: 18px
-		height: 40px
+		padding: 0 10px
+		height: 34px
+		font-size: 14px
+		color: #000
 		width: 100%
-		border: 1px solid #BDBDBD
-		+border-radius(5px)
-		+box-shadow(0.5px 0.9px 0 #FFF)
-		+box
 		background-color: #FFF
-		+background-image(linear-gradient(to top, #FFF 0%, #FFF 1%, #FDFCFC 77%, #ECECEC 100%))
-		display: block
-		+suir
-
+		display: inline-block
+		border: 1px solid #CCC
+		+border-radius(4px)
+		+box
+		+placeholder
+			color: #949494
+			+suii
+		&:focus
+			+placeholder
+				font-size: 0
 
 // ico
 .ico
 	display: inline-block
 	&.ico_from
 		+sr(ico-from)
-		// background-position: 0 -491px
 	&.ico_to
 		+sr(ico-to)
-		// background-position: 0 -612px
 	&.ico_people
 		+sr(ico-people)
-		// background-position: 0 -587px
 	&.ico_f
 		+sr(f)
 	&.ico_tw
 		+sr(tw)
-		// background-position: 0 -772px
 	&.ico_vk
 		+sr(vk)
-		// background-position: 0 -800px
 	&.ico_od
 		+sr(od)
 	&.ico_g
@@ -148,15 +155,34 @@
 		display: inline-block
 	.choose__plus,
 	.choose__minus
+		position: relative
 		width: 26%
 		color: #27ab00
-		background: none
-		i
-			line-height: 0.4
-			font-size: 42px
-			font-style: normal
-			display: inline-block
+		line-height: 23px
+		font-size: 42px
+		font-style: normal
+		background: white
+	&.choose_apartment
+		.choose__input
+			width: 60px
+			+placeholder
+				font-size: 18px
+				color: #000
 
+// chackbox
+.checkbox
+	padding-left: 8px
+	height: 40px
+	line-height: 40px
+	font-size: 14px
+	color: #000
+	text-align: left
+	border-top: 1px dotted #9e9e9e
+	display: block
+	&:first-child
+		border-top: 0
+	input
+		margin-right: 10px
 
 
 

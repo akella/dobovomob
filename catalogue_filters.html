@@ -25,7 +25,7 @@
 	<a href="#" class="back">Фильтры</a>
 	<!-- filter -->
 	<div class="filter" id="filter">
-		<div class="filter__item is-active js-choose" data-max-number="9">
+		<div class="filter__item js-choose" data-max-number="9">
 			<div class="filter__why js-open">
 				<div class="filter__inf">Количество людей</div>
 				<span class="filter__guest">
@@ -35,85 +35,177 @@
 			</div>
 			<div class="filter__block">
 				<!-- choose -->
-				<div class="choose">
-					<button class="choose__minus js-minus"><i>&ndash;</i></button>
+				<div class="choose js-choose-guests">
+					<button class="choose__minus js-minus">&ndash;</button>
 					<div class="choose__text">
 						<input type="text" class="choose__input" name="choose-input" value="1" readonly="">
 						<span class="filter__guests js-guests">гость</span>
 					</div>
-					<button class="choose__plus js-plus"><i>+</i></button>
+					<button class="choose__plus js-plus">+</button>
 				</div>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Даты заезда /выезда
 			</div>
-			<div class="filter__block is-active">
+			<div class="filter__block">
 				<!-- dropdown -->
-				<div class="dropdown">
+				<div class="dropdown dropdown_mod">
 					<div class="dropdown__col">
 						<div class="datepicker" id="from">
 							<i class="ico ico_from"></i>
-							<span class="datepicker__from" id="d1">Заезд</span>
+							<div class="datepicker__from-text">Заезд</div>
 						</div>
 					</div>
 					<div class="dropdown__col">
 						<div class="datepicker" id="to">
 							<i class="ico ico_to"></i>
-							Выезд
+							<div class="datepicker__to-text">Выезд</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
+			<div class="filter__why js-open">
+				Район
+			</div>
+			<div class="filter__block">
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+			</div>
+		</div>
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Количество комнат
 			</div>
 			<div class="filter__block">
-				
+				<!-- choose -->
+				<div class="choose choose_apartment js-choose" data-max-number="9">
+					<button class="choose__minus js-minus">&ndash;</button>
+					<div class="choose__text">
+						<input type="text" placeholder="Любое" class="choose__input" name="choose-input" value="" readonly="">
+					</div>
+					<button class="choose__plus js-plus">+</button>
+				</div>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Тип
 			</div>
 			<div class="filter__block">
-				
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Стоимость
 			</div>
-			<div class="filter__block">
-				
+			<!-- Сost -->
+			<div class="filter__block cost js-cost">
+				<div class="filter__row">
+					<div class="input"><input class="js-cost-input" type="text" placeholder="от..."></div>
+					<div class="input"><input class="js-cost-input" type="text" placeholder="до..."></div>
+				</div>
+				<label class="checkbox">
+					<input class="js-cost-checkbox" type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input class="js-cost-checkbox" type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input class="js-cost-checkbox" type="checkbox">text
+				</label>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Комплектация
 			</div>
 			<div class="filter__block">
-				
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
 			</div>
 		</div>
-		<div class="filter__item is-active">
+		<div class="filter__item">
 			<div class="filter__why js-open">
 				Дополнительные фильтры
 			</div>
 			<div class="filter__block">
-				
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">text
+				</label>
 			</div>
 		</div>
-		<div class="filter__item is-active">
-			<div class="filter__why js-open">
-				
-			</div>
-			<div class="filter__block">
-				
-			</div>
+		<div class="filter__bottom">
+			<button class="btn btn_green">применить</button>
+			<button class="btn btn_gray">сбросить</button>
 		</div>
 	</div>
 </div>

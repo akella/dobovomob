@@ -166,10 +166,11 @@ body
 
 // filter
 .filter
-	margin-bottom: 10px
+	margin-bottom: 79px
 	text-align: center
 	background-color: #F1F1F1
 	&.filter_bg
+		margin-bottom: 10px
 		padding: 5px 10px 18px
 		background: url('../img/bg-filter.png') repeat
 		.filter__inf
@@ -238,19 +239,161 @@ body
 			.ico
 				position: initial
 		&.is-active
-			padding-bottom: 303px
+			padding-bottom: 320px
 			.datepicker
 				position: relative
-				.ui-datepicker-inline
-					position: absolute
-					width: 305px
-					top: 54px
-					left: -11px
-					z-index: 20
-					+box
-					*
-						+box
-	
+	.filter__bottom
+		position: fixed
+		padding: 10px
+		left: 0
+		bottom: 0
+		right: 0
+		background: #e0e0e0
+		z-index: 100
+		font-size: 0
+		+clr
+		.btn_green
+			width: 55%
+		.btn_gray
+			margin-left: 5%
+			width: 40%
+		.btn_green,
+		.btn_gray
+			vertical-align: top
+			font-size: 18px
+
+// dropdown
+.dropdown
+	font-size: 0
+	border: 1px solid #BDBDBD
+	+border-radius(6px)
+	+box
+	+box-shadow(0.5px 0.9px 0 #FFF)
+	+gb(#FFF 0%, #EAEAEA 62%, #EAEAEA 100%)
+	background-color: #FFF
+	.dropdown__col
+		position: relative
+		height: 40px
+		line-height: 40px
+		width: 35%
+		font-size: 22px
+		color: #25292D
+		vertical-align: top
+		display: inline-block
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			margin-top: -10px
+			height: 21px
+			width: 1px
+			background: #bdbdbd
+		&:first-child
+			&:before
+				display: none
+		&.dropdown__col_people
+			width: 30%
+	&.dropdown_mod
+		margin-bottom: 0
+		.datepicker
+			padding-left: 0
+
+// 	datepicker		
+.datepicker
+	position: relative
+	padding-left: 30px
+	cursor: pointer
+	+box
+	.datepicker__from-text,
+	.datepicker__to-text
+		display: inline-block
+	&#from,
+	&#to
+		.ui-datepicker-inline
+			position: absolute
+			width: 305px
+			top: 54px
+			z-index: 20
+			+box
+			*
+				+box
+	&#from
+		.ui-datepicker-inline
+			left: -11px
+			&:before
+				position: absolute
+				content: ''
+				top: -9px
+				left: 49px
+				+arr(17,9,#fff,t)
+				display: block
+	&#to
+		.ui-datepicker-inline
+			left: -153px
+			&:before
+				position: absolute
+				content: ''
+				top: -9px
+				left: 185px
+				+arr(17,9,#fff,t)
+				display: block
+	.ico
+		position: absolute
+		top: 50%
+		left: 13px
+		margin-top: -10px
+	.ui-datepicker .ui-datepicker-prev span
+		left: 20px
+		+sr(arr-left)
+	.ui-datepicker .ui-datepicker-next span
+		left: 22px
+		+sr(arr-right)
+	.datepicker__from-text,
+	.datepicker__to-text
+		span
+			font-size: 14px
+			text-align: left
+			line-height: 1
+			text-transform: lowercase
+			display: inline-block
+			&:first-child
+				margin-right: 5px
+				font-size: 22px
+			&:last-child
+				position: relative
+				width: 0
+				left: -34px
+				color: #8E8E8E
+			&:nth-child(2)
+				width: 34px
+				overflow: hidden
+				text-overflow: ellipsis
+				white-space: nowrap
+				margin-top: 8px
+				vertical-align: top
+// cost
+.cost
+	.input
+		position: relative
+		margin: 0 0 10px 35px
+		width: 43.2%
+		display: inline-block
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: -27px
+			height: 1px
+			width: 16px
+			background: #9a9a9a
+
+		
 // search
 .search
 	position: relative
@@ -356,58 +499,6 @@ body
 		display: block
 		&:hover
 			border: none
-
-// dropdown
-.dropdown
-	font-size: 0
-	border: 1px solid #BDBDBD
-	+border-radius(6px)
-	+box
-	+box-shadow(0.5px 0.9px 0 #FFF)
-	+gb(#FFF 0%, #EAEAEA 62%, #EAEAEA 100%)
-	background-color: #FFF
-	.dropdown__col
-		position: relative
-		height: 40px
-		line-height: 40px
-		width: 35%
-		font-size: 22px
-		color: #25292D
-		vertical-align: top
-		display: inline-block
-		+box
-		&:before
-			position: absolute
-			content: ''
-			top: 50%
-			left: 0
-			margin-top: -10px
-			height: 21px
-			width: 1px
-			background: #bdbdbd
-		&:first-child
-			&:before
-				display: none
-		&.dropdown__col_people
-			width: 30%
-
-// 	datepicker		
-.datepicker
-	position: relative
-	padding-left: 30px
-	cursor: pointer
-	+box
-	.ico
-		position: absolute
-		top: 50%
-		left: 13px
-		margin-top: -10px
-	.ui-datepicker .ui-datepicker-prev span
-		left: 20px
-		+sr(arr-left)
-	.ui-datepicker .ui-datepicker-next span
-		left: 22px
-		+sr(arr-right)
 
 // back
 .back
@@ -764,15 +855,6 @@ body
 		font-family: "Arial"
 		font-size: 9px
 		font-weight: normal
-
-
-
-
-
-
-
-
-
 
 
 
