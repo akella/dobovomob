@@ -542,10 +542,13 @@ body
 
 //title
 .title
-	padding: 15px 0 10px
+	padding: 15px 20px 12px
 	text-align: center
 	color: #25292D
 	font-size: 22px
+	+box
+	&.title_left
+		text-align: left
 
 // apartment
 .apartment
@@ -820,6 +823,123 @@ body
 		background: #ed9731
 	.soc__g
 		background: #ca442b
+
+//map
+.gm-style
+	*
+		overflow: initial !important
+	.gm-style-iw
+		width: 283px !important
+		top: -90px !important
+		left: -20px !important
+		max-height: 10px
+		& + div
+			right: -220px !important
+			top: -90px !important
+			height: 10px
+			overflow: hidden !important
+	.gmnoprint,
+	.gm-style-cc
+		display: none
+.map
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		opacity: 0.19
+		height: 3px
+		z-index: 100
+		+background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49%, #000 100%))
+
+
+// popup-map
+.popup-map
+	position: relative
+	padding: 5px
+	width: 283px
+	background: #fff
+	+box-shadow(0.5px 0.9px 1px rgba(0, 0, 0, 0.31))
+	&:before
+		position: absolute
+		content: ''
+		left: 36px
+		bottom: -15px
+		+sr(arr-gmap-bot)
+	.popup-map__top
+		+clr
+	.popup-map__img
+		float: left
+		width: 126px
+		margin-right: 6px
+		position: relative
+		img
+			display: block
+	.popup-map__right
+		float: left
+		width: 140px
+	.popup-map__title	
+		color: #4F81BD
+		line-height: 1
+		font-size: 11px
+		text-decoration: none
+		display: block
+		+suisb
+		&:hover
+			text-decoration: underline
+	.popup-map__id
+		margin: 2px 0
+		font-size: 9px
+		color: #A5A7AA
+	.popup-map__address
+		margin-bottom: 3px
+		font-size: 12px
+		line-height: 1
+	.popup-map__row
+		font-size: 0
+	.popup-map__col
+		width: 43px
+		font-size: 9px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			width: 76px
+			margin-right: 13px
+	.popup-map__price 
+		&.popup-map__price_green
+			color: #48BF0D
+		span
+			line-height: 1
+			font-size: 16px
+	.popup-map__bottom
+		margin-top: 10px
+		.btn
+			width: 93%
+
+.price-black
+	position: absolute
+	left: 0
+	bottom: 5px
+	padding: 5px
+	color: #fff
+	font-size: 14px
+	z-index: 2
+	background: rgba(#25292D, .5)
+	+suir
+	.price-black__top
+		line-height: 1
+		text-transform: uppercase
+		+suib
+		display: block
+	.price-black__bott
+		font-size: 7px
+		text-decoration: underline
+		cursor: pointer
+		display: block
+		&:hover
+			text-decoration: none
 
 // footer
 .footer

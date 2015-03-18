@@ -59,6 +59,30 @@
 			top: 50%
 			margin-top: -11px
 			+sr(add-ap)
+	&.btn_green-arr
+		position: relative
+		margin-right: 19px
+		height: 38px
+		line-height: 38px
+		font-size: 15px
+		background-color: #6DAE10
+		+background-image(linear-gradient(to top, #229A00 0%, #2CBD00 100%))
+		border: 1px solid #5D9A07
+		border-right: none
+		// +box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 2px rgba(171, 230, 85, 0.27))
+		+border-radius(4px 0 0 4px)
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: -1px
+			right: -19px
+			+sr(arr-btn-green)
+		&:hover
+			+background-image(linear-gradient(to top, #4AC726 0%, #72E64E 100%))
+			&:before
+				right: -18px
+				+sr(arr-btn-green-hover)
 	&.btn_orange
 		height: 49px
 		line-height: 49px
