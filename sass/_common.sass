@@ -100,6 +100,7 @@ $dark-green: #2b4824
 body
 	font-size: 13px 
 	line-height: 1.4
+	min-width: 320px
 	+suir
     
 //in
@@ -109,13 +110,13 @@ body
 // header
 .header
 	position: relative
-	padding: 0 7px 3px 0
+	padding: 0 7px 0 0
 	background: #f8f5f3
 	+clr
 	&:before
 		position: absolute
 		content: ''
-		bottom: 0
+		bottom: -1.5px
 		left: 0
 		right: 0
 		height: 3px
@@ -175,6 +176,27 @@ body
 		background: url('../img/bg-filter.png') repeat
 		.filter__inf
 			margin-bottom: 13px
+	&.filter_gray
+		margin: 0
+		padding: 15px 10px 22px
+		background: #e5eaea
+		.dropdown
+			margin-bottom: 10px
+		.price-app
+			margin-bottom: 9px
+	&.filter_blue
+		margin-bottom: 0
+		padding: 0 10px 18px
+		text-align: left
+		background: #e5eaea
+		.price-app
+			margin-bottom: 9px
+		.filter__text
+			margin: 14px 0 5px
+			font-size: 16px
+			+suir
+			span
+				color: #48BF0D
 	.filter__title
 		color: #F9353A
 		font-size: 21px
@@ -261,6 +283,81 @@ body
 		.btn_gray
 			vertical-align: top
 			font-size: 18px
+	.filter__change-date
+		padding: 20px 10px 17px 5px
+		line-height: 1
+		border-bottom: 1px solid #fff
+		.btn-dashed
+			float: right
+
+// discounts
+.discounts
+	position: relative
+	padding-bottom: 51px
+	height: 226px
+	overflow-y: hidden
+	&.is-active
+		height: auto
+		.title.title_blue
+			span
+				&:before
+					+rotate(180)
+	.discounts__title
+		padding: 28px 0 13px
+		font-size: 21px
+		text-align: center
+		color: #000
+		font-weight: normal
+	.discounts__table
+		text-align: center
+		color: #25292D
+		tr
+			&:nth-child(odd)
+				background: #f5f7f7
+			th
+				height: 43px
+				line-height: 43px
+				font-size: 15px
+				font-weight: normal
+				border-left: 1px solid #cac7c5
+				border-bottom: 1px solid #cac7c5
+				background: #f8f5f3
+				&:first-child
+					border-left: none
+				span
+					font-size: 9px
+			th,td
+				width: 50%
+			td
+				border-left: 1px solid #e5eaea
+				height: 37px
+				font-size: 13px
+				line-height: 37px
+				&:first-child
+					border-left: none
+				span
+					text-decoration: line-through
+	.title.title_blue
+		position: absolute
+		bottom: 0
+		left: 0
+		padding-bottom: 14px
+		z-index: 2
+		width: 100%
+		text-align: center
+		background: #fff
+		display: block
+		span
+			position: relative
+			padding-right: 15px
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				right: 0
+				margin-top: -5px/2
+				+arr(6,5,#5f86be,b)
+
 
 // dropdown
 .dropdown
@@ -299,6 +396,13 @@ body
 		margin-bottom: 0
 		.datepicker
 			padding-left: 0
+	&.dropdown_rel
+		.datepicker#to
+			.ui-datepicker-inline
+				left: -108px
+		.datepicker#from
+			.ui-datepicker-inline
+				left: -3px
 
 // 	datepicker		
 .datepicker
@@ -546,9 +650,104 @@ body
 	text-align: center
 	color: #25292D
 	font-size: 22px
+	display: block
+	+suisb
 	+box
 	&.title_left
 		text-align: left
+	&.title_blue
+		padding: 12px 10px 23px
+		color: #5F86BE
+		font-size: 18px
+		text-transform: uppercase
+		text-decoration: none
+		+suir
+
+// description
+.description
+	position: relative
+	padding: 10px 0 0
+	overflow-y: hidden
+	border-top: 1px solid #c0d1d1
+	+box
+	&.is-active
+		.description__inf
+			display: block
+	.description__text
+		padding: 10px 10px 0
+		font-size: 14px
+		line-height: 1.2
+		color: #25292D
+		& + .title
+			position: relative
+			z-index: 2
+			+box-shadow(0 -19px 35px white)
+	.description__inf
+		margin-top: 20px
+		padding: 10px 10px 0
+		background: #f8f5f3
+		display: none
+		.title
+			span
+				&:before
+					+rotate(180)
+		.characteristics
+			padding: 0
+		.title.title_blue
+			border: none
+	.description__header
+		position: relative
+		padding-left: 50px
+		margin-bottom: 15px
+		strong
+			color: #25292D
+			font-size: 16px
+			+suisb
+		span
+			color: #767676
+			font-size: 11px
+	.description__left
+		overflow: hidden
+		span
+			font-size: 12px
+	.description__title
+		color: #4F81BD
+		font-size: 15px
+		line-height: 1
+	.description__right
+		float: right
+		padding: 0 10px
+		width: 80px
+		text-align: center
+		border-left: 1px solid #cacaca
+		+box
+		span
+			line-height: 1
+			display: block
+	.description__logo
+		position: absolute
+		top: 0
+		left: 0
+		height: 40px
+		width: 40px
+		line-height: 40px
+		text-align: center
+		+border-radius(50%)
+		background: #789dcb
+		.ico
+			vertical-align: middle
+	.title.title_blue
+		border-bottom: 1px solid #c0d1d1
+		span
+			position: relative
+			padding-right: 15px
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				right: 0
+				margin-top: -5px/2
+				+arr(6,5,#5f86be,b)
 
 // apartment
 .apartment
@@ -584,6 +783,9 @@ body
 		img
 			width: 100%
 			display: block
+		.price-black
+			top: 15px
+			bottom: auto
 	.apartment__title
 		position: relative
 		color: #25292D
@@ -602,11 +804,44 @@ body
 			background: #FCFAF9
 			z-index: 1
 			+box-shadow(0 0 25px 14px #fcfaf9)
+	.apartment__title2
+		margin: 6px 0
+		font-size: 16px
+		color: #25292D
+		line-height: 1
+		+suisb
+		span
+			+suir
+	.apartment__location
+		position: relative
+		margin: 12px 0 6px
+		padding-left: 30px
+		color: #4F81BD
+		font-size: 13px
+		text-decoration: none
+		display: block
+		&:hover
+			text-decoration: underline
+		&:before
+			position: absolute
+			content: ''
+			top: -3px
+			left: 0
+			+sr(marker-grey)
 	.apartment__inf
 		margin: 7px 0
 		color: #656B70
 		font-size: 14px
 		+suii
+	.apartment-request
+		position: absolute
+		bottom: 0
+		right: 0
+		padding: 0 12px
+		height: 25px
+		font-size: 11px
+		line-height: 25px
+		background-color: rgba(#FFFB78, .57)
 
 // price
 .price
@@ -639,7 +874,7 @@ body
 		bottom: -27px
 		&:before
 			+arr(20, 55, $green, r)
-		.price__old
+		.price__top
 			position: absolute
 			top: 0
 			left: 0
@@ -658,6 +893,30 @@ body
 				right: -15px
 				+arr(20, 15, $dark-green, bl)
 
+.price-old
+	color: #8B9094
+	text-align: left
+	font-size: 13px
+	text-decoration: line-through
+	+suisb
+.price-app
+	text-align: left
+	letter-spacing: -0.2px
+	font-size: 17px
+	.price-app__green	
+		color: #48BF0D
+		+suib
+		display: inline-block
+		span
+			line-height: 1
+			font-size: 40px
+			+suir
+	.price-all
+		margin-left: 10px
+.price-all
+	font-size: 14px
+	color: #25292D
+
 // rating
 .rating
 	.rating__estimate
@@ -670,6 +929,22 @@ body
 		display: inline-block
 
 //slider
+.slider-wrap
+	position: relative
+	.number-total
+		position: absolute
+		top: 20px
+		right: 10px
+		z-index: 300
+		color: #fff
+		font-size: 13px
+		+suib
+.slider-auto
+	.apartment
+		margin: 0
+	.apartment__photo
+		margin-top: 0
+
 .slider
 	margin-top: 5px
 	padding-bottom: 50px
@@ -702,6 +977,192 @@ body
 			display: block
 	.apartment__photo
 		margin-top: 0
+
+// date
+.date
+	font-size: 10px
+	color: #5C6064
+	line-height: 13px
+	font-family: "Arial"
+
+// reviews
+.reviews
+	.reviews__item
+		margin-top: 12px 
+		border-bottom: 1px solid #cac7c5
+	.reviews__estimate
+		padding-left: 14px
+		height: 28px
+		line-height: 26px
+		border-top: 1px solid #CAC7C5
+		+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+		+clr
+		strong
+			font-size: 20px 
+			text-transform: uppercase
+			+suib
+		span
+			font-size: 15px
+			line-height: 1
+			vertical-align: text-top
+			display: inline-block
+		.date
+			float: right
+			margin: 8px 10px 0 0
+			padding-left: 13px
+			border-left: 1px solid #e5ebeb
+	.reviews__block
+		padding: 0 0 7px 38px
+	.reviews__comm
+		position: relative
+		margin-top: 6px
+		padding: 7px 0 12px
+		font-size: 11px
+		color: #8B9094
+		font-family: "Arial"
+		border-top: 1px solid #ecf0f0
+		&:first-child
+			border-top: none
+		&:before
+			position: absolute
+			content: ''
+			top: 11px
+			left: -22px
+			+sr(ico-plus)
+		&.reviews__comm_minus
+			&:before
+				+sr(ico-minus)
+
+	.reviews__row
+		+clr
+		.like
+			margin-right: 9px
+	.reviews__user
+		float: left
+		a
+			color: #5F86BE
+			font-family: "Arial"
+			font-size: 15px
+			line-height: 1
+			text-decoration: none
+			display: block
+			&:hover
+				text-decoration: underline
+		span
+			font-size: 11px
+			color: #8B9094
+			+suir
+	.like
+		float: right
+// indicators
+.indicators
+	@extend %in
+	border-bottom: 1px solid #cac7c5
+	background: #f8f5f3
+	+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+	.indicators__title-top
+		padding: 18px 0 16px
+		color: #25292D
+		text-align: center
+		font-size: 21px
+	.indicators__title
+		padding-left: 6px
+		font-size: 17px
+		color: #25292D
+	.indicators__row
+		margin: 15px 0
+		line-height: 1
+		+clr
+	.indicators__left
+		float: left
+		padding-left: 6px
+		width: 50%
+		color: #8B9094
+		font-size: 15px
+		+box
+	.indicators__right
+		position: relative
+		float: right
+		padding-right: 28px
+		width: 50%
+		+box
+	.indicators__progress
+		position: relative
+		height: 12px
+		width: 100%
+		background-color: #DFD1C8
+		+border-radius(2px)
+	.indicators__proggress-in
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 1
+		background-color: #48BF0D
+		+border-radius(2px)
+	.indicators__estimate
+		position: absolute
+		top: 0
+		right: 0
+		width: 28px
+		line-height: 12px
+		text-align: center
+		font-size: 16px
+		color: #8B9094
+		+suib
+	.indicators__fhoto
+		position: relative
+		padding: 10px 0 10px 23px
+		line-height: 1.1
+		color: #48BF0D
+		letter-spacing: -0.4px
+		font-size: 12px
+		border-top: 1px solid #cac7c5
+		+suisb
+		.ico
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -8.5px
+	.rating-reviews
+		margin-bottom: 18px
+
+
+// rating-reviews
+.rating-reviews
+	position: relative
+	padding-left: 12px
+	height: 63px
+	line-height: 63px
+	color: #0BADFF
+	font-size: 15px
+	background-color: #FFF
+	border: 1px solid #FFF
+	+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+	&:before
+		position: absolute
+		content: ''
+		left: 16px
+		bottom: -10px
+		z-index: 2
+		+arr(16,9,#fff,b)
+	&:after
+		position: absolute
+		content: ''
+		left: 15px
+		bottom: -11px
+		z-index: 1
+		+arr(18,10,#B8B4B2,b)
+	strong
+		margin-right: 10px
+		font-size: 25px
+		text-transform: uppercase
+		+suib
+	span
+		display: inline-block
+		vertical-align: text-top
+		line-height: 1
+	
 
 // more
 .more
@@ -797,6 +1258,7 @@ body
 .soc
 	margin-bottom: 13px
 	font-size: 0
+	text-align: center
 	.soc__item
 		margin-left: 9px
 		display: inline-block
@@ -806,7 +1268,6 @@ body
 			height: 46px
 			width: 46px
 			line-height: 46px
-			text-align: center
 			+border-radius(50%)
 			display: block
 			&:hover
@@ -823,6 +1284,50 @@ body
 		background: #ed9731
 	.soc__g
 		background: #ca442b
+
+// characteristics
+.characteristics
+	@extend %in
+	.characteristics__in
+		margin-top: 15px
+	.characteristics__item
+		padding: 12px 0
+		color: #25292D
+		font-size: 16px
+		border-bottom: 1px solid #cacaca
+		+clr
+		&:first-child
+			border-top: 1px solid #cacaca
+	.characteristics__left
+		float: left
+	.characteristics__right
+		float: right
+	strong
+		+suib
+// convenience
+.convenience
+	.convenience__row
+		margin: 12px 0
+		width: 100%
+		display: table
+	.convenience__col
+		padding-left: 12px
+		display: table-cell
+		&:first-child
+			padding-left: 0
+	.convenience__item
+		padding: 9px 12px 7px
+		height: 32px
+		min-width: 80px
+		font-size: 14px
+		line-height: 1.1
+		color: #25292D
+		text-align: center
+		background-color: #F4EEEA
+		+border-radius(2.5px)
+		+box
+		&.is-disabled
+			color: #BBB
 
 //map
 .gm-style
@@ -853,6 +1358,10 @@ body
 		height: 3px
 		z-index: 100
 		+background-image(linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 49%, #000 100%))
+	&.map_card
+		margin: 10px 0
+		&:before
+			display: none
 
 
 // popup-map
@@ -928,6 +1437,8 @@ body
 	z-index: 2
 	background: rgba(#25292D, .5)
 	+suir
+	&:hover
+		background: rgba(#25292D, .79)
 	.price-black__top
 		line-height: 1
 		text-transform: uppercase
@@ -954,7 +1465,7 @@ body
 	.footer__bottom
 		position: relative
 		margin-top: 18px
-		padding: 25px 18px 0
+		padding: 25px 22px 0
 		&:before
 			position: absolute
 			content: ''

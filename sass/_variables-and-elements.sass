@@ -37,12 +37,9 @@
 		background-color: #6DAE10
 		+gt(#229A00 0%, #2CBD00 100%)
 		border: 1px solid #5D9A07
-		+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 2px rgba(171, 230, 85, 0.27))
+		+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 1px rgba(171, 230, 85, 0.27))
 		&:hover
-			background-color: #6DAE10
 			+gt(#4AC726 0%, #72E64E 100%)
-			border: 1px solid #5D9A07
-			+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 2px rgba(171, 230, 85, 0.27))
 	&.btn_green-small
 		position: relative
 		height: 37px
@@ -62,8 +59,8 @@
 	&.btn_green-arr
 		position: relative
 		margin-right: 19px
-		height: 38px
-		line-height: 38px
+		height: 36px
+		line-height: 36px
 		font-size: 15px
 		background-color: #6DAE10
 		+background-image(linear-gradient(to top, #229A00 0%, #2CBD00 100%))
@@ -101,9 +98,45 @@
 			background-color: #0BADFF
 			+background-image(linear-gradient(to top, #F2F2F2 0%, #F7F7F7 99%, #F7F7F7 100%))
 			+box-shadow(0.5px 0.9px 0 #AAAFAF)
+	&.btn_white-gray
+		height: 38px
+		font-size: 14px
+		color: #25292D
+		background-color: #0BADFF
+		+border-radius(0)
+		+background-image(linear-gradient(to top, #F2F2F2 0%, #F7F7F7 99%, #F7F7F7 100%))
+		+box-shadow(0.5px 0.9px 0 #AAAFAF)
+		&:hover
+			+background-image(linear-gradient(to top, #DEDEDE 0%, #ECECEC 100%))
+.btn-dashed
+	color: #5F86BE
+	font-size: 13px
+	line-height: 1
+	text-transform: uppercase
+	text-decoration: none
+	display: inline-block
+	border-bottom: 1px dashed #5F86BE
 
-// height + border-radius
-
+// like
+.like
+	position: relative
+	padding: 0 30px 0 7px
+	height: 30px
+	line-height: 30px
+	color: #48BF0D
+	font-size: 25px
+	+background-image(linear-gradient(to top, #EAEAEA 0%, #F8F8F8 99%, #F8F8F8 100%))
+	+box-shadow(0.5px 0.9px 0 #AAAFAF)
+	+suisb
+	&:hover
+		+background-image(linear-gradient(to top, #D3D3D3 0%, #EBEBEB 99%, #EBEBEB 100%))
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		right: 7px
+		margin-top: -9px
+		+sr(ico-like)
 // input
 .input
 	input
@@ -149,6 +182,21 @@
 		+sr(ico-owners)
 	&.ico_bed
 		+sr(ico-bed)
+	&.ico_desc-logo
+		+sr(desc-logo)
+	&.ico_fhoto-ind
+		position: relative
+		height: 17px
+		width: 17px
+		background: #48bf0d
+		+border-radius(50%)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			margin: -4px 0 0 -5.5px 
+			+sr(fhoto-ind)
 
 
 // choose
@@ -208,9 +256,62 @@
 	input
 		margin-right: 10px
 
+//tabs
+.tabs.ui-widget-content
+	border: none
+	background: none
+	font-size: 13px
+	+suir
+	.tabs__list
+		font-size: 0
+		border: none
+		li
+			width: 50%
+			display: inline-block
+			border: none
+			&.ui-tabs-active 
+				a
+					background: #e0e0e0
+					+background-image(none)
+					+suib
+		a
+			height: 38px
+			line-height: 38px
+			color: #25292D !important
+			font-size: 14px
+			text-decoration: none
+			text-align: center
+			background-color: #0BADFF
+			+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+			border: 1px solid #E2E2E2
+			+box-shadow(0 1px 1px #B8B4B2)
+			display: block
+			+suisb
+	.slick-slider
+		margin-top: 2px
+		border-bottom: none
+	.clean-basket
+		margin-bottom: 5px
 
-
-
+// clean-basket
+.clean-basket
+	position: relative
+	padding-left: 40px
+	width: 100%
+	height: 34px
+	text-align: left
+	line-height: 34px
+	font-size: 14px
+	color: #517DBA
+	font-weight: normal
+	background-color: #FCFAF9
+	display: block
+	&:before
+		position: absolute
+		content: ''
+		left: 9px
+		top: 2px
+		+sr(ico-clean-basket)
 
 
 
