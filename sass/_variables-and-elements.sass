@@ -101,13 +101,38 @@
 	&.btn_white-gray
 		height: 38px
 		font-size: 14px
-		color: #25292D
+		color: #25292D 
 		background-color: #0BADFF
 		+border-radius(0)
 		+background-image(linear-gradient(to top, #F2F2F2 0%, #F7F7F7 99%, #F7F7F7 100%))
 		+box-shadow(0.5px 0.9px 0 #AAAFAF)
 		&:hover
 			+background-image(linear-gradient(to top, #DEDEDE 0%, #ECECEC 100%))
+	&.btn_phone
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 15px
+			margin-top: -16px
+			+sr(ico-phone)
+	&.btn_filter
+		position: relative
+		width: 36px
+		height: 38px
+		background-color: #0BADFF
+		+background-image(linear-gradient(to top, #EAEAEA 0%, #F8F8F8 99%, #F8F8F8 100%))
+		+box-shadow(0.5px 0.9px 0 #AAAFAF)
+		+border-radius(0)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			margin: -10px 0 0 -10px
+			+sr(ico-btn-filter)
+
 .btn-dashed
 	color: #5F86BE
 	font-size: 13px
@@ -197,7 +222,14 @@
 			left: 50%
 			margin: -4px 0 0 -5.5px 
 			+sr(fhoto-ind)
-
+	&.ico_user
+		+sr(ico-user)
+	&.ico_planet
+		+sr(ico-planet)
+	&.ico_currency
+		+sr(ico-currency)
+	&.ico_consultation
+		+sr(ico-consultation)
 
 // choose
 .choose

@@ -8,6 +8,7 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/jquery-ui.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -153,9 +154,27 @@
 		</div>
 	</header>
 	<!-- title -->
-	<h3 class="title title_left">Карта</h3>
-	<!-- map -->
-	<div class="map" id="map" style="width: 100%; height: 380px"></div>
+	<div class="title title_filter">
+		<div class="title__town">Каменец-Подольский,</div>
+		<div class="title__date">с 24 авг по 26 авг, 2 чел.</div>
+		<button class="btn btn_filter"></button>
+	</div>
+
+	<!-- tabs -->
+	<div class="tabs" id="tabs">
+		<ul class="tabs__list">
+			<li><a href="#tabs-1">Вы смотрели</a></li>
+			<li><a href="#tabs-2">Похожые квартиры</a></li>
+		</ul>
+		<div id="tabs-1">
+			<!-- map -->
+			<div class="map" id="map" style="width: 100%; height: 380px"></div>
+		</div>
+		<div id="tabs-2">
+			<!-- map -->
+			<div class="map" id="map-card" style="width: 100%; height: 380px"></div>
+		</div>
+	</div>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="footer__top">

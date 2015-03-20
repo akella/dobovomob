@@ -267,7 +267,7 @@ head.ready(function() {
 			infowindow.open(map,marker);
 		});
 	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+	initialize();
 
 	// gmap-card
 	function initialize_card_map() {
@@ -325,7 +325,7 @@ head.ready(function() {
 			infowindow_card.open(map_card,marker_card);
 		});
 	}
-	google.maps.event.addDomListener(window, 'load', initialize_card_map);
+	initialize_card_map();
 
 	// description
 	$('.js-description-btn').on("click", function () {
@@ -354,4 +354,35 @@ head.ready(function() {
 		$('.slick-slider').slick('reinit');
 	});
 
+	// menu
+	$('.js-btn-menu').on('click', function (){
+		$('body').toggleClass('is-fixed');
+		$('.js-menu').toggleClass('is-active');
+		$('.js-menu').removeClass('is-languages');
+		$('.js-menu').removeClass('is-currency');
+	});
+	$('.js-open-languages').on('click', function (){
+		$('.js-menu').addClass('is-languages');
+		return false;
+	});
+	$('.js-close-languages').on('click', function (){
+		$('.js-menu').removeClass('is-languages');
+		return false;
+	});
+	$('.js-open-currency').on('click', function (){
+		$('.js-menu').addClass('is-currency');
+		return false;
+	});
+	$('.js-close-currency').on('click', function (){
+		$('.js-menu').removeClass('is-currency');
+		return false;
+	});
+
+	$('.js-label-languages').on('click', function (){
+		$( ".js-languages-check" ).text( $( ".js-input-languages:checked" ).val());
+	});
+	$('.js-label-curreccu').on('click', function (){
+		$( ".js-currency-check" ).html( $( ".js-input-currency:checked" ).val());
+	});
+	
 });

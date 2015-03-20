@@ -101,7 +101,14 @@ body
 	font-size: 13px 
 	line-height: 1.4
 	min-width: 320px
+	width: 100%
+	overflow-x: hidden
 	+suir
+	&.is-fixed
+		position: fixed
+		overflow: hidden
+		.menu
+			display: block
     
 //in
 %in
@@ -164,6 +171,234 @@ body
 	+sr(logo)
 	// background-position: 0 -634px
 	display: inline-block
+
+// menu
+.menu
+	position: fixed
+	top: 50px
+	left: -320px
+	overflow-x: hidden
+	bottom: 0
+	z-index: 200000
+	+transition(left, 0.5s )
+	&.is-active
+		left: 0
+		right: 0
+		width: auto
+		overflow-y: auto
+		.menu__in
+			width: 100%
+	&.is-languages
+		.languages
+			right: 0
+			width: 100%
+	&.is-currency
+		.currency
+			right: 0
+			width: 100%
+	&.is-languages,
+	&.is-currency
+		.menu__in
+			left: -320px
+			width: 320px
+	.menu__in
+		position: relative
+		left: 0
+		padding: 20px 10px 20px 0
+		width: 320px
+		background-color: rgba(#665B56, .95)
+		+transition(left, 0.5s )
+		+box
+		&:before
+			position: absolute
+			content: ''
+			right: 0
+			top: 0
+			height: 100%
+			width: 10px
+			z-index: 1
+			border-left: 1px solid #a29a94
+			background-color: rgba(#46403c, .9)
+	.menu__search
+		position: relative
+		overflow: hidden
+		+border-radius(37px)
+		input
+			padding: 0 35px 0 10px
+			height: 37px
+			font-size: 16px
+			color: #25292D
+			background: #fff
+			width: 100%
+			+suii
+			display: block
+			+box
+			+placeholder
+				color: #25292D
+			&:focus
+				+placeholder
+					font-size: 0
+	.menu__search-btn
+		position: absolute
+		top: 50%
+		right: 13px
+		margin-top: -13px
+		z-index: 1
+		+sr(ico-search-input)
+	.menu__wrap
+		@extend %in
+	.menu__list
+		margin: 20px 0 15px
+	.menu__item 
+		border-bottom: 1px solid #aaa4a2
+		&:first-child
+			border-top: 1px solid #aaa4a2
+		a
+			position: relative
+			padding: 0 35px 0 15px
+			height: 40px
+			color: #fff
+			font-size: 18px
+			text-decoration: none
+			line-height: 40px
+			letter-spacing: -0.2px
+			display: block
+			&:hover
+				background: #493f3b
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				right: 15px
+				margin-top: -13px
+				+sr(arr-right-white)
+			.ico
+				position: absolute
+				left: 15px
+				top: 50%
+				margin-top: -14px
+		&.menu__item_light
+			background: #ddd5d0
+			a
+				padding-left: 47px
+				color: #685F5B
+				&:hover
+					background: #b6a9a1
+				&:before
+					+sr(arr-brown)
+	.menu__copy
+		margin-top: 19px
+		text-align: center
+		color: #FFF
+		font-family: "Arial"
+		font-size: 9px
+	.menu__languages,
+	.menu__currency
+		float: right
+		margin-top: 8px
+		width: 41px
+		height: 22px
+		line-height: 21px
+		color: #DDD5D0
+		z-index: 2
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase
+		background: #645954
+
+// languages currency
+.languages,
+.currency
+	position: fixed
+	top: 50px
+	right: -320px
+	bottom: 0
+	overflow-y: auto
+	width: 320px
+	font-size: 18px
+	background: #fff
+	+transition(right, 0.5s )
+	+suir
+	*
+		+box
+	.languages__list,
+	.currency__list
+		@extend %in
+	.languages__title,
+	.currency__title
+		position: relative
+		padding: 0 15px 0 25px
+		color: #000
+		height: 40px
+		line-height: 40px
+		text-decoration: none
+		background: #f0f0f0
+		display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 10px
+			margin-top: -8px
+			+sr(arr-left)
+	.languages__item,
+	.currency__item
+		border-top: 1px solid #aaa4a2
+		&:first-child
+			border-top: none
+		label
+			position: relative
+			padding: 0 15px
+			height: 40px
+			width: 100%
+			color: #000
+			text-transform: uppercase
+			line-height: 40px
+			cursor: pointer
+			display: block
+		input
+			position: absolute
+			content: ''
+			top: 50%
+			right: 15px
+			width: 20px
+			height: 20px
+			margin-top: -10px
+			opacity: 0
+			z-index: 2
+			&:checked
+				& + span
+					background-image: none
+					&:before,
+					&:after
+						display: block
+
+		span
+			position: absolute
+			content: ''
+			top: 50%
+			right: 15px
+			margin-top: -9px
+			+sr(arr-right)
+			&:before
+				position: absolute
+				content: ''
+				bottom: 9px
+				height: 2px
+				width: 20px
+				background: #000
+				+rotate(-45)
+				display: none
+			&:after
+				position: absolute
+				content: ''
+				bottom: 5px
+				right: 4px
+				height: 2px
+				width: 10px
+				background: #000
+				+rotate(-135)
+				display: none
 
 // filter
 .filter
@@ -662,6 +897,18 @@ body
 		text-transform: uppercase
 		text-decoration: none
 		+suir
+	&.title_filter
+		position: relative
+		padding: 10px 42px 5px 15px
+		text-align: left
+		font-size: 14px
+		line-height: 1.2
+		+suir
+		.btn_filter
+			position: absolute
+			top: 50%
+			right: 5px
+			margin-top: -19px
 
 // description
 .description
