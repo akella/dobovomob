@@ -124,6 +124,27 @@
 		+box-shadow(0.5px 0.9px 0 #AAAFAF)
 		&:hover
 			+background-image(linear-gradient(to top, #DEDEDE 0%, #ECECEC 100%))
+	&.btn_wg-arr
+		position: relative
+		height: 37px
+		width: 94%
+		font-size: 14px
+		color: #25292D 
+		background-color: #6DAE10
+		+background-image(linear-gradient(to top, #EAEAEA 0%, #F2F2F2 99%, #F2F2F2 100%))
+		+box-shadow(0.5px 0.9px 0 #AAAFAF)
+		+border-radius(7px 0 0 7px)
+		&:hover
+			+background-image(linear-gradient(to top, #D5D5D5 0%, #DCDCDC 100%))
+			&:before
+				+sr(wg-arr-hover)
+		&:before
+			position: absolute
+			content: ''
+			top: -4px
+			bottom: 0
+			right: -17px
+			+sr(wg-arr)
 	&.btn_phone
 		position: relative
 		&:before
@@ -148,6 +169,17 @@
 			left: 50%
 			margin: -10px 0 0 -10px
 			+svg(ico-btn-filter, 20, 18)
+	&.btn_phone-2
+		height: 36px
+		font-size: 15px
+		background-color: #f05500
+		+background-image(linear-gradient(to top, #f05500 0%, #ff7d36 61%, #ffb164 100%))
+		+border-radius(4px)
+		&:hover
+			+background-image(linear-gradient(to top, #C34500 0%, #F9691C 100%))
+		.ico
+			margin-right: 10px
+			vertical-align: bottom
 
 .btn-dashed
 	color: #5F86BE
@@ -213,6 +245,8 @@
 		+sr(marker-grey)
 	&.ico_edit
 		+sr(ico-edit)
+	&.ico_phone-2
+		+sr(ico-phone-2)
 
 
 
