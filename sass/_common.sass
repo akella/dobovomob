@@ -703,6 +703,23 @@ label
 				background: #000
 				+rotate(-135)
 				display: none
+	.list__link
+		position: relative
+		padding: 8px 20px 8px 0
+		color: #000
+		text-decoration: none
+		display: block
+		+clr
+		span
+			right: 0
+	.list__left
+		float: left
+		width: 197px
+		line-height: 1.2
+	.list__right
+		float: right
+		margin-top: 3px
+		color: #989898
 
 // filter
 .filter
@@ -2086,8 +2103,26 @@ label
 		&:hover
 			text-decoration: none
 
-// catalog__botton
+// catalog
 .catalog
+	&.catalog_not-found
+		margin-bottom: 25px
+		.title
+			font-size: 18px
+			+suir
+		.yellow-block
+			padding: 10px
+			.title
+				padding: 5px 0 5px
+			p
+				font-size: 12px
+				line-height: 1.2
+				margin-bottom: 15px
+		.list__item
+			border-bottom: 1px solid #aaa4a2
+			border-top: none
+			&:first-child
+				border-top: 1px solid #aaa4a2
 	.catalog__botton
 		padding: 20px 10px
 	.apartment

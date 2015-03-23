@@ -182,6 +182,11 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .list .list__item span { position: absolute; content: ""; top: 50%; right: 15px; margin-top: -9px; background: url('../img/icons-s5581590e47.png') 0 -470px no-repeat; background-position: 0 -236px; width: 9px; height: 20px; -moz-background-size: 116px, 1451px; -o-background-size: 116px, 1451px; -webkit-background-size: 116px, 1451px; background-size: 116px, 1451px; }
 .list .list__item span:before { position: absolute; content: ""; bottom: 9px; height: 2px; width: 20px; background: black; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); display: none; }
 .list .list__item span:after { position: absolute; content: ""; bottom: 5px; right: 4px; height: 2px; width: 10px; background: black; -ms-transform: rotate(-135deg); -webkit-transform: rotate(-135deg); transform: rotate(-135deg); display: none; }
+.list .list__link { position: relative; padding: 8px 20px 8px 0; color: black; text-decoration: none; display: block; *zoom: 1; }
+.list .list__link:after { content: " "; display: table; clear: both; }
+.list .list__link span { right: 0; }
+.list .list__left { float: left; width: 197px; line-height: 1.2; }
+.list .list__right { float: right; margin-top: 3px; color: #989898; }
 
 .filter { margin-bottom: 79px; text-align: center; background-color: #f1f1f1; }
 .filter.filter_bg { margin-bottom: 10px; padding: 5px 10px 18px; background: url("../img/bg-filter.png") repeat; }
@@ -547,6 +552,13 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .price-black .price-black__bott { font-size: 7px; text-decoration: underline; cursor: pointer; display: block; }
 .price-black .price-black__bott:hover { text-decoration: none; }
 
+.catalog.catalog_not-found { margin-bottom: 25px; }
+.catalog.catalog_not-found .title { font-size: 18px; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+.catalog.catalog_not-found .yellow-block { padding: 10px; }
+.catalog.catalog_not-found .yellow-block .title { padding: 5px 0 5px; }
+.catalog.catalog_not-found .yellow-block p { font-size: 12px; line-height: 1.2; margin-bottom: 15px; }
+.catalog.catalog_not-found .list__item { border-bottom: 1px solid #aaa4a2; border-top: none; }
+.catalog.catalog_not-found .list__item:first-child { border-top: 1px solid #aaa4a2; }
 .catalog .catalog__botton { padding: 20px 10px; }
 .catalog .apartment { margin-bottom: 0; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border-bottom: 1px solid #cac7c5; }
 .catalog .apartment .apartment__photo { margin-top: 0; }
