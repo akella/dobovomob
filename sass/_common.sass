@@ -2220,11 +2220,68 @@ label
 		padding: 17px 15px
 		font-size: 13px
 		background: #ebebeb
-		&.user__com_topic
-			+suisb
+		p
+			margin-top: 13px
+	.user__title
+		font-size: 13px
+		+suisb
+	.user__field
+		padding: 0 15px 0 13px
+		border-bottom: 1px solid #c6c9ca
+		+clr
+		&:first-child
+			border-top: 1px solid #c6c9ca
+	.user__left
+		float: left
+		width: 200px
+		height: 66px
+		line-height: 60px
+		font-size: 17px
+		color: #5C6064
+	.confirmed
+		float: right
+		margin-top: 14px
+	.user__mail,
+	.user__phone,
+	.user__f,
+	.user__rec
+		position: relative
+		padding-left: 42px
+		line-height: 1.2
+		vertical-align: middle
+		display: inline-block
+		&:before
+			position: relative
+			left: 0
+			top: 50%
+			+translate(0, -50)
+
+// text-none
+.text-none
+	position: relative
+	color: #f0f0f0
+	background: #f0f0f0
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		right: 0
+		bottom: -2px
+		height: 2px
+		background: #f0f0f0
+
+// confirmed
+.confirmed
+	text-align: center
+	color: #81C51F
+	line-height: 1
+	font-size: 10px
+	.ico
+		margin-bottom: 6px
 
 // footer
 .footer
+	margin-top: 15px
 	padding: 17px 0
 	background: #f8f5f3
 	border-top: 1px solid #dadee1
