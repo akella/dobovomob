@@ -35,11 +35,13 @@
 					<li class="menu__item menu__item_light"><a href="#"><i class="ico ico_user"></i>Личный кабинет</a></li>
 					<li class="menu__item menu__item_light">
 						<a class="js-open-languages" href="#"><i class="ico ico_planet"></i>Языки 
+							<input class="js-languages-check" type="text" hidden>
 							<div class="menu__languages js-languages-check">RU</div>
 						</a>
 					</li>
 					<li class="menu__item menu__item_light">
 						<a class="js-open-currency" href="#"><i class="ico ico_currency"></i>Валюта
+							<input class="js-currency-check" type="text" hidden>
 							<div class="menu__currency js-currency-check">UAH</div>
 						</a>
 					</li>
@@ -52,49 +54,49 @@
 			</div>
 			<div class="languages">
 				<a href="#" class="languages__title js-close-languages">Язык</a>
-				<ul class="languages__list">
-					<li class="languages__item">
+				<ul class="languages__list list">
+					<li class="list__item">
 						<label class="js-label-languages">
 							ru
 							<input class="js-input-languages" value="ru" name="languages" type="radio" checked><span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							ua
 							<input class="js-input-languages" value="ua" name="languages" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							fr
 							<input class="js-input-languages" value="fr" name="languages" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							be
 							<input class="js-input-languages" value="be" name="languages" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							bg
 							<input class="js-input-languages" value="bg" name="languages" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							nl
 							<input class="js-input-languages" value="nl" name="languages" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="languages__item">
+					<li class="list__item">
 						<label class="js-label-languages">
 							it
 							<input class="js-input-languages" value="it" name="languages" type="radio">
@@ -105,44 +107,44 @@
 			</div>
 			<div class="currency">
 				<a href="#" class="currency__title js-close-currency">Валюта</a>
-				<ul class="currency__list">
-					<li class="currency__item">
+				<ul class="currency__list list">
+					<li class="list__item">
 						<label class="js-label-curreccu">uah
 							<input class="js-input-currency" value="uah" name="currency" type="radio" checked>
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">ru
 							<input class="js-input-currency" value="ru" name="currency" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">usd
 							<input class="js-input-currency" value="usd" name="currency" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">usd
 							<input class="js-input-currency" value="usd" name="currency" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">usd
 							<input class="js-input-currency" value="usd" name="currency" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">usd
 							<input class="js-input-currency" value="usd" name="currency" type="radio">
 							<span></span>
 						</label>
 					</li>
-					<li class="currency__item">
+					<li class="list__item">
 						<label class="js-label-curreccu">usd
 							<input class="js-input-currency" value="usd" name="currency" type="radio">
 							<span></span>
@@ -213,10 +215,78 @@
 				</div>
 			</div>
 			<div class="dropdown__col dropdown__col_people">
-				<div class="people">
+				<div class="people js-open-popup">
 					<i class="ico ico_people"></i>
-					<div class="people__number">1</div>
+					<input class="js-people" type="text" hidden>
+					<div class="people__number js-people">1</div>
 				</div>
+					<!-- popup -->
+					<div class="popup">
+						<div class="popup__in">
+							<div class="popup__header">
+								Укажыте количество людей
+								<button class="popup__close"></button>
+							</div>
+							<ul class="list">
+								<li class="list__item">
+									<label class="js-label-people">
+										1 человек
+										<input class="js-input-people" value="1" name="people" type="radio" checked>
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										2 человек
+										<input class="js-input-people" value="2" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										3 человек
+										<input class="js-input-people" value="3" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										4 человек
+										<input class="js-input-people" value="4" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										5 человек
+										<input class="js-input-people" value="5" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										6 человек
+										<input class="js-input-people" value="6" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										7 человек
+										<input class="js-input-people" value="7" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										8 и больше человек
+										<input class="js-input-people" value="8" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
 			</div>
 		</div>
 		<div class="filter__inf">2 ночи проживания</div>
@@ -482,6 +552,5 @@
 <!-- END out-->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 </body>
 </html>

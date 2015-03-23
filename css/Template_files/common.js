@@ -320,28 +320,21 @@ head.ready(function() {
 		return false;
 	});
 
-	// add value languages, curreccu, people
+	// add value languages curreccu in menu
 	$('.js-label-languages').on('click', function (){
 		$( ".js-languages-check" ).text( $( ".js-input-languages:checked" ).val());
 	});
 	$('.js-label-curreccu').on('click', function (){
 		$( ".js-currency-check" ).html( $( ".js-input-currency:checked" ).val());
 	});
-	$('.js-label-people').on('click', function (){
-		$( ".js-people" ).html( $( ".js-input-people:checked" ).val());
-	});
-
-	// popup
-	$('.js-open-popup').on('click', function (){
-		$(this).parent().find('.popup').show();
-		$('body').addClass('is-fixed');
-	});
-	$('.popup, .popup__close').on('click', function(event){
-		$('.popup').hide();
-		$('body').removeClass('is-fixed');
-	});
-	$( ".popup__in" ).click(function(event) {
-		event.stopPropagation();
+	$('.js-arr').on('click', function(){
+		var id = $(this).attr("data-id");
+		$('body').find(".js-popup", function (){
+			if(id == $('.js-arr').attr()) {
+				$(this).addClass('is-active');
+			}
+		});
+		return false;
 	});
 
 });

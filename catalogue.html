@@ -8,8 +8,6 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
-	<link rel="stylesheet" media="all" href="css/jquery-ui.css" >
-	
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -156,196 +154,146 @@
 			</div>
 		</div>
 	</header>
-	<!-- back -->
-	<a href="#" class="back">Фильтры</a>
-	<!-- filter -->
-	<div class="filter" id="filter">
-		<div class="filter__item js-choose" data-max-number="9">
-			<div class="filter__why js-open">
-				<div class="filter__inf">Количество людей</div>
-				<span class="filter__guest">
-					<input type="text" name="choose-input" value="1" readonly="">
-					<span class="filter__guests js-guests">гость</span>
-				</span>
+	<!-- title -->
+	<div class="title title_filter">
+		<div class="title__town">Каменец-Подольский,</div>
+		<div class="title__date">с 24 авг по 26 авг, 2 чел.</div>
+		<button class="btn btn_filter"></button>
+	</div>
+	<!-- catalog -->
+	<div class="catalog">
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__photo">
+				<img src="img/img1.png" alt="">
+				<div class="price price_old">
+					<div class="price__top">590 грн.</div>
+					390<span>грн.</span><span>в сутки</span>
+				</div>
 			</div>
-			<div class="filter__block">
-				<!-- choose -->
-				<div class="choose js-choose-guests">
-					<button class="choose__minus js-minus">&ndash;</button>
-					<div class="choose__text">
-						<input type="text" class="choose__input" name="choose-input" value="1" readonly="">
-						<span class="filter__guests js-guests">гость</span>
-					</div>
-					<button class="choose__plus js-plus">+</button>
+			<div class="apartment__bottom">
+				<div class="apartment__title">Двухуровневая квартира в самом центре</div>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
 				</div>
 			</div>
 		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Даты заезда /выезда
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__photo">
+				<img src="img/img2.png" alt="">
+				<div class="price">390<span>грн.</span><span>в сутки</span></div>
 			</div>
-			<div class="filter__block">
-				<!-- dropdown -->
-				<div class="dropdown dropdown_mod">
-					<div class="dropdown__col">
-						<div class="datepicker" id="from">
-							<i class="ico ico_from"></i>
-							<div class="datepicker__from-text">Заезд</div>
-						</div>
-					</div>
-					<div class="dropdown__col">
-						<div class="datepicker" id="to">
-							<i class="ico ico_to"></i>
-							<div class="datepicker__to-text">Выезд</div>
-						</div>
-					</div>
+			<div class="apartment__bottom">
+				<div class="apartment__title">Двухуровневая квартира в самом центре</div>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
 				</div>
 			</div>
 		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Район
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__photo">
+				<img src="img/img1.png" alt="">
+				<div class="price">390<span>грн.</span><span>в сутки</span></div>
 			</div>
-			<div class="filter__block">
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-			</div>
-		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Количество комнат
-			</div>
-			<div class="filter__block">
-				<!-- choose -->
-				<div class="choose choose_apartment js-choose" data-max-number="9">
-					<button class="choose__minus js-minus">&ndash;</button>
-					<div class="choose__text">
-						<input type="text" placeholder="Любое" class="choose__input" name="choose-input" value="" readonly="">
-					</div>
-					<button class="choose__plus js-plus">+</button>
+			<div class="apartment__bottom">
+				<div class="apartment__title">Двухуровневая квартира в самом центре</div>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
 				</div>
 			</div>
 		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Тип
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__photo">
+				<img src="img/img2.png" alt="">
+				<div class="price price_yellow">390<span>грн.</span><span>в сутки</span></div>
 			</div>
-			<div class="filter__block">
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-			</div>
-		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Стоимость
-			</div>
-			<!-- Сost -->
-			<div class="filter__block cost js-cost">
-				<div class="filter__row">
-					<div class="input"><input class="js-cost-input" type="text" placeholder="от..."></div>
-					<div class="input"><input class="js-cost-input" type="text" placeholder="до..."></div>
+			<div class="apartment__bottom">
+				<div class="apartment__title">Двухуровневая квартира в самом центре</div>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
 				</div>
-				<label class="checkbox">
-					<input class="js-cost-checkbox" type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input class="js-cost-checkbox" type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input class="js-cost-checkbox" type="checkbox">text
-				</label>
 			</div>
 		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Комплектация
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__photo">
+				<img src="img/img1.png" alt="">
+				<div class="price price_yellow price_old">
+					<div class="price__top">590 грн.</div>
+					390<span>грн.</span><span>в сутки</span>
+				</div>
 			</div>
-			<div class="filter__block">
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
+			<div class="apartment__bottom">
+				<div class="apartment__title">Двухуровневая квартира в самом центре</div>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
+				</div>
 			</div>
 		</div>
-		<div class="filter__item">
-			<div class="filter__why js-open">
-				Дополнительные фильтры
-			</div>
-			<div class="filter__block">
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-				<label class="checkbox">
-					<input type="checkbox">text
-				</label>
-			</div>
-		</div>
-		<div class="filter__bottom">
-			<button class="btn btn_green">применить</button>
-			<button class="btn btn_gray">сбросить</button>
+		<div class="catalog__botton">
+			<button class="btn btn_white">показать еще</button>
 		</div>
 	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="footer__row">
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Помощь</a></li>
+					<li><a href="#">Партнерство</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Вакансии</a></li>
+				</ul>
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Пресса и Добово</a></li>
+					<li><a href="#">Условия пользования</a></li>
+					<li><a href="#">Личный кабинет</a></li>
+					<li><a href="#">Вход для владельца</a></li>
+					<li><a href="#">Блог</a></li>
+				</ul>
+			</div>
+			<!-- phone -->
+			<div class="phone">(+38 044) 221-55-11</div>
+			<button class="btn btn_green-small">Добавить квартиру</button>
+		</div>
+		<div class="footer__bottom">
+			<ul class="soc">
+				<li class="soc__item"><a href="#" class="soc__f"><i class="ico ico_f"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__tw"><i class="ico ico_tw"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__vk"><i class="ico ico_vk"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__od"><i class="ico ico_od"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__g"><i class="ico ico_g"></i></a></li>
+			</ul>
+			<div class="footer__row">
+				<a href="#" class="footer__logo"></a>
+				<div class="footer__copy">
+					<p>© 2010 - 2013 Dobovo.com</p>
+					<p>Все права защищены.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 <!-- END out-->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 </body>
 </html>

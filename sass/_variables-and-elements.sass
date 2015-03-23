@@ -31,6 +31,17 @@
 		&:hover
 			color: #fff
 			background: $blue
+	&.btn_white-2
+		height: 49px
+		color: #000
+		background-color: #6DAE10
+		+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+		border: 1px solid #E2E2E2
+		+box-shadow(0 1px 1px #B8B4B2)
+		&:hover
+			color: #fff
+			background-color: #A1A1A1
+			+background-image(none)
 	&.btn_green
 		height: 49px
 		line-height: 49px
@@ -40,6 +51,11 @@
 		+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 1px rgba(171, 230, 85, 0.27))
 		&:hover
 			+gt(#4AC726 0%, #72E64E 100%)
+	&.h36r4
+		height: 36px
+		line-height: 36px
+		font-size: 15px
+		+border-radius(4px)
 	&.btn_green-small
 		position: relative
 		height: 37px
@@ -131,7 +147,7 @@
 			top: 50%
 			left: 50%
 			margin: -10px 0 0 -10px
-			+sr(ico-btn-filter)
+			+svg(ico-btn-filter, 20, 18)
 
 .btn-dashed
 	color: #5F86BE
@@ -142,45 +158,6 @@
 	display: inline-block
 	border-bottom: 1px dashed #5F86BE
 
-// like
-.like
-	position: relative
-	padding: 0 30px 0 7px
-	height: 30px
-	line-height: 30px
-	color: #48BF0D
-	font-size: 25px
-	+background-image(linear-gradient(to top, #EAEAEA 0%, #F8F8F8 99%, #F8F8F8 100%))
-	+box-shadow(0.5px 0.9px 0 #AAAFAF)
-	+suisb
-	&:hover
-		+background-image(linear-gradient(to top, #D3D3D3 0%, #EBEBEB 99%, #EBEBEB 100%))
-	&:before
-		position: absolute
-		content: ''
-		top: 50%
-		right: 7px
-		margin-top: -9px
-		+sr(ico-like)
-// input
-.input
-	input
-		padding: 0 10px
-		height: 34px
-		font-size: 14px
-		color: #000
-		width: 100%
-		background-color: #FFF
-		display: inline-block
-		border: 1px solid #CCC
-		+border-radius(4px)
-		+box
-		+placeholder
-			color: #949494
-			+suii
-		&:focus
-			+placeholder
-				font-size: 0
 
 // ico
 .ico
@@ -230,125 +207,12 @@
 		+sr(ico-currency)
 	&.ico_consultation
 		+sr(ico-consultation)
-
-// choose
-.choose
-	padding: 4px 0
-	text-align: center
-	font-size: 0
-	background: #fff
-	.choose__input
-	.choose__plus,
-	.choose__minus,
-	.choose__text
-		height: 25px
-		vertical-align: top
-		border-left: 1px solid #ccc
-		display: inline-block
-		+box
-		&:first-child
-			border: none
-	.choose__text
-		width: 48%
-		line-height: 25px
-		font-size: 18px
-	.choose__input
-		font-size: 18px
-		width: 15px
-		text-align: center
-		display: inline-block
-	.choose__plus,
-	.choose__minus
-		position: relative
-		width: 26%
-		color: #27ab00
-		line-height: 23px
-		font-size: 42px
-		font-style: normal
-		background: white
-	&.choose_apartment
-		.choose__input
-			width: 60px
-			+placeholder
-				font-size: 18px
-				color: #000
-
-// chackbox
-.checkbox
-	padding-left: 8px
-	height: 40px
-	line-height: 40px
-	font-size: 14px
-	color: #000
-	text-align: left
-	border-top: 1px dotted #9e9e9e
-	display: block
-	&:first-child
-		border-top: 0
-	input
-		margin-right: 10px
-
-//tabs
-.tabs.ui-widget-content
-	border: none
-	background: none
-	font-size: 13px
-	+suir
-	.tabs__list
-		font-size: 0
-		border: none
-		li
-			width: 50%
-			display: inline-block
-			border: none
-			&.ui-tabs-active 
-				a
-					background: #e0e0e0
-					+background-image(none)
-					+suib
-		a
-			height: 38px
-			line-height: 38px
-			color: #25292D !important
-			font-size: 14px
-			text-decoration: none
-			text-align: center
-			background-color: #0BADFF
-			+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
-			border: 1px solid #E2E2E2
-			+box-shadow(0 1px 1px #B8B4B2)
-			display: block
-			+suisb
-	.slick-slider
-		margin-top: 2px
-		border-bottom: none
-	.clean-basket
-		margin-bottom: 5px
-
-// clean-basket
-.clean-basket
-	position: relative
-	padding-left: 40px
-	width: 100%
-	height: 34px
-	text-align: left
-	line-height: 34px
-	font-size: 14px
-	color: #517DBA
-	font-weight: normal
-	background-color: #FCFAF9
-	display: block
-	&:before
-		position: absolute
-		content: ''
-		left: 9px
-		top: 2px
-		+sr(ico-clean-basket)
-
-
-
-
-
+	&.ico_item-tab
+		+svg(ico-item-tab, 23, 18)
+	&.ico_marker-tab
+		+sr(marker-grey)
+	&.ico_edit
+		+sr(ico-edit)
 
 
 

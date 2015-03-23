@@ -91,7 +91,7 @@ $dark-brown: #493f3b
 $light-brown: #b6a9a1
 $gray-brown: #ddd5d0
 
-$yellow: #fffdbc
+$yellow: #fefdbc
 $yellow-text: #FF9000
 
 $green: #48bf0d
@@ -110,9 +110,48 @@ body
 		.menu
 			display: block
     
+label
+	+user-select(none)
+
 //in
 %in
 	padding: 0 10px
+.in
+	@extend %in
+
+//blue
+%blue
+	color: #5f86be
+
+//yellow-block
+.yellow-block
+	padding: 12px 17px
+	background: $yellow
+
+// email-gray
+.email-gray
+	position: relative
+	padding: 0 15px
+	color: #456ea9
+	font-size: 16px
+	height: 36px
+	background-color: #FFF
+	+background-image(linear-gradient(to top, #EAEAEA 0%, #F8F8F8 99%, #F8F8F8 100%))
+	+border-radius(2px)
+	+box-shadow(0.5px 0.9px 0 #AAAFAF)
+	+box
+	.ico
+		position: absolute
+		top: 50%
+		right: 10px
+		margin-top: -12px
+
+// block-gray
+.block-gray
+	padding: 8px
+	background-color: #f4f4f4
+	+border-radius(4px)
+	+box
 
 // header
 .header
@@ -341,19 +380,284 @@ body
 			left: 10px
 			margin-top: -8px
 			+sr(arr-left)
-	.languages__item,
-	.currency__item
+	label
+		padding-left: 25px
+
+
+// like
+.like
+	position: relative
+	padding: 0 30px 0 7px
+	height: 30px
+	line-height: 30px
+	color: #48BF0D
+	font-size: 25px
+	+background-image(linear-gradient(to top, #EAEAEA 0%, #F8F8F8 99%, #F8F8F8 100%))
+	+box-shadow(0.5px 0.9px 0 #AAAFAF)
+	+suisb
+	&:hover
+		+background-image(linear-gradient(to top, #D3D3D3 0%, #EBEBEB 99%, #EBEBEB 100%))
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		right: 7px
+		margin-top: -9px
+		+sr(ico-like)
+
+// input
+.input
+	input
+		padding: 0 10px
+		height: 34px
+		font-size: 14px
+		color: #000
+		width: 100%
+		background-color: #FFF
+		display: inline-block
+		border: 1px solid #CCC
+		+border-radius(4px)
+		+box
+		+placeholder
+			color: #949494
+			+suii
+		&:focus
+			+placeholder
+				font-size: 0
+
+// form
+.form
+	margin-top: 20px
+	.form__row
+		margin-bottom: 15px
+		+clr
+	input, textarea
+		padding: 4px 10px 0
+		width: 100%
+		height: 36px
+		font-size: 18px
+		background-color: #FFF
+		border: 1px solid #E2E3EA
+		+border-radius(1px)
+		+box-shadow(inset 0.5px 0.9px 1px #000)
+		+suir
+		display: block
+		+box
+		+placeholder
+			color: #A9A9A9
+		&:focus
+			+placeholder
+				font-size: 0
+	textarea
+		height: 111px
+		resize: none
+	input[type="checkbox"]
+		width: auto
+		height: auto
+		border: none
+		+box-shadow(none)
+		display: inline-block
+	.form__row_bottom
+		font-size: 0
+		.btn
+			font-size: 15px
+		.btn_green
+			width: 56%
+		.btn_white-2
+			margin-left: 4%
+			width: 40%
+
+// choose
+.choose
+	padding: 4px 0
+	text-align: center
+	font-size: 0
+	background: #fff
+	.choose__input
+	.choose__plus,
+	.choose__minus,
+	.choose__text
+		height: 25px
+		vertical-align: top
+		border-left: 1px solid #ccc
+		display: inline-block
+		+box
+		&:first-child
+			border: none
+	.choose__text
+		width: 48%
+		line-height: 25px
+		font-size: 18px
+	.choose__input
+		font-size: 18px
+		width: 15px
+		text-align: center
+		display: inline-block
+	.choose__plus,
+	.choose__minus
+		position: relative
+		width: 26%
+		color: #27ab00
+		line-height: 23px
+		font-size: 42px
+		font-style: normal
+		background: white
+	&.choose_apartment
+		.choose__input
+			width: 60px
+			+placeholder
+				font-size: 18px
+				color: #000
+
+// chackbox
+.checkbox
+	padding-left: 8px
+	height: 40px
+	line-height: 40px
+	font-size: 14px
+	color: #000
+	text-align: left
+	border-top: 1px dotted #9e9e9e
+	display: block
+	&:first-child
+		border-top: 0
+	input
+		margin-right: 10px
+
+//tabs
+.tabs.ui-widget-content
+	border: none
+	background: none
+	font-size: 13px
+	+suir
+	.tabs__list
+		font-size: 0
+		border: none
+		li
+			width: 50%
+			display: inline-block
+			vertical-align: top
+			border: none
+			&.ui-tabs-active 
+				a
+					background: #e0e0e0
+					+background-image(none)
+					+suib
+		a
+			height: 38px
+			line-height: 38px
+			color: #25292D
+			font-size: 14px
+			text-decoration: none
+			text-align: center
+			background-color: #0BADFF
+			+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+			border: 1px solid #E2E2E2
+			+box-shadow(0 1px 1px #B8B4B2)
+			display: block
+			+suisb
+	.slick-slider
+		margin-top: 2px
+		border-bottom: none
+	.clean-basket 
+		margin-bottom: 5px
+	&.tabs_mod
+		.tabs__list
+			li
+				&.ui-tabs-active 
+					a
+						background-color: #dee1e1
+						+suisb
+			a
+				background-color: whitesmoke
+				+box-shadow(none)
+				font-size: 15px
+				color: #757474
+				+background-image(none)
+				border: none
+				span
+					line-height: 1
+					vertical-align: middle
+					display: inline-block
+			.ico
+				position: relative
+				margin-right: 13px
+				top: 50%
+				+translate(0,-50%) 
+				vertical-align: top
+
+// clean-basket
+.clean-basket
+	position: relative
+	padding-left: 40px
+	width: 100%
+	height: 34px
+	text-align: left
+	line-height: 34px
+	font-size: 14px
+	color: #517DBA
+	font-weight: normal
+	background-color: #FCFAF9
+	display: block
+	&:before
+		position: absolute
+		content: ''
+		left: 9px
+		top: 2px
+		+sr(ico-clean-basket)
+
+
+// popup
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 20001
+	overflow-y: auto
+	overflow-x: hidden
+	text-align: left
+	background: rgba(#000, 0.67)
+	display: none
+	.popup__in
+		background: #fff
+	.popup__header
+		position: relative
+		padding: 0 15px 0 20px
+		color: #000
+		height: 57px
+		line-height: 57px
+		text-decoration: none
+		background: #f0f0f0
+		display: block
+	.popup__close
+		position: absolute
+		content: ''
+		top: 50%
+		right: 10px
+		margin-top: -10px
+		background-color: none
+		+sr(ico-popup-close)
+
+
+// list
+.list
+	+suir
+	*
+		+box
+	.list__item
 		border-top: 1px solid #aaa4a2
+		display: block
 		&:first-child
 			border-top: none
 		label
 			position: relative
-			padding: 0 15px
-			height: 40px
+			padding: 0 20px
+			height: 47px
 			width: 100%
 			color: #000
-			text-transform: uppercase
-			line-height: 40px
+			line-height: 47px
 			cursor: pointer
 			display: block
 		input
@@ -525,6 +829,67 @@ body
 		.btn-dashed
 			float: right
 
+// info
+.info
+	padding: 0 10px 5px
+	font-size: 16px
+	color: #000
+	&.info_answer
+		margin-bottom: 15px
+		padding-top: 8px
+		font-size: 14px
+		.btn
+			height: 39px
+		input
+			+placeholder
+				font-size: 14px
+	.info__row
+		margin: 15px 0
+		+clr
+		&:first-child
+			.info__right
+				@extend %blue
+	.info__left
+		float: left
+		width: 82px
+		color: #ABABAB
+	.info__right
+		overflow: hidden
+		.price-app
+			width: 158px
+		.price-all
+			width: 70px
+		.price-app,
+		.price-all
+			vertical-align: bottom
+			display: inline-block
+	.info__title
+		color: black
+		font-size: 19px
+		line-height: 1.3
+		strong
+			+suisb
+	.info__in
+		padding: 14px 16px 15px
+		border: 1px solid #e6692d
+		+border-radius(4px)
+	.info__title
+		+suisb
+	ul
+		padding-left: 15px
+		li
+			margin-left: 15px
+			list-style-type: disc
+	.block-gray
+		line-height: 1
+		color: #595959
+		width: 100%
+		display: block
+		span
+			margin-left: 5px
+	.email-gray
+		line-height: 36px
+
 // discounts
 .discounts
 	position: relative
@@ -597,6 +962,7 @@ body
 // dropdown
 .dropdown
 	font-size: 0
+	text-align: center
 	border: 1px solid #BDBDBD
 	+border-radius(6px)
 	+box
@@ -909,6 +1275,10 @@ body
 			top: 50%
 			right: 5px
 			margin-top: -19px
+	&.title_border
+		padding: 8px 20px 10px 12px
+		text-align: left
+		border-bottom: 1px solid #e5eaea
 
 // description
 .description
@@ -1089,6 +1459,11 @@ body
 		font-size: 11px
 		line-height: 25px
 		background-color: rgba(#FFFB78, .57)
+	.apartment__row
+		.apartment__inf,
+		.rating
+			color: #656b70
+			display: inline-block
 
 // price
 .price
@@ -1139,7 +1514,19 @@ body
 				top: 0
 				right: -15px
 				+arr(20, 15, $dark-green, bl)
-
+	&.price_yellow
+		background: #fffb78
+		color: #198200
+		&:before
+			+arr(20, 51, #fffb78, r)
+		.price__top
+			color: #fff
+			background: #fd9826
+			&:before
+				+arr(20, 15, #fd9826, bl)
+		&.price_old
+			&:before
+				+arr(20, 55, #fffb78, r)
 .price-old
 	color: #8B9094
 	text-align: left
@@ -1582,12 +1969,12 @@ body
 		overflow: initial !important
 	.gm-style-iw
 		width: 283px !important
-		top: -90px !important
-		left: -20px !important
+		top: -86px !important
+		left: -46px !important
 		max-height: 10px
 		& + div
-			right: -220px !important
-			top: -90px !important
+			right: -246px !important
+			top: -85px !important
 			height: 10px
 			overflow: hidden !important
 	.gmnoprint,
@@ -1698,6 +2085,17 @@ body
 		display: block
 		&:hover
 			text-decoration: none
+
+// catalog__botton
+.catalog
+	.catalog__botton
+		padding: 20px 10px
+	.apartment
+		margin-bottom: 0
+		+box-shadow(none)
+		border-bottom: 1px solid #cac7c5
+		.apartment__photo
+			margin-top: 0
 
 // footer
 .footer
