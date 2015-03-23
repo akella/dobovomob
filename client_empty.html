@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/jquery-ui.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- header -->
+	<header class="header">
+		<button class="btn-menu js-btn-menu"></button>
+		<a href="#" class="logo"></a>
+		<a href="#" class="btn-login">Войти</a>
+		<!-- menu -->
+		<div class="menu js-menu">
+			<div class="menu__in">
+				<div class="menu__wrap">
+					<div class="menu__search">
+						<input type="text" placeholder="Укажите ID...">
+						<button class="menu__search-btn"></button>
+					</div>
+				</div>
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#">Найти квартиру</a></li>
+					<li class="menu__item"><a href="#">О нас</a></li>
+					<li class="menu__item"><a href="#">Контакты</a></li>
+					<li class="menu__item"><a href="#">Условия пользования сервисом</a></li>
+					<li class="menu__item menu__item_light"><a href="#"><i class="ico ico_user"></i>Личный кабинет</a></li>
+					<li class="menu__item menu__item_light">
+						<a class="js-open-languages" href="#"><i class="ico ico_planet"></i>Языки 
+							<input class="js-languages-check" type="text" hidden>
+							<div class="menu__languages js-languages-check">RU</div>
+						</a>
+					</li>
+					<li class="menu__item menu__item_light">
+						<a class="js-open-currency" href="#"><i class="ico ico_currency"></i>Валюта
+							<input class="js-currency-check" type="text" hidden>
+							<div class="menu__currency js-currency-check">UAH</div>
+						</a>
+					</li>
+					<li class="menu__item menu__item_light"><a href="#"><i class="ico ico_consultation"></i>Онлайн консультация</a></li>
+				</ul>
+				<div class="menu__wrap">
+					<button class="btn btn_orange btn_phone">+38 (044) 271-55-11</button>
+					<div class="menu__copy">© 2010 - 2013 Dobovo.com  /  Все права защищены.</div>
+				</div>
+			</div>
+			<div class="languages">
+				<a href="#" class="languages__title js-close-languages">Язык</a>
+				<ul class="languages__list list">
+					<li class="list__item">
+						<label class="js-label-languages">
+							ru
+							<input class="js-input-languages" value="ru" name="languages" type="radio" checked><span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							ua
+							<input class="js-input-languages" value="ua" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							fr
+							<input class="js-input-languages" value="fr" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							be
+							<input class="js-input-languages" value="be" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							bg
+							<input class="js-input-languages" value="bg" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							nl
+							<input class="js-input-languages" value="nl" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							it
+							<input class="js-input-languages" value="it" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="currency">
+				<a href="#" class="currency__title js-close-currency">Валюта</a>
+				<ul class="currency__list list">
+					<li class="list__item">
+						<label class="js-label-curreccu">uah
+							<input class="js-input-currency" value="uah" name="currency" type="radio" checked>
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">ru
+							<input class="js-input-currency" value="ru" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- title-user -->
+	<div class="title-user">
+		Ирина Васильева
+		<address>Украина, г. Киев, 23 года<address>
+	</div>
+	<!-- user -->
+	<div class="user">
+		<div class="user__img user__img_none">
+			<!-- <img src="img/user-no-photo-0_5.png" alt="img"> -->
+			<div class="user__img-text">Ирина пока не загрузила свое фото</div>
+		</div>
+		<div class="user__com user__com_topic">Привет, меня зовут Ирина :)</div>
+		<h3 class="title-2">Отзывы от арендодателей</h3>
+		<!-- in -->
+		<div class="in">
+			<div class="user__com">Об Ирине пока никто не написал</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="footer__row">
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Помощь</a></li>
+					<li><a href="#">Партнерство</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Вакансии</a></li>
+				</ul>
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Пресса и Добово</a></li>
+					<li><a href="#">Условия пользования</a></li>
+					<li><a href="#">Личный кабинет</a></li>
+					<li><a href="#">Вход для владельца</a></li>
+					<li><a href="#">Блог</a></li>
+				</ul>
+			</div>
+			<!-- phone -->
+			<div class="phone">(+38 044) 221-55-11</div>
+			<button class="btn btn_green-small">Добавить квартиру</button>
+		</div>
+		<div class="footer__bottom">
+			<ul class="soc">
+				<li class="soc__item"><a href="#" class="soc__f"><i class="ico ico_f"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__tw"><i class="ico ico_tw"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__vk"><i class="ico ico_vk"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__od"><i class="ico ico_od"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__g"><i class="ico ico_g"></i></a></li>
+			</ul>
+			<div class="footer__row">
+				<a href="#" class="footer__logo"></a>
+				<div class="footer__copy">
+					<p>© 2010 - 2013 Dobovo.com</p>
+					<p>Все права защищены.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

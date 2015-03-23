@@ -343,6 +343,9 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 
 .title-2 { padding: 20px 0; font-size: 18px; font-weight: normal; text-align: center; }
 
+.title-user { padding: 10px; text-align: left; font-size: 19px; line-height: 1.2; border-bottom: 1px solid #cfcfcf; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
+.title-user address { font-size: 15px; font-style: normal; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+
 .description { position: relative; padding: 10px 0 0; overflow-y: hidden; border-top: 1px solid #c0d1d1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .description.is-active .description__inf { display: block; }
 .description .description__text { padding: 10px 10px 0; font-size: 14px; line-height: 1.2; color: #25292d; }
@@ -577,6 +580,14 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .other-quest { margin-bottom: 25px; }
 .other-quest .other-quest__row { margin-top: 15px; }
 .other-quest .other-quest__row:first-child { margin-top: 0; }
+
+.user { margin-bottom: 25px; }
+.user .user__img { position: relative; margin: 28px auto; height: 237px; width: 237px; overflow: hidden; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+.user .user__img img { position: relative; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; }
+.user .user__img.user__img_none { background: url(../img/user-no-photo.png) no-repeat 0 0; background-size: cover; }
+.user .user__img-text { position: absolute; left: 55px; bottom: 30px; width: 120px; text-align: center; font-size: 12px; color: white; line-height: 1.2; }
+.user .user__com { padding: 17px 15px; font-size: 13px; background: #ebebeb; }
+.user .user__com.user__com_topic { font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 
 .footer { padding: 17px 0; background: #f8f5f3; border-top: 1px solid #dadee1; }
 .footer .footer__row { font-size: 0; *zoom: 1; }

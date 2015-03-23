@@ -1326,6 +1326,17 @@ label
 	font-size: 18px
 	font-weight: normal
 	text-align: center
+.title-user
+	padding: 10px
+	text-align: left
+	font-size: 19px
+	line-height: 1.2
+	border-bottom: 1px solid #cfcfcf
+	+suisb
+	address
+		font-size: 15px
+		font-style: normal
+		+suir
 
 // description
 .description
@@ -2176,6 +2187,41 @@ label
 		margin-top: 15px
 		&:first-child
 			margin-top: 0
+
+// user
+.user
+	margin-bottom: 25px
+	.user__img
+		position: relative
+		margin: 28px auto
+		height: 237px
+		width: 237px
+		overflow: hidden
+		+border-radius(50%)
+		img
+			position: relative
+			top: 50%
+			left: 50%
+			+translate(-50%,-50%)
+			display: block
+		&.user__img_none
+			background: url(../img/user-no-photo.png) no-repeat 0 0
+			background-size: cover
+	.user__img-text
+		position: absolute
+		left: 55px
+		bottom: 30px
+		width: 120px
+		text-align: center
+		font-size: 12px
+		color: #fff
+		line-height: 1.2
+	.user__com
+		padding: 17px 15px
+		font-size: 13px
+		background: #ebebeb
+		&.user__com_topic
+			+suisb
 
 // footer
 .footer
