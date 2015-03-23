@@ -225,6 +225,11 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .filter .filter__change-date { padding: 20px 10px 17px 5px; line-height: 1; border-bottom: 1px solid white; }
 .filter .filter__change-date .btn-dashed { float: right; }
 
+.filter-bottom { padding: 7px 0; font-size: 0; background-color: #a3afaf; background-image: -moz-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: -webkit-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: linear-gradient(to top, #a3afaf 0%, #b8c4c4 100%); }
+.filter-bottom .filter-bottom__col { width: 50%; text-align: center; height: 34px; line-height: 34px; font-size: 13px; text-transform: uppercase; text-decoration: none; color: white; border-left: 1px solid white; display: inline-block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.filter-bottom .filter-bottom__col:first-child { border-left: none; }
+.filter-bottom .filter-bottom__col:hover { text-decoration: underline; }
+
 .info { padding: 0 10px 5px; font-size: 16px; color: black; }
 .info.info_answer { margin-bottom: 15px; padding-top: 8px; font-size: 14px; }
 .info.info_answer .btn { height: 39px; }

@@ -845,6 +845,28 @@ label
 		border-bottom: 1px solid #fff
 		.btn-dashed
 			float: right
+// filter-bottom
+.filter-bottom
+	padding: 7px 0
+	font-size: 0
+	background-color: #A3AFAF
+	+background-image(linear-gradient(to top, #A3AFAF 0%, #B8C4C4 100%))
+	.filter-bottom__col
+		width: 50%
+		text-align: center
+		height: 34px
+		line-height: 34px
+		font-size: 13px
+		text-transform: uppercase
+		text-decoration: none
+		color: #fff
+		border-left: 1px solid #fff
+		display: inline-block
+		+box
+		&:first-child
+			border-left: none
+		&:hover
+			text-decoration: underline
 
 // info
 .info
