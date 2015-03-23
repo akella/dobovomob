@@ -548,7 +548,7 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 
 .price-black { position: absolute; left: 0; bottom: 5px; padding: 5px; color: white; font-size: 14px; z-index: 2; background: rgba(37, 41, 45, 0.5); font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .price-black:hover { background: rgba(37, 41, 45, 0.79); }
-.price-black .price-black__top { line-height: 1; text-transform: uppercase; font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; display: block; }
+.price-black .price-black__top { line-height: 1; font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; display: block; }
 .price-black .price-black__bott { font-size: 7px; text-decoration: underline; cursor: pointer; display: block; }
 .price-black .price-black__bott:hover { text-decoration: none; }
 
