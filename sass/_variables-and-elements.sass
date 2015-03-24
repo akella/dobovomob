@@ -56,6 +56,15 @@
 		line-height: 36px
 		font-size: 15px
 		+border-radius(4px)
+	&.btn_arr
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			right: 8px
+			top: 50%
+			margin-top: -3px
+			+arr(8,7,#8b9094,b)
 	&.btn_green-small
 		position: relative
 		height: 37px
@@ -202,14 +211,22 @@
 		+sr(ico-people)
 	&.ico_f
 		+sr(f)
+	&.ico_f-2
+		+sr(f-2)
 	&.ico_tw
 		+sr(tw)
 	&.ico_vk
 		+sr(vk)
+	&.ico_vk-2
+		+sr(vk-2)
 	&.ico_od
 		+sr(od)
+	&.ico_od-2
+		+sr(od-2)
 	&.ico_g
 		+sr(g)
+	&.ico_g-2
+		+sr(g-2)
 	&.ico_ap
 		+sr(ico-ap)
 	&.ico_owners

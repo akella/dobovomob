@@ -467,6 +467,20 @@ label
 			margin-left: 4%
 			width: 40%
 
+// forgot-pass
+.forgot-pass
+	padding: 0 15px
+	height: 36px
+	line-height: 36px
+	color: $blue
+	text-decoration: none
+	background-color: #efefef
+	+border-radius(2px)
+	display: block
+	&:hover
+		color: #90b6ec
+		background: #f8f8f8
+
 // choose
 .choose
 	padding: 4px 0
@@ -523,6 +537,54 @@ label
 		border-top: 0
 	input
 		margin-right: 10px
+
+// toggle
+.toggle
+	position: relative
+	padding-left: 19px
+	height: 51px
+	line-height: 42px
+	width: 100%
+	cursor: pointer
+	background-color: white
+	border: 1px solid #d6d6d6
+	+border-radius(2px)
+	display: block
+	+box
+	&:hover
+		background: #f4f4f4
+	.toggle__text
+		color: black
+		font-size: 16px
+		vertical-align: middle
+		line-height: 19px
+		display: inline-block
+	input
+		display: none
+		&:checked + .toggle__checkbox
+			background: #28ae00
+			&:before
+				left: auto
+				right: 0
+	.toggle__checkbox
+		position: absolute
+		right: 11px
+		top: 50%
+		margin-top: -16px
+		height: 32px
+		width: 74px
+		+border-radius(32px)
+		background-color: #EAEAEA
+		&:before
+			position: absolute
+			content: ''
+			top: 1px
+			left: 0
+			height: 30px
+			width: 30px
+			+border-radius(50%)
+			background-color: #FFF
+			+box-shadow(0 0 5px rgba(0, 0, 0, 0.75), inset 0 0 5px rgba(255, 255, 255, 0.4))
 
 //tabs
 .tabs.ui-widget-content
@@ -1299,12 +1361,15 @@ label
 	&.title_left
 		text-align: left
 	&.title_blue
-		padding: 12px 10px 23px
+		padding: 12px 0 18px
 		color: #5F86BE
 		font-size: 18px
+		letter-spacing: -0.2px
 		text-transform: uppercase
 		text-decoration: none
 		+suir
+		&:hover
+			color: #90b6ec
 	&.title_filter
 		position: relative
 		padding: 10px 42px 5px 15px
@@ -1976,6 +2041,50 @@ label
 		background: #ed9731
 	.soc__g
 		background: #ca442b
+
+.social
+	font-size: 0
+	.social__item
+		margin-left: 13px
+		display: inline-block
+		vertical-align: top
+		&:first-child
+			margin-left: 0
+	a
+		position: relative
+		width: 142px
+		height: 39px
+		line-height: 39px
+		text-align: center
+		color: #fff
+		font-size: 14px
+		text-decoration: none
+		display: block
+		+box
+		+suir
+		&:hover
+			+opacity(.8)
+		.ico
+			position: absolute
+			left: 10px
+			top: 50%
+		&.social__f
+			background: #3d5a9b
+			.ico
+				margin-top: -13px
+		&.social__g
+			background: #c0382c
+			.ico
+				margin-top: -11px
+		&.social__vk
+			background: #2f5e89
+			.ico
+				margin-top: -10px
+		&.social__od
+			padding-left: 15px
+			background: #ffa04c
+			.ico
+				margin-top: -18px
 
 // characteristics
 .characteristics
