@@ -200,7 +200,7 @@ head.ready(function() {
 		});
 		$(".datepicker__from-text").text('--');
 	});
-	
+
 	// cost
 	$('.js-cost-input').on('input', function (){
 		if ( $(this).val().length) {

@@ -1204,7 +1204,7 @@ label
 		position: absolute
 		top: 50%
 		left: 13px
-		margin-top: -10px
+		margin-top: -8px
 	.ui-datepicker .ui-datepicker-prev span
 		left: 20px
 		+sr(arr-left)
@@ -1253,7 +1253,168 @@ label
 			height: 1px
 			width: 16px
 			background: #9a9a9a
-
+.calendar
+	text-align: left
+	.calendar__header
+		position: relative
+		height: 50px
+	.calendar__btn-left,
+	.calendar__btn-right
+		position: absolute
+		top: 50%
+		width: 36px
+		height: 36px
+		margin-top: -18px
+		background-color: #EDEDED
+		+background-image(linear-gradient(to top, #E0E0E0 0%, #E0E0E0 11%, #F5F5F5 100%))
+		border: 1px solid #E2E2E2
+		+box-shadow(0 1px 1px #B8B4B2)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			margin-top: -8px
+	.calendar__btn-left
+		left: 13px
+		&:before
+			position: absolute
+			left: 13px
+			content: ''
+			+sr(arr-left)
+	.calendar__btn-right
+		right: 13px
+		&:before
+			position: absolute
+			content: ''
+			right: 13px
+			+sr(arr-right)
+	.calendar__month
+		text-align: center
+		font-size: 18px
+		line-height: 50px
+		+suir
+	.calendar__week,
+	.calendar__days
+		font-size: 0
+		line-height: 1
+	.calendar__th,
+	.calendar__day
+		font-size: 4.5vw
+		width: 14.28vw
+		vertical-align: top
+		display: inline-block
+		border: 1px solid #E2E2E2
+		+box
+		+suir
+	.calendar__th
+		height: 27px
+		line-height: 27px
+		text-transform: capitalize
+		text-align: center
+		background: #fcfcfc
+	.calendar__day
+		position: relative
+		padding: 2px
+		height: 12vw
+		line-height: 1
+		overflow: hidden
+		background-color: #fff
+		border: 1px solid #E2E2E2
+		cursor: pointer
+		span
+			text-align: right
+			display: block
+		.calendar__price,
+		span
+			position: relative
+			z-index: 2
+		&.is-other-month
+			background-color: #C0C0C0
+			color: #C0C0C0
+			+background-image(none)
+			cursor: default
+		&.is-today
+			border: 2px solid #FFB400
+		&.is-inactive
+			background: #eebaaf
+			cursor: default
+			&.is-selected
+				color: #f9f9b7
+			&.first
+				background: none
+				&:before
+					position: absolute
+					content: ''
+					top: 0
+					right: 0
+					width: 0px
+					height: 0px
+					border-style: solid
+					border-width: 0 0 12vw 15vw
+					border-color: transparent transparent #eebaaf transparent
+			&.last
+				color: #000
+				background: none
+				&:before
+					position: absolute
+					content: ''
+					top: 0
+					left: 0
+					width: 0px
+					height: 0px
+					border-style: solid
+					border-width: 12vw 15vw 0 0
+					border-color: #eebaaf transparent transparent transparent
+			.calendar__price
+				display: none
+		&.is-selected
+			background: #f9f9b7
+			&.in
+				&:before
+					position: absolute
+					content: ''
+					top: 50%
+					left: 0
+					margin-top: -6px
+					+arr(6,12,#999,r)
+			&.out
+				&:before
+					position: absolute
+					content: ''
+					top: 50%
+					right: 0
+					margin-top: -6px
+					+arr(6,12,#999,l)
+		&.is-last-days
+			color: #8f8f8f
+			background: #dfdede
+			cursor: default
+			.calendar__price
+				display: none
+	.calendar__price
+		font-size: 2.4vw
+.calendar-info
+	padding: 0 10px
+	font-size: 0
+	+box
+	span
+		width: 49%
+		font-size: 12px
+		line-height: 21px
+		display: inline-block
+	i 
+		width: 21px
+		height: 21px
+		display: inline-block
+		border: 1px solid #E2E2E2
+		vertical-align: middle
+		+box
+	.is-to-day
+		border: 2px solid #FFB400
+	.is-selected
+		background: #f9f9b7
+	.is-inactive
+		background: #eebaaf
 		
 // search
 .search
@@ -2412,10 +2573,23 @@ label
 		vertical-align: middle
 		display: inline-block
 		&:before
-			position: relative
+			position: absolute
+			content: ''
 			left: 0
 			top: 50%
-			+translate(0, -50)
+			+translate(0, -50%)
+	.user__mail
+		&:before
+			+sr(blue-mail)
+	.user__phone
+		&:before
+			+sr(blue-phone)
+	.user__f
+		&:before
+			+sr(blue-facebook)
+	.user__rec
+		&:before
+			+sr(blue-comm)
 
 // text-none
 .text-none
