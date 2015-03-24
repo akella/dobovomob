@@ -522,6 +522,58 @@ label
 			+placeholder
 				font-size: 18px
 				color: #000
+// choose-people
+.choose-people
+	position: relative
+	padding: 0 25px
+	height: 40px
+	width: 95px
+	cursor: pointer
+	line-height: 40px
+	background-color: #FFF
+	+background-image(linear-gradient(to bottom, #FFF 0%, #EAEAEA 62%, #EAEAEA 100%))
+	border: 1px solid #BDBDBD
+	+border-radius(5px)
+	+box-shadow(0.5px 0.9px 0 #FFF)
+	+box
+	&:hover
+		background: white
+		+background-image(none)
+		+box-shadow(none)
+	&:before
+		position: absolute
+		content: ''
+		right: 10px
+		top: 50%
+		margin-top: -3px
+		+arr(8,7,#25292d,b)
+	.ico
+		position: absolute
+		left: 10px
+		top: 50%
+		margin-top: -11px
+	.choose-people__text
+		text-align: center
+		font-size: 18px
+	.choose-people__info
+		position: absolute
+		top: 0
+		right: -205px
+		padding-left: 10px
+		width: 193px
+		height: 40px
+		cursor: default
+		font-size: 13px
+		color: #000
+		background-color: #FFFDBC
+		+box
+		&:before
+			position: absolute
+			content: ''
+			left: -5px
+			top: 50%
+			margin-top: -5px
+			+arr(5,10,#fffdbc,l)
 
 // chackbox
 .checkbox
