@@ -123,6 +123,10 @@ label
 %blue
 	color: #5f86be
 
+// text-green
+.text-green
+	color: #48BF0D
+
 //yellow-block
 .yellow-block
 	padding: 12px 17px
@@ -551,7 +555,7 @@ label
 		position: absolute
 		left: 10px
 		top: 50%
-		margin-top: -11px
+		margin-top: -9px
 	.choose-people__text
 		text-align: center
 		font-size: 18px
@@ -711,7 +715,7 @@ label
 	font-size: 14px
 	color: #517DBA
 	font-weight: normal
-	background-color: #FCFAF9
+	background-color: #fcf9f7
 	display: block
 	&:before
 		position: absolute
@@ -798,13 +802,16 @@ label
 			position: absolute
 			content: ''
 			top: 50%
-			right: 15px
-			margin-top: -9px
-			+sr(arr-right)
+			right: 10px
+			width: 20px
+			height: 20px
+			margin-top: -15px
+			// +sr(arr-right)
 			&:before
 				position: absolute
 				content: ''
-				bottom: 9px
+				bottom: 4px
+				right: 0
 				height: 2px
 				width: 20px
 				background: #000
@@ -813,8 +820,8 @@ label
 			&:after
 				position: absolute
 				content: ''
-				bottom: 5px
-				right: 4px
+				bottom: 0
+				right: 15px
 				height: 2px
 				width: 10px
 				background: #000
@@ -883,7 +890,11 @@ label
 	.dropdown
 		margin-bottom: 20px
 	.filter__inf
-		font-size: 18px
+		font-size: 15px
+		&.filter__inf_mod
+			margin: 8px 0 5px
+			text-align: left
+			font-size: 16px
 	.filter__item
 		+box
 		&.is-active
@@ -1045,6 +1056,10 @@ label
 			margin-left: 5px
 	.email-gray
 		line-height: 36px
+	.info__wellas
+		margin-top: 15px
+		span
+			color: #8b9094
 
 // discounts
 .discounts
@@ -1415,7 +1430,19 @@ label
 		background: #f9f9b7
 	.is-inactive
 		background: #eebaaf
-		
+
+.check-date
+	padding: 0 0 10px
+	margin: 0 0 10px
+	color: $blue
+	text-align: center
+	text-decoration: none
+	line-height: 1.2
+	font-size: 16px
+	display: block
+	&:hover
+		text-decoration: underline
+
 // search
 .search
 	position: relative
@@ -1564,7 +1591,7 @@ label
 
 //title
 .title
-	padding: 15px 20px 12px
+	padding: 12px 20px
 	text-align: center
 	color: #25292D
 	font-size: 22px
@@ -1574,7 +1601,7 @@ label
 	&.title_left
 		text-align: left
 	&.title_blue
-		padding: 12px 0 18px
+		padding: 12px 0
 		color: #5F86BE
 		font-size: 18px
 		letter-spacing: -0.2px
@@ -1626,6 +1653,10 @@ label
 	&.is-active
 		.description__inf
 			display: block
+		.title
+			span
+				&:before
+					+rotate(180)
 	.description__text
 		padding: 10px 10px 0
 		font-size: 14px
@@ -1706,8 +1737,10 @@ label
 .apartment
 	margin-bottom: 14px
 	padding-bottom: 9px
-	background-color: #FCFAF9
+	background-color: #fcf9f7
+	text-decoration: none
 	+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+	display: block
 	.apartment__bottom,
 	.apartment__top
 		@extend %in
@@ -1761,8 +1794,12 @@ label
 		margin: 6px 0
 		font-size: 16px
 		color: #25292D
+		text-decoration: none
 		line-height: 1
+		display: block
 		+suisb
+		&:hover
+			text-decoration: underline
 		span
 			+suir
 	.apartment__location
@@ -2281,23 +2318,16 @@ label
 			position: absolute
 			left: 10px
 			top: 50%
+			+translate(0, -50%)
 		&.social__f
 			background: #3d5a9b
-			.ico
-				margin-top: -13px
 		&.social__g
 			background: #c0382c
-			.ico
-				margin-top: -11px
 		&.social__vk
 			background: #2f5e89
-			.ico
-				margin-top: -10px
 		&.social__od
 			padding-left: 15px
 			background: #ffa04c
-			.ico
-				margin-top: -18px
 
 // characteristics
 .characteristics
@@ -2330,12 +2360,13 @@ label
 		&:first-child
 			padding-left: 0
 	.convenience__item
-		padding: 9px 12px 7px
+		padding: 0 12px
 		height: 32px
 		min-width: 80px
 		font-size: 14px
-		line-height: 1.1
+		line-height: 32px
 		color: #25292D
+		word-wrap: break-all
 		text-align: center
 		background-color: #F4EEEA
 		+border-radius(2.5px)
@@ -2448,6 +2479,7 @@ label
 	padding: 5px
 	color: #fff
 	font-size: 14px
+	text-decoration: none
 	z-index: 2
 	background: rgba(#25292D, .5)
 	+suir
