@@ -2066,6 +2066,73 @@ label
 			+suir
 	.like
 		float: right
+	.reviews__recommends
+		position: relative
+		padding: 8px 0 8px 14px
+		border-top: 1px solid #CAC7C5
+		+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
+		background: #f9f9f9
+		+clr
+		& + .reviews__block
+			padding: 10px
+			@extend %in
+		.date
+			position: absolute
+			right: 0
+			top: 50%
+			width: 25%
+			text-align: center
+			+translate(0, -50%)
+			border: none
+			display: block
+		.recommends
+			width: 75%
+	.reviews__comm-rec
+		margin: 10px 0
+		color: #25292D
+		font-family: "Arial"
+		font-size: 11px
+		font-weight: 400
+		line-height: 1.2
+
+// answer
+.answer
+	padding: 6px 10px
+	font-size: 11px
+	background-color: #F9F9F9
+	+suisb
+
+// recommends
+.recommends
+	position: relative
+	float: left
+	line-height: 1.4
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		width: 1px
+		background: #ddd
+	.recommends__title
+		color: $blue
+		font-size: 15px
+		+suir
+	.recommends__user
+		position: relative
+		padding-left: 18px
+		color: #7fc41e
+		font-size: 11px
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			+translate(0, -50%)
+			+sr(ico-recommends)
+
+
 // indicators
 .indicators
 	@extend %in
@@ -2371,7 +2438,8 @@ label
 		font-size: 14px
 		line-height: 32px
 		color: #25292D
-		word-wrap: break-all
+		word-break: break-all
+		overflow: hidden
 		text-align: center
 		background-color: #F4EEEA
 		+border-radius(2.5px)
@@ -2477,6 +2545,7 @@ label
 		.btn
 			width: 93%
 
+// price-block
 .price-black
 	position: absolute
 	left: 0
@@ -2489,6 +2558,9 @@ label
 	background: rgba(#25292D, .5)
 	+suir
 	&:hover
+		.price-black__bott
+			text-decoration: none
+	&:hover
 		background: rgba(#25292D, .79)
 	.price-black__top
 		line-height: 1
@@ -2499,8 +2571,6 @@ label
 		text-decoration: underline
 		cursor: pointer
 		display: block
-		&:hover
-			text-decoration: none
 
 // catalog
 .catalog
