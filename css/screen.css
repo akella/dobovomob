@@ -448,7 +448,8 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .apartment .apartment__photo { position: relative; margin: 8px 0; }
 .apartment .apartment__photo img { width: 100%; display: block; }
 .apartment .apartment__photo .price-black { top: 15px; bottom: auto; }
-.apartment .apartment__title { position: relative; color: #25292d; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
+.apartment .apartment__title { position: relative; color: #25292d; font-size: 16px; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
+.apartment .apartment__title:hover { text-decoration: underline; }
 .apartment .apartment__title:before { position: absolute; content: ""; top: 0; right: 0; bottom: 0; width: 105px; background: #fcfaf9; z-index: 1; -moz-box-shadow: 0 0 25px 14px #fcfaf9; -webkit-box-shadow: 0 0 25px 14px #fcfaf9; box-shadow: 0 0 25px 14px #fcfaf9; }
 .apartment .apartment__title2 { margin: 6px 0; font-size: 16px; color: #25292d; text-decoration: none; line-height: 1; display: block; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 .apartment .apartment__title2:hover { text-decoration: underline; }
@@ -483,6 +484,7 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 
 .price-all { font-size: 14px; color: #25292d; }
 
+.rating { color: black; }
 .rating .rating__estimate { margin-left: 3px; font-size: 14px; text-decoration: none; cursor: pointer; color: #5f86be; font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; display: inline-block; }
 
 .slider-wrap { position: relative; }

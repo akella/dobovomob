@@ -1776,10 +1776,14 @@ label
 		position: relative
 		color: #25292D
 		font-size: 16px
+		text-decoration: none
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
+		display: block
 		+suisb
+		&:hover
+			text-decoration: underline
 		&:before
 			position: absolute
 			content: ''
@@ -1926,6 +1930,7 @@ label
 
 // rating
 .rating
+	color: #000
 	.rating__estimate
 		margin-left: 3px
 		font-size: 14px
