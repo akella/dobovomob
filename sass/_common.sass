@@ -153,9 +153,14 @@ label
 // block-gray
 .block-gray
 	padding: 8px
+	width: 100%
+	display: block
 	background-color: #f4f4f4
 	+border-radius(4px)
 	+box
+label.block-gray
+	input
+		margin-right: 2px
 
 // header
 .header
@@ -710,6 +715,15 @@ label
 				top: 50%
 				+translate(0,-50%) 
 				vertical-align: top
+	&.tabs_login
+		text-align: center
+		.btn
+			font-size: 21px
+		.form
+			text-align: left
+			margin-bottom: 20px
+		.title.title_blue
+			padding: 0
 
 // clean-basket
 .clean-basket
@@ -1466,7 +1480,7 @@ label
 		position: absolute
 		top: 50%
 		right: 10px
-		margin-top: -15px
+		margin-top: -13px
 		cursor: pointer
 		z-index: 1203
 		+sr(search-input-btn)
