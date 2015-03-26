@@ -44,7 +44,7 @@
 			+background-image(none)
 	&.btn_green
 		height: 49px
-		line-height: 49px
+		line-height: 47px
 		background-color: #6DAE10
 		+gt(#229A00 0%, #2CBD00 100%)
 		border: 1px solid #5D9A07
@@ -162,7 +162,7 @@
 			content: ''
 			top: 50%
 			left: 15px
-			margin-top: -16px
+			margin-top: -15px
 			+sr(ico-phone)
 	&.btn_filter
 		position: relative
@@ -190,6 +190,27 @@
 		.ico
 			margin-right: 10px
 			vertical-align: bottom
+	&.btn_mail
+		position: relative
+		height: 49px
+		color: #000
+		font-size: 18px
+		line-height: 49px
+		text-transform: lowercase
+		background-color: #fff
+		+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+		border: 1px solid #E2E2E2
+		+box-shadow(0 1px 1px #B8B4B2)
+		+suir
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 18px
+			margin-top: -11px
+			+sr(ico-mail-gray)
+		&:hover
+			+background-image(none)
 
 .btn-dashed
 	color: #5F86BE
