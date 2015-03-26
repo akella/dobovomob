@@ -342,4 +342,9 @@ head.ready(function() {
 		event.stopPropagation();
 	});
 
+	// click
+	$('.like').on('click', function(){
+		$(this).addClass('is-active');
+	});
+
 });
