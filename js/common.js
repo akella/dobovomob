@@ -347,4 +347,42 @@ head.ready(function() {
 		$(this).addClass('is-active');
 	});
 
+	// calendar
+	function calendar() {
+		var calendar = $('.calendar');
+		calendar.each(function(){
+			// get date
+			var from = $( ".is-selected.in" ).attr('date');
+			var to = $( ".is-selected.out" ).attr('date');
+			// add date
+			$('.js-check-date').bind("click", function(){
+				var to_text = $(".datepicker__to-text");
+				var from_text = $(".datepicker__from-text");
+				to_text.html(to);
+				from_text.html(from);
+				// add span from (to)
+				var to_block = to_text.html();
+				var new_to_block = "";
+					to_block = to_block.split(" ");
+					for ( i = 0; i < to_block.length; i++ ) {
+					new_to_block = new_to_block + "<span>" + to_block[i] + "</span>";
+				}
+				to_text.html(new_to_block);
+				// add span from (from)
+				var from_block = from_text.html();
+				var new_from_block = "";
+					from_block = from_block.split(" ");
+					for ( i = 0; i < from_block.length; i++ ) {
+					new_from_block = new_from_block + "<span>" + from_block[i] + "</span>";
+				}
+				from_text.html(new_from_block);
+				// hide popup calendar
+				$('.popup').hide();
+				$('body').removeClass('is-fixed');
+				return false;
+			});
+		});
+	}
+	calendar();
+
 });
