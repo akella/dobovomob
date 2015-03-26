@@ -505,6 +505,9 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 .slider .apartment.slick-active { display: block; }
 .slider .apartment__photo { margin-top: 0; }
 
+.slick-slider .apartment__photo { height: 201px; }
+.slick-slider .apartment__photo img { position: relative; left: 50%; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); height: 100%; display: block; }
+
 .date { font-size: 10px; color: #5c6064; line-height: 13px; font-family: "Arial"; }
 
 .reviews .reviews__item { margin-top: 12px; border-bottom: 1px solid #cac7c5; }
