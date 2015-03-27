@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Avocode 1.1.1 - http://avocode.com -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="82" viewBox="0 0 78 82">
+    <desc>Created with Avocode</desc>
+    <defs>
+        <linearGradient id="gradient-1" x1="0%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#0badff" />
+            <stop offset="100%" stop-color="#3fbeff" />
+        </linearGradient>
+        <filter id="filter-2" x="-50%" y="-50%" width="200%" height="200%">
+            <feOffset dx="0.5" dy="0.9" in="SourceAlpha" result="shadowOffset1" />
+            <feGaussianBlur in="shadowOffset1" result="shadowBlur1" stdDeviation="1" />
+            <feColorMatrix values="0 0 0 0 0.8313725490196079   0 0 0 0 0.788235294117647   0 0 0 0 0.7647058823529411   0 0 0 1 0" type="matrix" in="shadowBlur1" result="shadowMatrix1" />
+            <feMerge>
+                <feMergeNode in="shadowMatrix1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="filter-3" x="-50%" y="-50%" width="200%" height="200%">
+            <feOffset dx="0.5" dy="0.9" in="SourceAlpha" result="shadowOffset1" />
+            <feGaussianBlur in="shadowOffset1" result="shadowBlur1" stdDeviation="1" />
+            <feColorMatrix values="0 0 0 0 0.8313725490196079   0 0 0 0 0.788235294117647   0 0 0 0 0.7647058823529411   0 0 0 1 0" type="matrix" in="shadowBlur1" result="shadowMatrix1" />
+            <feMerge>
+                <feMergeNode in="shadowMatrix1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <path d="M 8.82 10.69 C 4.23 10.69, 0.5 14.42, 0.5 19 L 0.5 66.78 C 0.5 71.37, 4.23 75.09, 8.82 75.09 L 62.89 75.09 C 67.48 75.09, 71.2 71.37, 71.2 66.78 L 71.2 19 C 71.2 14.42, 67.48 10.69, 62.89 10.69 L 8.82 10.69 Z" fill="#d6cfcb" stroke="#ffffff" stroke-width="1" />
+    <path d="M 2.8 24.84 C 1.08 25.84, 0.48 28.04, 1.48 29.77 L 14.11 51.61 C 15.1 53.34, 17.31 53.92, 19.03 52.93 L 59.65 29.51 C 61.37 28.51, 61.96 26.31, 60.97 24.59 L 48.34 2.74 C 47.34 1.02, 45.14 0.43, 43.41 1.42 L 2.8 24.84 Z" fill="#0e98de" />
+    <path d="M 6.98 24.55 C 4.76 25.15, 3.44 27.43, 4.04 29.64 L 11.57 57.73 C 12.16 59.95, 14.44 61.26, 16.66 60.67 L 68.89 46.69 C 71.11 46.1, 72.42 43.82, 71.83 41.6 L 64.29 13.51 C 63.7 11.3, 61.42 9.98, 59.2 10.58 L 6.98 24.55 Z" fill="url(#gradient-1)" filter="url(#filter-2)" />
+    <path d="M0.5,32.03079884504332C0.5,31.908324163703806,0.5,32.5632704444239,0.5000000000000001,33.550000000000004C0.5,41.469392560849535,0.5,70.94,0.5,70.94C0.5,75.52,4.23,79.24,8.82,79.24C8.82,79.24,64.97,79.24,64.97,79.24C69.56,79.24,73.28,75.52,73.28,70.94C73.28,70.94,73.28,31.47,73.28,31.47C73.28,26.88,69.56,23.16,64.97,23.16C64.97,23.16,20.54221709977802,23.16,10.900000000000004,23.160000000000004C10.900000000000015,23.16,10.900000000000007,23.16,10.9,23.16C0.5,23.16,0.5,12.77,0.5,12.77C0.5,12.77,0.5,27.426992492781523,0.5,31.47C0.5,31.887096165058402,0.5,32.23048139229393,0.5,32.03079884504332" fill="#ffffff" filter="url(#filter-3)" />
+    <path d="M 62.89 43.93 C 60.59 43.93, 58.73 45.79, 58.73 48.09 L 58.73 52.24 C 58.73 54.53, 60.59 56.4, 62.89 56.4 L 73.28 56.4 C 75.58 56.4, 77.44 54.53, 77.44 52.24 L 77.44 48.09 C 77.44 45.79, 75.58 43.93, 73.28 43.93 L 62.89 43.93 Z" fill="#d1c8c2" />
+</svg>

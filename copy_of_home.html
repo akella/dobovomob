@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out out_mod">
+	<!-- header -->
+	<header class="header">
+		<button class="btn-menu js-btn-menu"></button>
+		<a href="#" class="logo"></a>
+		<a href="#" class="btn-login">Войти</a>
+		<!-- menu -->
+		<div class="menu js-menu">
+			<div class="menu__in">
+				<div class="menu__wrap">
+					<div class="menu__search">
+						<input type="text" placeholder="Укажите ID...">
+						<button class="menu__search-btn"></button>
+					</div>
+				</div>
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#">Найти квартиру</a></li>
+					<li class="menu__item"><a href="#">О нас</a></li>
+					<li class="menu__item"><a href="#">Контакты</a></li>
+					<li class="menu__item"><a href="#">Условия пользования сервисом</a></li>
+					<li class="menu__item menu__item_light"><a href="#"><i class="ico ico_user"></i>Личный кабинет</a></li>
+					<li class="menu__item menu__item_light">
+						<a class="js-open-languages" href="#"><i class="ico ico_planet"></i>Языки 
+							<input class="js-languages-check" type="text" hidden>
+							<div class="menu__languages js-languages-check">RU</div>
+						</a>
+					</li>
+					<li class="menu__item menu__item_light">
+						<a class="js-open-currency" href="#"><i class="ico ico_currency"></i>Валюта
+							<input class="js-currency-check" type="text" hidden>
+							<div class="menu__currency js-currency-check">UAH</div>
+						</a>
+					</li>
+					<li class="menu__item menu__item_light"><a href="#"><i class="ico ico_consultation"></i>Онлайн консультация</a></li>
+				</ul>
+				<div class="menu__wrap">
+					<button class="btn btn_orange btn_phone">+38 (044) 271-55-11</button>
+					<div class="menu__copy">© 2010 - 2013 Dobovo.com  /  Все права защищены.</div>
+				</div>
+			</div>
+			<div class="languages">
+				<a href="#" class="languages__title js-close-languages">Язык</a>
+				<ul class="languages__list list">
+					<li class="list__item">
+						<label class="js-label-languages">
+							ru
+							<input class="js-input-languages" value="ru" name="languages" type="radio" checked><span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							ua
+							<input class="js-input-languages" value="ua" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							fr
+							<input class="js-input-languages" value="fr" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							be
+							<input class="js-input-languages" value="be" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							bg
+							<input class="js-input-languages" value="bg" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							nl
+							<input class="js-input-languages" value="nl" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-languages">
+							it
+							<input class="js-input-languages" value="it" name="languages" type="radio">
+							<span></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="currency">
+				<a href="#" class="currency__title js-close-currency">Валюта</a>
+				<ul class="currency__list list">
+					<li class="list__item">
+						<label class="js-label-curreccu">uah
+							<input class="js-input-currency" value="uah" name="currency" type="radio" checked>
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">ru
+							<input class="js-input-currency" value="ru" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+					<li class="list__item">
+						<label class="js-label-curreccu">usd
+							<input class="js-input-currency" value="usd" name="currency" type="radio">
+							<span></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- filter -->
+	<div class="filter filter_bg" id="filter">
+		<h3 class="filter__title">Онлайн бронирование квартир</h3>
+		<div class="filter__text">На сайте 3 914 квартиры, по 46 городам Украины</div>
+		<!-- search -->
+		<div class="search">
+			<div class="search__chosen">
+				<select class="select-chosen" multiple data-placeholder="Выберите город..." tabindex="-1" id="selUMW">
+					<option value=""></option>
+					<option data-type="Киев" data-user="(90 квартир)">Киев</option>
+					<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
+					<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
+					<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
+					<option data-type="Киев" data-user="(90 квартир)">Киев</option>
+					<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
+					<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
+					<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
+				</select>
+				<button class="search__input-btn js-open-town"></button>
+			</div>
+			<button class="search__btn"></button>
+			<!-- drop-town -->
+			<div class="drop-town js-town">
+				<h3 class="drop-town__title">Популярные города</h3>
+				<ul>
+					<li>Киев<span>(120 квартир)</span></li>
+					<li>Одесса<span>(100 квартир)</span></li>
+					<li>Харьков<span>(100 квартир)</span></li>
+					<li>Днепропетровск<span>(100 квартир)</span></li>
+				</ul>
+				<h3 class="drop-town__title">Все города</h3>
+				<ul>
+					<li>Алупка<span>(90 квартир)</span></li>
+					<li>Алупка<span>(100 квартир)</span></li>
+					<li>Алупка<span>(100 квартир)</span></li>
+					<li>Алупка<span>(100 квартир)</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- tags -->
+		<div class="tags">
+			<div class="tags__item"><a href="#">Киев</a></div>
+			<div class="tags__item"><a href="#">Львов</a></div>
+			<div class="tags__item"><a href="#">Одесса</a></div>
+			<div class="tags__item"><a href="#">Харьков</a></div>
+		</div>
+		<!-- dropdown -->
+		<div class="dropdown">
+			<div class="dropdown__col">
+				<div class="datepicker">
+					<i class="ico ico_from"></i>
+					Заезд
+				</div>
+			</div>
+			<div class="dropdown__col">
+				<div class="datepicker">
+					<i class="ico ico_to"></i>
+					Выезд
+				</div>
+			</div>
+			<div class="dropdown__col dropdown__col_people">
+				<div class="people js-open-popup">
+					<i class="ico ico_people"></i>
+					<input class="js-people" type="text" hidden>
+					<div class="people__number js-people">1</div>
+				</div>
+					<!-- popup -->
+					<div class="popup">
+						<div class="popup__in">
+							<div class="popup__header">
+								Укажыте количество людей
+								<button class="popup__close"></button>
+							</div>
+							<ul class="list">
+								<li class="list__item">
+									<label class="js-label-people">
+										1 человек
+										<input class="js-input-people" value="1" name="people" type="radio" checked>
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										2 человек
+										<input class="js-input-people" value="2" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										3 человек
+										<input class="js-input-people" value="3" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										4 человек
+										<input class="js-input-people" value="4" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										5 человек
+										<input class="js-input-people" value="5" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										6 человек
+										<input class="js-input-people" value="6" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										7 человек
+										<input class="js-input-people" value="7" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										8 и больше человек
+										<input class="js-input-people" value="8" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="filter__inf">2 ночи проживания</div>
+		<button class="btn btn_red">Найти квартиру</button>
+	</div>
+	<!-- steps -->
+	<div class="steps">
+		<div class="steps__item">
+			<div class="steps__col">
+				<div class="step__number">1</div>
+				<i class="ico ico_step-date"></i>
+				<div class="step__text">Укажите даты</div>
+			</div>
+		</div>
+		<div class="steps__item steps__item_right">
+			<div class="steps__col">
+				<i class="ico ico_step-marker"></i>
+				<div class="step__text">Выберите квартиру</div>
+				<div class="step__number">2</div>
+			</div>
+		</div>
+		<div class="steps__item">
+			<div class="steps__col">
+				<div class="step__number">3</div>
+				<i class="ico ico_purse"></i>
+				<div class="step__text">Забронируйте</div>
+			</div>
+		</div>
+		<div class="steps__item steps__item_right">
+			<div class="steps__col">
+				<i class="ico ico_key"></i>
+				<div class="step__text">Заселяйтесь и отдыхайте</div>
+				<div class="step__number">4</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- title -->
+		<h3 class="title">Популярные города</h3>
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__top">
+				<div class="apartment__left">
+					<p><a class="apartment__town" href="#">Киев</a></p>
+					<p><a class="apartment__amount" href="#">123 квартиры</a></p>
+				</div>
+				<div class="apartment__price-from">от 78 грн. в сутки</div>
+			</div>
+			<div class="apartment__photo">
+				<img src="img/img1.png" alt="">
+				<div class="price">390<span>грн.</span><span>в сутки</span></div>
+			</div>
+			<div class="apartment__bottom">
+				<a href="#" class="apartment__title">Двухуровневая квартира в самом центре</a>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
+				</div>
+			</div>
+		</div>
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__top">
+				<div class="apartment__left">
+					<p><a class="apartment__town" href="#">Одеса</a></p>
+					<p><a class="apartment__amount" href="#">123 квартиры</a></p>
+				</div>
+				<div class="apartment__price-from">от 78 грн. в сутки</div>
+			</div>
+			<div class="apartment__photo">
+				<img src="img/img2.png" alt="">
+				<div class="price">390<span>грн.</span><span>в сутки</span></div>
+			</div>
+			<div class="apartment__bottom">
+				<a href="#" class="apartment__title">Двухуровневая квартира в самом центре</a>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
+				</div>
+			</div>
+		</div>
+		<!-- apartment -->
+		<div class="apartment">
+			<div class="apartment__top">
+				<div class="apartment__left">
+					<p><a class="apartment__town" href="#">Львов</a></p>
+					<p><a class="apartment__amount" href="#">123 квартиры</a></p>
+				</div>
+				<div class="apartment__price-from">от 78 грн. в сутки</div>
+			</div>
+			<div class="apartment__photo">
+				<img src="img/img3.png" alt="">
+				<div class="price">390<span>грн.</span><span>в сутки</span></div>
+			</div>
+			<div class="apartment__bottom">
+				<a href="#" class="apartment__title">Двухуровневая квартира в самом центре</a>
+				<div class="apartment__inf">21 авг- 23 авг (3 ночи)</div>
+				<!-- rating -->
+				<div class="rating">
+					Оценка по 5 отзывам:
+					<div class="rating__estimate">Превосходно 9.2</div>
+				</div>
+			</div>
+		</div>
+		<!-- more -->
+		<div class="more"><button class="btn btn_white">показать еще</button></div>
+		<!-- title -->
+		<h3 class="title">Добово - это:</h3>
+		<!-- stat -->
+		<div class="stat">
+			<div class="stat__row">
+				<div class="stat__col">
+					<div class="stat__all">
+						<div class="stat__text">
+							<div class="stat__text-top">12 458</div>
+							<p>всего отзывов</p>
+						</div>
+					</div>
+				</div>
+				<div class="stat__col">
+					<div class="stat__comm">
+						<div class="stat__text">
+							<div class="stat__text-top">58</div>
+							<p>за прошлую неделю</p>
+						</div>
+					</div>
+					<div class="stat__comm">
+						<div class="stat__text">
+							<div class="stat__text-top">196</div>
+							<p>за прошлый месяц</p>
+						</div>
+					</div>
+					<div class="stat__comm">
+						<div class="stat__text">
+							<div class="stat__text-top">2 371</div>
+							<p>за прошлый год</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="stat__row">
+				<div class="stat__col">
+					<span class="ico ico_ap"></span>
+					<div class="stat__text">
+						<div class="stat__text-top">3 194</div>
+						<p>Квартиры</p>
+					</div>
+				</div>
+				<div class="stat__col">
+					<span class="ico ico_owners"></span>
+					<div class="stat__text">
+						<div class="stat__text-top">899</div>
+						<p>Хозяев</p>
+					</div>
+				</div>
+			</div>
+			<div class="stat__row">
+				<div class="stat__col">
+					<span class="ico ico_bed"></span>
+				</div>
+				<div class="stat__col">
+					<div class="stat__text stat__text-nights">
+						<div class="stat__text-top">105 605</div>
+						<p>Забронированых ночей</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="footer__row">
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Помощь</a></li>
+					<li><a href="#">Партнерство</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Вакансии</a></li>
+				</ul>
+				<!-- links -->
+				<ul class="links">
+					<li><a href="#">Пресса и Добово</a></li>
+					<li><a href="#">Условия пользования</a></li>
+					<li><a href="#">Личный кабинет</a></li>
+					<li><a href="#">Вход для владельца</a></li>
+					<li><a href="#">Блог</a></li>
+				</ul>
+			</div>
+			<!-- phone -->
+			<div class="phone">(+38 044) 221-55-11</div>
+			<button class="btn btn_green-small">Добавить квартиру</button>
+		</div>
+		<div class="footer__bottom">
+			<ul class="soc">
+				<li class="soc__item"><a href="#" class="soc__f"><i class="ico ico_f"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__tw"><i class="ico ico_tw"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__vk"><i class="ico ico_vk"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__od"><i class="ico ico_od"></i></a></li>
+				<li class="soc__item"><a href="#" class="soc__g"><i class="ico ico_g"></i></a></li>
+			</ul>
+			<div class="footer__row">
+				<a href="#" class="footer__logo"></a>
+				<div class="footer__copy">
+					<p>© 2010 - 2013 Dobovo.com</p>
+					<p>Все права защищены.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
