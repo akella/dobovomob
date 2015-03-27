@@ -2886,6 +2886,44 @@ label.block-gray
 		&:before
 			+sr(blue-comm)
 
+// profile
+.profile
+	.profile__top
+		padding: 15px 18px 12px
+		background: #ebebeb
+	.profile__title
+		margin-bottom: 5px
+		font-size: 17px
+	.profile__user
+		position: relative
+		text-decoration: none
+		color: #000
+		padding: 19px 0 19px 72px
+		display: block
+	.profile__img
+		position: absolute
+		top: 50%
+		left: 0
+		margin-right: 17px
+		overflow: hidden
+		width: 58px
+		height: 58px
+		+border-radius(50%)
+		+translate(0, -50%)
+		display: inline-block
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			+translate(-50%, -50%)
+	.profile__name
+		font-size: 19px
+		+suisb
+	.form
+		padding: 0 10px 10px
+		font-size: 15px
+
+
 // text-none
 .text-none
 	position: relative

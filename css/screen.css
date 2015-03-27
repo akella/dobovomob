@@ -750,6 +750,14 @@ label.block-gray input { margin-right: 2px; }
 .user .user__f:before { background: url('../img/icons-s05f83d6b8c.png') 0 -595px no-repeat; background-position: 0 -298px; width: 25.5px; height: 25.5px; -moz-background-size: 171px 2105px; -webkit-background-size: 171px 2105px; background-size: 171px 2105px; }
 .user .user__rec:before { background: url('../img/icons-s05f83d6b8c.png') 0 -540px no-repeat; background-position: 0 -270px; width: 27.5px; height: 22.5px; -moz-background-size: 171px 2105px; -webkit-background-size: 171px 2105px; background-size: 171px 2105px; }
 
+.profile .profile__top { padding: 15px 18px 12px; background: #ebebeb; }
+.profile .profile__title { margin-bottom: 5px; font-size: 17px; }
+.profile .profile__user { position: relative; text-decoration: none; color: black; padding: 19px 0 19px 72px; display: block; }
+.profile .profile__img { position: absolute; top: 50%; left: 0; margin-right: 17px; overflow: hidden; width: 58px; height: 58px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; -moz-transform: translate(0, -50%); -ms-transform: translate(0, -50%); -webkit-transform: translate(0, -50%); transform: translate(0, -50%); display: inline-block; }
+.profile .profile__img img { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.profile .profile__name { font-size: 19px; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
+.profile .form { padding: 0 10px 10px; font-size: 15px; }
+
 .text-none { position: relative; color: #f0f0f0; background: #f0f0f0; }
 .text-none:before { position: absolute; content: ""; left: 0; right: 0; bottom: -2px; height: 2px; background: #f0f0f0; }
 
