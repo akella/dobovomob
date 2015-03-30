@@ -385,4 +385,23 @@ head.ready(function() {
 	}
 	calendar();
 
+	// toggle checkbox
+	function toggle() {
+		$('.js-toggle').on('change', function() {
+			if ($(this).is(':checked')) {
+				$(this).parent().parent().addClass('is-active');
+				$(".select-chosen").trigger('chosen:activate');
+			}
+			else {
+				$(this).parent().parent().removeClass('is-active');
+			}
+		});
+	}
+	toggle();
+
+	// addcomment
+	$('.js-addcomment').on('click', function(){
+		$(this).parent().toggleClass('is-active');
+	});
+
 });

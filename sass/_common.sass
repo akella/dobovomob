@@ -131,6 +131,11 @@ label
 .yellow-block
 	padding: 12px 17px
 	background: $yellow
+	a
+		color: #5F86BE
+		text-decoration: underline
+		&:hover
+			text-decoration: none
 
 // email-gray
 .email-gray
@@ -201,7 +206,6 @@ label.block-gray
 		left: 50%
 		margin: -14px 0 0 -16px 
 		+sr(ico-btn-menu)
-		// background-position: 0 -423px
 .btn-login
 	float: right
 	margin-top: 7px
@@ -440,6 +444,14 @@ label.block-gray
 		&:focus
 			+placeholder
 				font-size: 0
+// input-btn
+.input-btn
+	position: absolute
+	top: 50%
+	right: 10px
+	margin-top: -13px
+	cursor: pointer
+	+sr(search-input-btn)
 
 // form
 .form
@@ -455,7 +467,7 @@ label.block-gray
 		background-color: #FFF
 		border: 1px solid #E2E3EA
 		+border-radius(1px)
-		+box-shadow(inset 0.5px 0.9px 1px #000)
+		+box-shadow(inset 1px 1px 1px #bfbfbf)
 		+suir
 		display: block
 		+box
@@ -485,6 +497,11 @@ label.block-gray
 		.btn_white-2
 			margin-left: 4%
 			width: 40%
+	.toggle
+		input
+			display: none
+	.form__ex
+		font-size: 12px
 
 // forgot-pass
 .forgot-pass
@@ -555,6 +572,7 @@ label.block-gray
 	+border-radius(5px)
 	+box-shadow(0.5px 0.9px 0 #FFF)
 	+box
+	display: block
 	&:hover
 		background: white
 		+background-image(none)
@@ -574,6 +592,7 @@ label.block-gray
 	.choose-people__text
 		text-align: center
 		font-size: 18px
+		color: #000
 	.choose-people__info
 		position: absolute
 		top: 0
@@ -593,6 +612,8 @@ label.block-gray
 			top: 50%
 			margin-top: -5px
 			+arr(5,10,#fffdbc,l)
+	input
+		display: none
 
 // chackbox
 .checkbox
@@ -612,31 +633,40 @@ label.block-gray
 // toggle
 .toggle
 	position: relative
-	padding-left: 19px
-	height: 51px
-	line-height: 42px
-	width: 100%
-	cursor: pointer
-	background-color: white
-	border: 1px solid #d6d6d6
-	+border-radius(2px)
-	display: block
-	+box
-	&:hover
-		background: #f4f4f4
+	&.is-active
+		.toggle__block
+			display: block
+	.toggle__block
+		display: none
+		input
+			display: block
+	.toggle__label
+		position: relative
+		padding: 0 90px 0 19px
+		height: 51px
+		line-height: 42px
+		width: 100%
+		cursor: pointer
+		background-color: white
+		border: 1px solid #d6d6d6
+		+border-radius(2px)
+		display: block
+		+box
+		&:hover
+			background: #f4f4f4
 	.toggle__text
 		color: black
 		font-size: 16px
 		vertical-align: middle
 		line-height: 19px
 		display: inline-block
-	input
+	input[type="checkbox"]
 		display: none
 		&:checked + .toggle__checkbox
 			background: #28ae00
 			&:before
 				left: auto
-				right: 0
+				right: 1px
 	.toggle__checkbox
 		position: absolute
 		right: 11px
@@ -1482,15 +1512,6 @@ label.block-gray
 		.chzn-choices .search-choice .search-choice-close
 			top: 11px
 			right: 26px
-	.search__input-btn
-		position: absolute
-		top: 50%
-		right: 10px
-		margin-top: -13px
-		cursor: pointer
-		z-index: 1203
-		+sr(search-input-btn)
-		// background-position: 0 -741px
 	.search__btn
 		position: absolute
 		top: 0
@@ -1512,7 +1533,8 @@ label.block-gray
 			left: 50%
 			margin: -13px 0 0 -13px
 			+sr(search-ico)
-			// background-position: 0 -710px
+	.input-btn
+		z-index: 1203
 
 // drop-town
 .drop-town
@@ -1913,6 +1935,15 @@ label.block-gray
 		.rating
 			color: #656b70
 			display: inline-block
+	.apartment__date
+		padding-left: 30px
+		font-size: 14px
+		strong
+			+suisb
+	.apartment__price
+		margin-top: 10px
+		padding-top: 10px
+		border-top: 1px solid #e8dddd
 
 // price
 .price
@@ -2720,6 +2751,11 @@ label.block-gray
 	z-index: 2
 	background: rgba(#25292D, .5)
 	+suir
+	&.price-black_big
+		padding: 6px 8px
+		font-size: 28px
+		.price-black__bott
+			font-size: 14px
 	&:hover
 		.price-black__bott
 			text-decoration: none
@@ -2922,6 +2958,123 @@ label.block-gray
 	.form
 		padding: 0 10px 10px
 		font-size: 15px
+
+// order
+.order
+	.order__topic
+		margin-top: 6px
+		padding: 11px 10px
+		font-size: 18px
+		background-color: #f6f6f6
+		border: 1px solid white
+		+box-shadow(0 1px 1px #b8b4b2, inset 0 -1px 0 white)
+		+suisb
+		+box
+		&:first-child
+			margin-top: 0
+		&.is-disabled
+			color: #A9A9A9
+	.order__topic-text
+		font-size: 12px
+		+suir
+	.order__in
+		padding: 10px 10px 15px 10px
+		color: #A9A9A9 
+	.order__title
+		font-size: 17px
+		line-height: 1.2
+		color: #000
+		+suisb
+	.order__row
+		margin-top: 15px
+	.toggle
+		margin: 15px 0
+	.apartment
+		margin-bottom: 0
+	.yellow-block
+		font-size: 16px
+		margin: 10px 12px
+	.form
+		margin-top: 13px
+	.form__ex
+		margin-top: -10px
+	.form__row
+		position: relative
+		margin-bottom: 12px
+	.chzn-container
+		padding-left: 8px
+		min-height: 36px
+		+background-image(none)
+		&:before
+			border: 1px solid #E2E3EA
+			z-index: 2
+			+border-radius(0)
+			+box-shadow(inset 0.5px 0.9px 1px #000)
+	.chzn-choices
+		input
+			height: 22px
+	.chzn-container-multi .chzn-choices .search-choice .search-choice-close
+		top: 11px
+		right: 26px
+	.btn.btn_white-gray
+		padding-left: 6px
+		text-transform: inherit
+		text-align: left
+		+suisb
+	.choose-people
+		margin-bottom: 15px
+
+.addcomment
+	&.is-active
+		.addcomment__top
+			+box-shadow(none)
+			+background-image(none)
+			&:before
+				+rotate(180)
+		.addcomment__block
+			display: block
+	.addcomment__top
+		position: relative
+		padding: 10px 18px 10px 7px
+		font-size: 14px
+		color: #25292D 
+		background-color: #f6f6f6
+		cursor: pointer
+		+user-select(none)
+		+background-image(linear-gradient(to top, #F2F2F2 0%, #F7F7F7 99%, #F7F7F7 100%))
+		+box-shadow(0.5px 0.9px 0 #AAAFAF)
+		+box
+		+suisb
+		&:hover
+			text-decoration: underline
+		&:before
+			position: absolute
+			content: ''
+			right: 8px
+			top: 50%
+			margin-top: -2px
+			+arr(8,7,#8b9094,b)
+	.addcomment__block
+		padding: 0 10px 10px
+		background: #f6f6f6
+		display: none
+	textarea
+		padding: 4px 0 0 10px
+		height: 74px
+		width: 100%
+		resize: none
+		font-size: 12px
+		border: 1px solid #E2E3EA
+		+border-radius(2px)
+		+box-shadow(inset 1px 1px 1px #bfbfbf)
+		background-color: #FFF
+		display: block
+		+suir
+		+placeholder-color(#848484)
+		+box
+		&:focus
+			+placeholder
+				font-size: 0
 
 
 // text-none
