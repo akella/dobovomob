@@ -1117,6 +1117,16 @@ label.block-gray
 		margin-top: 15px
 		span
 			color: #8b9094
+	.info__item
+		margin-top: 10px
+		color: #000
+		&:first-child
+			margin-top: 0
+	a
+		color: #5F86BE
+		text-decoration: underline
+		&:hover
+			text-decoration: none
 
 // discounts
 .discounts
@@ -2977,16 +2987,27 @@ label.block-gray
 	.order__topic-text
 		font-size: 12px
 		+suir
+	.order__step
+		margin-top: 10px
 	.order__in
 		padding: 10px 10px 15px 10px
 		color: #A9A9A9 
-	.order__title
+		.yellow-block
+			margin: 15px 0 0 0
+			padding: 20px 38px 20px 20px
+			font-size: 12px
+			color: #000
+	.order__title,
+	.order__title-2
 		font-size: 17px
 		line-height: 1.2
 		color: #000
 		+suisb
+	.order__title-2
+		font-size: 15px
 	.order__row
 		margin-top: 15px
+		color: #000
 	.toggle
 		margin: 15px 0
 	.apartment
@@ -3023,6 +3044,8 @@ label.block-gray
 		+suisb
 	.choose-people
 		margin-bottom: 15px
+	.info
+		padding: 0
 
 .addcomment
 	&.is-active
