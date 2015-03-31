@@ -404,4 +404,40 @@ head.ready(function() {
 		$(this).parent().toggleClass('is-active');
 	});
 
+	// add date 
+	function discounts_day(){
+		var day = $(".js-discounts-day");
+		var to_text = $(".datepicker__to-text");
+		var from_text = $(".datepicker__from-text");
+		day.on('click', function(){
+			var from = $(this).attr('date-from');
+			var to = $(this).attr('date-to');
+			var page = $(this).attr("href");
+			// scroll top
+			$('html, body').animate({
+				scrollTop: $(page).offset().top
+			}, 600);
+			// add date
+			to_text.html(to);
+			from_text.html(from);
+			// add span from (to)
+			var to_block = to_text.html();
+			var new_to_block = "";
+				to_block = to_block.split(" ");
+				for ( i = 0; i < to_block.length; i++ ) {
+				new_to_block = new_to_block + "<span>" + to_block[i] + "</span>";
+			}
+			to_text.html(new_to_block);
+			// add span from (from)
+			var from_block = from_text.html();
+			var new_from_block = "";
+				from_block = from_block.split(" ");
+				for ( i = 0; i < from_block.length; i++ ) {
+				new_from_block = new_from_block + "<span>" + from_block[i] + "</span>";
+			}
+			from_text.html(new_from_block);
+			return false;
+		});
+	}
+	discounts_day();
 });

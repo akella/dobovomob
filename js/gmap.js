@@ -14,10 +14,10 @@ head.ready(function() {
 				'<div class="popup-map__top">'+
 					'<div class="popup-map__img">'+
 						'<img src="img/img-map.png" alt="">'+
-						'<div class="price-black">'+
+						'<a href="#" class="price-black">'+
 							'<strong class="price-black__top">9.1</strong>'+
 							'<span class="price-black__bott">12 отзывов</span>'+
-						'</div>'+
+						'</a>'+
 					'</div>'+
 					'<div class="popup-map__right">'+
 						'<a href="#" class="popup-map__title">Двухуровневая квартира в самом центре столицы</a>'+

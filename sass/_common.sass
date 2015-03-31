@@ -1175,6 +1175,11 @@ label.block-gray
 					border-left: none
 				span
 					text-decoration: line-through
+		a
+			color: #5f86be
+			text-decoration: none
+			&:hover
+				text-decoration: underline
 	.title.title_blue
 		position: absolute
 		bottom: 0
@@ -2657,11 +2662,11 @@ label.block-gray
 		overflow: initial !important
 	.gm-style-iw
 		width: 283px !important
-		top: -86px !important
-		left: -46px !important
+		top: -90px !important
+		left: -148px !important
 		max-height: 10px
 		& + div
-			right: -246px !important
+			right: -142px !important
 			top: -85px !important
 			height: 10px
 			overflow: hidden !important
@@ -2684,6 +2689,11 @@ label.block-gray
 		margin: 10px 0
 		&:before
 			display: none
+	.price-black
+		padding: 5px
+		font-size: 14px
+		.price-black__bott
+			font-size: 7px
 
 
 // popup-map
@@ -2696,8 +2706,9 @@ label.block-gray
 	&:before
 		position: absolute
 		content: ''
-		left: 36px
+		left: 50%
 		bottom: -15px
+		margin-left: -9px
 		+sr(arr-gmap-bot)
 	.popup-map__top
 		+clr
@@ -2754,9 +2765,9 @@ label.block-gray
 	position: absolute
 	left: 0
 	bottom: 5px
-	padding: 5px
+	padding: 3px 10px 4px
 	color: #fff
-	font-size: 14px
+	font-size: 18px
 	text-decoration: none
 	z-index: 2
 	background: rgba(#25292D, .5)
@@ -2776,7 +2787,7 @@ label.block-gray
 		+suib
 		display: block
 	.price-black__bott
-		font-size: 7px
+		font-size: 10px
 		text-decoration: underline
 		cursor: pointer
 		display: block

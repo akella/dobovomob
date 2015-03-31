@@ -182,121 +182,100 @@
 				</div>
 			</div>
 		</div>
-		<!-- in -->
-		<div class="yellow-block"><a href="#">Войдите</a>, что бы сэкономить время</div>
 		<div class="order__step">
 			<div class="order__topic">1. Личные данные</div>
 			<div class="order__in">
 				<div class="order__title">Ваши данные</div>
-				<div class="order__inf">Все поля обязательные для заполнения</div>
-				<!-- form -->
-				<div class="form">
-					<div class="form__row">
-						<input type="text" placeholder="Ваше имя...">
+				<div class="order__row">
+					<div class="info">
+						<div class="info__left">Контакты</div>
+						<div class="info__right">
+							<div class="info__item">Ирина Васильева</div>
+							<div class="info__item">Россия</div>
+							<div class="info__item"><a href="#">gennadiy_2000@mail.ru</a></div>
+							<div class="info__item">+7(903) 478-65-73</div>
+						</div>
 					</div>
-					<div class="form__row">
-						<input type="text" placeholder="Ваша фамилия...">
-					</div>
-					<div class="form__row">
-						<select class="select-chosen" multiple data-placeholder="Страна..." tabindex="-1" id="selUMW">
-							<option value=""></option>
-							<option data-type="Киев" data-user="(90 квартир)">Киев</option>
-							<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
-							<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
-							<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
-							<option data-type="Киев" data-user="(90 квартир)">Киев</option>
-							<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
-							<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
-							<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
-						</select>
-						<button class="input-btn"></button>
-					</div>
-					<div class="form__row">
-						<input type="text" placeholder="E-mail...">
-					</div>
-					<div class="form__row">
-						<input type="text" placeholder="Мобильный телефон...">
-					</div>
-					<div class="form__row"><div class="form__ex">Например, +380675433241</div></div>
-					<div class="choose-people js-open-popup">
-						<i class="ico ico_people"></i>
-						<input class="js-people" type="text">
-						<div class="choose-people__text js-people">3</div>
-						<div class="choose-people__info">Укажите количество гостей</div>
-						<!-- popup -->
-						<div class="popup">
-							<div class="popup__in">
-								<div class="popup__header">
-									Укажыте количество людей
-									<button class="popup__close"></button>
-								</div>
-								<ul class="list">
-									<li class="list__item">
-										<label class="js-label-people">
-											1 человек
-											<input class="js-input-people" value="1" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											2 человек
-											<input class="js-input-people" value="2" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											3 человек
-											<input class="js-input-people" value="3" name="people" type="radio" checked>
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											4 человек
-											<input class="js-input-people" value="4" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											5 человек
-											<input class="js-input-people" value="5" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											6 человек
-											<input class="js-input-people" value="6" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											7 человек
-											<input class="js-input-people" value="7" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-									<li class="list__item">
-										<label class="js-label-people">
-											8 и больше человек
-											<input class="js-input-people" value="8" name="people" type="radio">
-											<span></span>
-										</label>
-									</li>
-								</ul>
+				</div>
+				<!-- choose-people -->
+				<div class="order__row choose-people js-open-popup">
+					<i class="ico ico_people"></i>
+					<input class="js-people" type="text">
+					<div class="choose-people__text js-people">3</div>
+					<div class="choose-people__info">Укажите количество гостей</div>
+					<!-- popup -->
+					<div class="popup">
+						<div class="popup__in">
+							<div class="popup__header">
+								Укажыте количество людей
+								<button class="popup__close"></button>
 							</div>
+							<ul class="list">
+								<li class="list__item">
+									<label class="js-label-people">
+										1 человек
+										<input class="js-input-people" value="1" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										2 человек
+										<input class="js-input-people" value="2" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										3 человек
+										<input class="js-input-people" value="3" name="people" type="radio" checked>
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										4 человек
+										<input class="js-input-people" value="4" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										5 человек
+										<input class="js-input-people" value="5" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										6 человек
+										<input class="js-input-people" value="6" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										7 человек
+										<input class="js-input-people" value="7" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+								<li class="list__item">
+									<label class="js-label-people">
+										8 и больше человек
+										<input class="js-input-people" value="8" name="people" type="radio">
+										<span></span>
+									</label>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<!-- toggle -->
-				<div class="toggle is-active">
+				<div class="toggle">
 					<label class="toggle__label">
 						<div class="toggle__text">Нужны документы для командировки</div>
-						<input class="js-toggle" type="checkbox" checked>
+						<input class="js-toggle" type="checkbox">
 						<span class="toggle__checkbox"></span>
 					</label>
 					<div class="toggle__block">
@@ -319,10 +298,10 @@
 					</div>
 				</div>
 				<!-- toggle -->
-				<div class="toggle is-active">
+				<div class="toggle">
 					<label class="toggle__label">
 						<div class="toggle__text">Бронирую не для себя</div>
-						<input class="js-toggle" type="checkbox" checked>
+						<input class="js-toggle" type="checkbox">
 						<span class="toggle__checkbox"></span>
 					</label>
 					<div class="toggle__block">
@@ -360,14 +339,17 @@
 					</div>
 				</div>
 				<!-- addcomment -->
-				<div class="addcomment is-active">
+				<div class="addcomment">
 					<div class="addcomment__top js-addcomment">Добавыть комментарии или пожелания</div>
 					<div class="addcomment__block">
 						<textarea placeholder="Введите свой комментарий или пожелание"></textarea>
 					</div>
 				</div>
 				<div class="order__row">
-					<button class="btn btn_orange h36r4">отправить запрос</button>
+					<button class="btn btn_green-arr">text</button>
+				</div>
+				<div class="order__row">
+					<a href="#" class="title title_blue">бронировать без предоплаты &rarr;</a>
 				</div>
 			</div>
 			<div class="order__topic is-disabled">2. Подтверждение запроса</div>
