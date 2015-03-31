@@ -761,6 +761,163 @@ label.block-gray
 		.title.title_blue
 			padding: 0
 
+// tab
+.tab
+	.tab__list
+		margin-top: 12px
+		font-size: 0
+		&:first-child
+			margin-top: 0
+	.tab__item
+		padding-left: 6px
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		+box
+		&:first-child
+			padding-left: 0
+			padding-right: 6px
+		&.is-active
+			// &.ico_tab1
+			// 	+sr(ico-tab1)
+			.ico_tab2
+				+sr(ico-tab2-active)
+			.ico_tab3
+				+sr(ico-tab3-active)
+			.ico_tab4
+				+sr(ico-tab4-active)
+			.tab__link
+				background: #f0f0f0
+				+box-shadow(none)
+				+background-image(none)
+				border-bottom: none
+				&:before
+					display: block
+	.tab__link
+		position: relative
+		padding-top: 8px
+		height: 114px
+		color: #000
+		font-size: 11px
+		text-decoration: none
+		text-align: center
+		border: 1px solid #E2E2E2
+		+border-radius(5px)
+		+box-shadow(0 1px 1px #B8B4B2)
+		+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+		background-color: #BAD3E4
+		display: block
+		+box
+		&:before
+			position: absolute
+			content: ''
+			left: -1px
+			right: -1px
+			bottom: -13px
+			height: 17px
+			border-left: 1px solid #E2E2E2
+			border-right: 1px solid #E2E2E2
+			background: #f0f0f0
+			display: none
+	.tab__img
+		height: 80px
+		line-height: 80px
+		text-align: center
+		.ico
+			vertical-align: middle
+	.tab__cont
+		padding: 10px 5px 5px
+		margin-top: 12px
+		background-color: #F0F0F0
+		border: 1px solid #E2E2E2
+		+border-radius(5px 0 5px 5px)
+		font-size: 12px
+		display: none
+		&:first-child
+			+border-radius(0 5px 5px)
+		&.is-active
+			display: block
+		.way
+			.yellow-block
+				margin: 0
+				padding: 10px 14px 10px 14px
+			strong
+				+suib
+	.tab__title-2
+		margin: 10px 0 7px
+		font-size: 14px
+		text-align: center
+		+suir
+	.tab__ul
+		margin-bottom: 10px
+		list-style-type: disc
+		margin-left: 20px
+		li
+			margin-top: 3px
+			&:first-child
+				margin-top: 0
+	.form
+		textarea
+			font-size: 18px
+			height: 131px
+	.btn.btn_orange
+		height: 40px
+		line-height: 38px
+		font-size: 17px
+
+// way
+.way
+	margin-top: 10px
+	+border-radius(5px)
+	&:first-child
+		margin-top: 0
+	&.is-active
+		background: #fff
+		.way__in
+			display: block
+		.way__topic
+			+background-image(linear-gradient(to bottom, #E3E3E3 0%, #E3E3E3 0%, #F7F7F7 100%))
+			+suib
+	.way__topic
+		position: relative
+		padding-left: 55px
+		height: 41px
+		color: #494949
+		font-size: 16px
+		cursor: pointer
+		line-height: 36px
+		background-color: #F6F6F6
+		background-image: linear-gradient(to top, #F5F5F5 0%, #FFF 100%)
+		border: 1px solid #E2E2E2
+		+user-select(none)
+		+border-radius(5px)
+		+box-shadow(0 1px 1px #B8B4B2)
+		+box
+		span
+			line-height: 1
+			vertical-align: middle
+			display: inline-block
+	.way__ico
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 55px
+		line-height: 36px
+		text-align: center
+		.ico
+			vertical-align: middle
+	.way__in
+		padding: 6px
+		line-height: 1.1
+		display: none
+	.way__row
+		margin: 10px 0
+	.btn.btn_green
+		font-size: 17px
+		height: 40px
+		line-height: 39px
+
 // clean-basket
 .clean-basket
 	position: relative
@@ -1127,6 +1284,15 @@ label.block-gray
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+
+// edit
+.edit
+	font-size: 18px
+	color: #5F86BE
+	text-decoration: none
+	text-transform: uppercase
+	&:hover
+		color: #90B6EC
 
 // discounts
 .discounts
@@ -2982,6 +3148,8 @@ label.block-gray
 
 // order
 .order
+	&.order__step_gray
+		color: #A9A9A9
 	.order__topic
 		margin-top: 6px
 		padding: 11px 10px
@@ -3002,7 +3170,6 @@ label.block-gray
 		margin-top: 10px
 	.order__in
 		padding: 10px 10px 15px 10px
-		color: #A9A9A9 
 		.yellow-block
 			margin: 15px 0 0 0
 			padding: 20px 38px 20px 20px
@@ -3022,6 +3189,14 @@ label.block-gray
 		.title.title_blue
 			margin-top: 20px
 			padding: 0
+	.order__list
+		margin-top: 15px
+		list-style-type: disc
+		margin-left: 20px
+		li
+			margin-top: 15px
+			&:first-child
+				margin-top: 0
 	.toggle
 		margin: 15px 0
 	.apartment
@@ -3060,7 +3235,44 @@ label.block-gray
 		margin-bottom: 15px
 	.info
 		padding: 0
-
+		font-size: 15px
+		.edit
+			text-decoration: none
+	.price-app .price-all
+		font-size: 16px
+.reservation
+	padding: 13px
+	color: #000
+	+border-radius(4px)
+	background-color: #E2F2FD
+	font-size: 12px
+	strong
+		+suisb
+	.reservation__row
+		padding: 14px 0
+		border-top: 1px solid #bad3e4
+		+clr
+		&:first-child
+			border-top: none
+	.reservation__col
+		position: relative
+		float: left
+		width: 50%
+		line-height: 1.2
+		text-align: center
+		+box
+		&:first-child
+			border-right: 1px solid #bad3e4
+	.reservation__title
+		font-size: 15px
+	.reservation__number
+		font-size: 25px
+	.reservation__price
+		font-size: 25px
+		color: #48BF0D
+		span
+			font-size: 18px
+// addcomment
 .addcomment
 	&.is-active
 		.addcomment__top

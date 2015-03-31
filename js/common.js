@@ -236,6 +236,24 @@ head.ready(function() {
 		$('.slick-slider').slick('reinit');
 	});
 
+	// tab
+	function tab() {
+		$(".js-tab").each(function(){
+			var tab_link = $(this).find("a");
+			var tab_item = $(this).find("li");
+			var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+			tab_link.on("click", function() {
+				var index = $(this).attr("href");
+				$('.js-tab-item').removeClass("is-active");
+				$(this).parent().addClass("is-active");
+				tab_cont.removeClass('is-active');
+				$(this).parents(".js-tab-group").find("."+index).addClass("is-active");
+				return false;
+			});
+		});
+	}
+	tab();
+
 	// map in tabs
 	function initialize_map_tab() {
 		var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
@@ -440,4 +458,16 @@ head.ready(function() {
 		});
 	}
 	discounts_day();
+
+	// accordion
+	$('.js-accordion').on('click', function() {
+		var parent = $(this).parent();
+		if (parent.hasClass('is-active')) {
+			parent.removeClass('is-active');
+		}
+		else {
+			$('.js-accordion').parent().removeClass('is-active');
+			parent.addClass('is-active');
+		}
+	});
 });
