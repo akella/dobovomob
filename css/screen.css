@@ -792,6 +792,7 @@ label.block-gray input { margin-right: 2px; }
 .order .order__title, .order .order__title-2 { font-size: 17px; line-height: 1.2; color: black; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 .order .order__title-2 { font-size: 15px; }
 .order .order__row { margin-top: 15px; color: black; }
+.order .order__row .title.title_blue { margin-top: 20px; padding: 0; }
 .order .toggle { margin: 15px 0; }
 .order .apartment { margin-bottom: 0; }
 .order .yellow-block { font-size: 16px; margin: 10px 12px; }
