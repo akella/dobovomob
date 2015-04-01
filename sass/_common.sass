@@ -1290,6 +1290,17 @@ label.block-gray
 		input
 			+placeholder
 				font-size: 14px
+	&.info_mod
+		margin-top: 15px
+		font-size: 14px
+		.btn
+			height: 39px
+		input
+			+placeholder
+				font-size: 14px
+		.title-2
+			padding: 5px 0 0 
+			text-align: left
 	.info__row
 		margin: 15px 0
 		+clr
@@ -2004,12 +2015,27 @@ label.block-gray
 	border-top: 1px solid #c0d1d1
 	+box
 	&.is-active
-		.description__inf
+		.description__inf,
+		.description__block
 			display: block
 		.title
 			span
 				&:before
 					+rotate(180)
+	&.description_gray
+		padding-top: 0
+		border-top: none
+		&.is-active
+			.title.title_blue
+				border-bottom: none
+		.title.title_blue
+			text-transform: inherit
+			background: #ededed
+		.apartment__photo
+			margin-top: 0
+		.apartment
+			margin-bottom: 2px
+			background: #ededed
 	.description__text
 		padding: 10px 10px 0
 		font-size: 14px
@@ -2085,6 +2111,8 @@ label.block-gray
 				right: 0
 				margin-top: -5px/2
 				+arr(6,5,#5f86be,b)
+	.description__block
+		display: none
 
 // apartment
 .apartment
@@ -3076,6 +3104,10 @@ label.block-gray
 			padding: 0
 			margin: 20px 0
 			text-align: left
+	&.content_mod
+		padding-bottom: 0
+		p
+			margin-bottom: 0
 	p
 		margin-bottom: 15px
 
@@ -3375,6 +3407,9 @@ label.block-gray
 			border-right: 1px solid #bad3e4
 	.reservation__title
 		font-size: 15px
+	.reservation__title-2
+		font-size: 17px
+		+suisb
 	.reservation__number
 		font-size: 25px
 	.reservation__price
@@ -3382,6 +3417,25 @@ label.block-gray
 		color: #48BF0D
 		span
 			font-size: 18px
+	&.reservation_mod
+		background: #fff
+		.yellow-block
+			margin-top: 13px
+			font-size: 15px
+			line-height: 1.2
+			padding: 13px 17px
+			+border-radius(2px)
+		.reservation__row
+			margin: 10px 0 0
+			padding: 0
+			text-align: center
+			border: none
+		.reservation__title,
+		.reservation__number
+			display: inline-block
+		.reservation__title
+			margin-right: 10px
+			vertical-align: text-bottom
 
 // addcomment
 .addcomment

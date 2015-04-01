@@ -330,6 +330,14 @@ label.block-gray input { margin-right: 2px; }
 .info.info_answer input::-moz-placeholder { font-size: 14px; }
 .info.info_answer input::-webkit-input-placeholder { font-size: 14px; }
 .info.info_answer input::placeholder { font-size: 14px; }
+.info.info_mod { margin-top: 15px; font-size: 14px; }
+.info.info_mod .btn { height: 39px; }
+.info.info_mod input:-ms-input-placeholder { font-size: 14px; }
+.info.info_mod input:-moz-placeholder { font-size: 14px; }
+.info.info_mod input::-moz-placeholder { font-size: 14px; }
+.info.info_mod input::-webkit-input-placeholder { font-size: 14px; }
+.info.info_mod input::placeholder { font-size: 14px; }
+.info.info_mod .title-2 { padding: 5px 0 0; text-align: left; }
 .info .info__row { margin: 15px 0; *zoom: 1; }
 .info .info__row:after { content: " "; display: table; clear: both; }
 .info .info__left { float: left; width: 82px; color: #ababab; }
@@ -509,8 +517,13 @@ label.block-gray input { margin-right: 2px; }
 .title-line span { position: relative; padding: 0 16px; text-transform: uppercase; z-index: 1; background: white; display: inline-block; }
 
 .description { position: relative; padding: 10px 0 0; overflow-y: hidden; border-top: 1px solid #c0d1d1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.description.is-active .description__inf { display: block; }
+.description.is-active .description__inf, .description.is-active .description__block { display: block; }
 .description.is-active .title span:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.description.description_gray { padding-top: 0; border-top: none; }
+.description.description_gray.is-active .title.title_blue { border-bottom: none; }
+.description.description_gray .title.title_blue { text-transform: inherit; background: #ededed; }
+.description.description_gray .apartment__photo { margin-top: 0; }
+.description.description_gray .apartment { margin-bottom: 2px; background: #ededed; }
 .description .description__text { padding: 10px 10px 0; font-size: 14px; line-height: 1.2; color: #25292d; }
 .description .description__text + .title { position: relative; z-index: 2; -moz-box-shadow: 0 -19px 35px white; -webkit-box-shadow: 0 -19px 35px white; box-shadow: 0 -19px 35px white; }
 .description .description__inf { margin-top: 20px; padding: 10px 10px 0; background: #f8f5f3; display: none; }
@@ -530,6 +543,7 @@ label.block-gray input { margin-right: 2px; }
 .description .title.title_blue { border-bottom: 1px solid #c0d1d1; }
 .description .title.title_blue span { position: relative; padding-right: 15px; }
 .description .title.title_blue span:before { position: absolute; content: ""; top: 50%; right: 0; margin-top: -2.5px; width: 0px; height: 0px; border-style: solid; border-width: 5px 3px 0 3px; border-color: #5f86be transparent transparent transparent; }
+.description .description__block { display: none; }
 
 .apartment { margin-bottom: 14px; padding-bottom: 9px; background-color: #fcf9f7; text-decoration: none; -moz-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; -webkit-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; display: block; }
 .apartment .apartment__bottom, .apartment .apartment__top { *zoom: 1; }
@@ -798,6 +812,8 @@ label.block-gray input { margin-right: 2px; }
 
 .content { padding: 0 10px 12px; line-height: 1.2; }
 .content.content_condition .title-2 { padding: 0; margin: 20px 0; text-align: left; }
+.content.content_mod { padding-bottom: 0; }
+.content.content_mod p { margin-bottom: 0; }
 .content p { margin-bottom: 15px; }
 
 .contact { margin-bottom: 5px; font-size: 15px; line-height: 1.2; }
@@ -885,9 +901,15 @@ label.block-gray input { margin-right: 2px; }
 .reservation .reservation__col { position: relative; float: left; width: 50%; line-height: 1.2; text-align: center; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .reservation .reservation__col:first-child { border-right: 1px solid #bad3e4; }
 .reservation .reservation__title { font-size: 15px; }
+.reservation .reservation__title-2 { font-size: 17px; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 .reservation .reservation__number { font-size: 25px; }
 .reservation .reservation__price { font-size: 25px; color: #48bf0d; }
 .reservation .reservation__price span { font-size: 18px; }
+.reservation.reservation_mod { background: white; }
+.reservation.reservation_mod .yellow-block { margin-top: 13px; font-size: 15px; line-height: 1.2; padding: 13px 17px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.reservation.reservation_mod .reservation__row { margin: 10px 0 0; padding: 0; text-align: center; border: none; }
+.reservation.reservation_mod .reservation__title, .reservation.reservation_mod .reservation__number { display: inline-block; }
+.reservation.reservation_mod .reservation__title { margin-right: 10px; vertical-align: text-bottom; }
 
 .addcomment.is-active .addcomment__top { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; background-image: none; }
 .addcomment.is-active .addcomment__top:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }

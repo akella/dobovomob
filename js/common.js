@@ -121,7 +121,7 @@ head.ready(function() {
 	// datepicker
 	$('#from').on('click', function(){
 		$(this).parent().parent().parent().addClass('is-active');
-		var array = ["2015-03-18","2015-03-19","2015-03-20"]
+		var array = ["2015-04-18","2015-04-19","2015-04-20"]
 		$( "#from" ).datepicker({
 			 beforeShowDay: function(date){
 		        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
