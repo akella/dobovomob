@@ -237,6 +237,56 @@ label.block-gray
 	&:hover
 		background: $light-blue
 
+// login
+.login
+	float: right
+	position: relative
+	margin-top: 4px
+	padding: 12px 0 0 50px
+	height: 40px
+	width: 100px
+	color: #559ABC
+	text-decoration: none
+	font-size: 12px
+	display: block
+	+box
+	+suisb
+	&:hover
+		text-decoration: underline
+	.login__img
+		position: absolute
+		top: 0
+		left: 0
+		height: 40px
+		width: 40px
+		overflow: hidden
+		+border-radius(50%)
+		img
+			position: relative
+			top: 50%
+			left: 50%
+			+translate(-50%, -50%)
+			display: block
+	.login__mail
+		position: absolute
+		top: 2px
+		left: 30px
+		height: 14px
+		width: 14px
+		line-height: 12px
+		color: #fff
+		text-align: center
+		font-size: 9px
+		z-index: 1
+		+border-radius(50%)
+		background: #f21a41
+		+suir
+	.login__name
+		width: 50px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+
 //logo
 .logo
 	margin: 7px 0 0 17px
@@ -471,6 +521,7 @@ label.block-gray
 // form
 .form
 	margin-top: 20px
+	text-align: left
 	.form__row
 		margin-bottom: 15px
 		+clr
@@ -1780,6 +1831,7 @@ label.block-gray
 	@extend %in
 	font-size: 15px
 	.forget-code__ask
+		margin-bottom: 4px
 		text-align: center
 		color: #434343
 	.social
@@ -1789,6 +1841,17 @@ label.block-gray
 	.title.title_blue
 		padding: 0
 
+// sing-up
+.center
+	text-align: center
+	&.center__mod
+		padding-bottom: 14px
+	.center__in
+		margin: 0 auto
+		width: 210px
+	.center__text
+		margin-bottom: 12px
+		font-size: 15px
 
 // tags
 .tags

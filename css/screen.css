@@ -64,6 +64,13 @@ label.block-gray input { margin-right: 2px; }
 .btn-login { float: right; margin-top: 7px; padding: 0 17.5px; height: 36px; line-height: 36px; color: white; font-size: 19px; text-decoration: none; display: inline-block; background: #5f86be; -moz-box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.6), inset -1px -1px 0 0 rgba(70, 105, 163, 0.9); -webkit-box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.6), inset -1px -1px 0 0 rgba(70, 105, 163, 0.9); box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.6), inset -1px -1px 0 0 rgba(70, 105, 163, 0.9); font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .btn-login:hover { background: #8ab4f1; }
 
+.login { float: right; position: relative; margin-top: 4px; padding: 12px 0 0 50px; height: 40px; width: 100px; color: #559abc; text-decoration: none; font-size: 12px; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
+.login:hover { text-decoration: underline; }
+.login .login__img { position: absolute; top: 0; left: 0; height: 40px; width: 40px; overflow: hidden; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+.login .login__img img { position: relative; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: block; }
+.login .login__mail { position: absolute; top: 2px; left: 30px; height: 14px; width: 14px; line-height: 12px; color: white; text-align: center; font-size: 9px; z-index: 1; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: #f21a41; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+.login .login__name { width: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 .logo { margin: 7px 0 0 17px; vertical-align: top; background: url('../img/icons-s911c8f5aea.png') 0 -5061px no-repeat; background-position: 0 -2531px; width: 107px; height: 33px; -moz-background-size: 171px 3326px; -webkit-background-size: 171px 3326px; background-size: 171px 3326px; display: inline-block; }
 
 .menu { position: fixed; top: 50px; left: -320px; overflow-x: hidden; bottom: 0; z-index: 200000; -moz-transition: left, 0.5s; -o-transition: left, 0.5s; -webkit-transition: left, 0.5s; transition: left, 0.5s; }
@@ -125,7 +132,7 @@ label.block-gray input { margin-right: 2px; }
 
 .input-btn { position: absolute; top: 50%; right: 10px; margin-top: -13px; cursor: pointer; background: url('../img/icons-s911c8f5aea.png') 0 -5834px no-repeat; background-position: 0 -2917px; width: 25.5px; height: 25.5px; -moz-background-size: 171px 3326px; -webkit-background-size: 171px 3326px; background-size: 171px 3326px; }
 
-.form { margin-top: 20px; }
+.form { margin-top: 20px; text-align: left; }
 .form .form__row { margin-bottom: 15px; *zoom: 1; }
 .form .form__row:after { content: " "; display: table; clear: both; }
 .form input, .form textarea { padding: 0 10px 0; width: 100%; height: 36px; font-size: 16px; background-color: white; border: 1px solid #e2e3ea; -moz-border-radius: 1px; -webkit-border-radius: 1px; border-radius: 1px; -moz-box-shadow: inset 1px 1px 1px #bfbfbf; -webkit-box-shadow: inset 1px 1px 1px #bfbfbf; box-shadow: inset 1px 1px 1px #bfbfbf; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -457,10 +464,15 @@ label.block-gray input { margin-right: 2px; }
 .drop-town ul li span { margin-left: 3px; color: #b2b2b2; font-size: 10px; display: inline-block; }
 
 .forget-code { font-size: 15px; }
-.forget-code .forget-code__ask { text-align: center; color: #434343; }
+.forget-code .forget-code__ask { margin-bottom: 4px; text-align: center; color: #434343; }
 .forget-code .social { margin-bottom: 17px; }
 .forget-code .form { margin-bottom: 25px; }
 .forget-code .title.title_blue { padding: 0; }
+
+.center { text-align: center; }
+.center.center__mod { padding-bottom: 14px; }
+.center .center__in { margin: 0 auto; width: 210px; }
+.center .center__text { margin-bottom: 12px; font-size: 15px; }
 
 .tags { margin: 20px 0 10px; font-size: 0; }
 .tags .tags__item { margin: 0 0 10px 20px; display: inline-block; }
