@@ -136,6 +136,20 @@ label
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+	.yellow-block__title-or
+		position: relative
+		color: #FC8E00
+		font-size: 14px
+		+suib
+		&:before
+			position: absolute
+			content: ''
+			left: -14px
+			top: 8px
+			width: 4px
+			height: 4px
+			+border-radius(50%)
+			background: #000
 
 // email-gray
 .email-gray
@@ -778,8 +792,8 @@ label.block-gray
 			padding-left: 0
 			padding-right: 6px
 		&.is-active
-			// &.ico_tab1
-			// 	+sr(ico-tab1)
+			.ico_tab1
+				+sr(ico-tab1-active)
 			.ico_tab2
 				+sr(ico-tab2-active)
 			.ico_tab3
@@ -3170,6 +3184,8 @@ label.block-gray
 		margin-top: 10px
 	.order__in
 		padding: 10px 10px 15px 10px
+		&.order__in_mod
+			padding-bottom: 0
 		.yellow-block
 			margin: 15px 0 0 0
 			padding: 20px 38px 20px 20px
@@ -3183,6 +3199,10 @@ label.block-gray
 		+suisb
 	.order__title-2
 		font-size: 15px
+	.order__small-title
+		padding-left: 20px
+		font-size: 14px
+		+suisb
 	.order__row
 		margin-top: 15px
 		color: #000
@@ -3197,6 +3217,23 @@ label.block-gray
 			margin-top: 15px
 			&:first-child
 				margin-top: 0
+	.order__info
+		margin-top: 10px
+		padding: 10px
+		border: 1px solid #DDD
+		+border-radius(4px)
+		+box
+		.order__list
+			margin-top: 10px
+			li
+				margin-top: 3px
+				font-size: 12px
+				line-height: 1.2
+		.yellow-block
+			padding: 3px 5px 7px 20px
+			line-height: 1.2
+			font-size: 12px
+			+border-radius(4px)
 	.toggle
 		margin: 15px 0
 	.apartment
@@ -3240,6 +3277,11 @@ label.block-gray
 			text-decoration: none
 	.price-app .price-all
 		font-size: 16px
+	.title
+		padding: 15px 0 5px
+		font-size: 17px
+
+// reservation
 .reservation
 	padding: 13px
 	color: #000
@@ -3272,6 +3314,7 @@ label.block-gray
 		color: #48BF0D
 		span
 			font-size: 18px
+
 // addcomment
 .addcomment
 	&.is-active
@@ -3325,6 +3368,53 @@ label.block-gray
 			+placeholder
 				font-size: 0
 
+// terminals
+.terminals
+	margin-top: 5px
+	font-size: 0
+	overflow: hidden
+	.terminals__in
+		margin-right: -3%
+	.terminals__item
+		position: relative
+		margin-top: 10px
+		margin-right: 3%
+		padding: 8px 5px
+		height: 113px
+		text-align: center
+		width: 47%
+		color: #000
+		text-decoration: none
+		vertical-align: top
+		border: 1px solid #E2E2E2
+		+border-radius(4px)
+		background-color: #fff
+		+background-image(linear-gradient(to top, #F5F5F5 0%, #FFF 100%))
+		display: inline-block
+		+box
+		&:hover
+			+background-image(none)
+			.terminals__det
+				text-decoration: underline
+	.terminals__title
+		font-size: 12px
+		line-height: 1.1
+		+suir
+	.terminals__ico
+		height: 75px
+		line-height: 75px
+		&.terminals__ico_qiwi
+			height: 63px
+			line-height: 63px
+		.ico
+			vertical-align: middle
+	.terminals__det
+		position: absolute
+		bottom: 7px
+		left: 0
+		width: 100%
+		color: #609AC1
+		font-size: 9px
 
 // text-none
 .text-none
