@@ -601,6 +601,8 @@ label.block-gray input { margin-right: 2px; }
 
 .slider-wrap { position: relative; }
 .slider-wrap .number-total { position: absolute; top: 20px; right: 10px; z-index: 300; color: white; font-size: 13px; font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; }
+.slider-wrap .apartment { margin: 0; }
+.slider-wrap .slick-slider { height: 201px !important; width: 100%; overflow: hidden; }
 
 .slider-auto .apartment { margin: 0; }
 .slider-auto .apartment__photo { margin-top: 0; }
