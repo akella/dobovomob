@@ -178,6 +178,14 @@ label
 	background-color: #f4f4f4
 	+border-radius(4px)
 	+box
+	.info
+		padding: 0
+		font-size: 15px
+		line-height: 1.2
+		.info__row
+			margin: 10px 0
+	&.block-gray_mod
+		+border-radius(0)
 label.block-gray
 	input
 		margin-right: 2px
@@ -1281,6 +1289,7 @@ label.block-gray
 	padding: 0 10px 5px
 	font-size: 16px
 	color: #000
+	+clr
 	&.info_answer
 		margin-bottom: 15px
 		padding-top: 8px
@@ -1307,6 +1316,12 @@ label.block-gray
 		&:first-child
 			.info__right
 				@extend %blue
+		.btn_white-2,
+		.btn_down
+			width: 47.5%
+			+suir
+		.btn_down
+			margin-left: 3%
 	.info__left
 		float: left
 		width: 82px
@@ -1361,6 +1376,15 @@ label.block-gray
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+	.reservation.reservation_mod
+		padding: 0
+		margin: 0
+		background: none
+		.reservation__row
+			margin: 0
+			text-align: left
+		.reservation__title 
+			vertical-align: super
 
 // edit
 .edit
@@ -2122,6 +2146,9 @@ label.block-gray
 	text-decoration: none
 	+box-shadow(0 1px 1px #B8B4B2, inset 0 -1px 0 #FFF)
 	display: block
+	&.apartment_mod
+		margin-bottom: 0
+		background: #ededed
 	.apartment__bottom,
 	.apartment__top
 		@extend %in
@@ -3429,7 +3456,7 @@ label.block-gray
 			margin-top: 13px
 			font-size: 15px
 			line-height: 1.2
-			padding: 13px 17px
+			padding: 13px 6px 13px 15px
 			+border-radius(2px)
 		.reservation__row
 			margin: 10px 0 0

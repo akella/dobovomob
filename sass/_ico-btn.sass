@@ -177,6 +177,7 @@
 			+svg(ico-btn-filter, 20, 18)
 	&.btn_phone-2
 		height: 36px
+		line-height: 34px
 		font-size: 15px
 		background-color: #f05500
 		+background-image(linear-gradient(to top, #f05500 0%, #ff7d36 61%, #ffb164 100%))
@@ -185,7 +186,14 @@
 			+background-image(linear-gradient(to top, #C34500 0%, #F9691C 100%))
 		.ico
 			margin-right: 10px
-			vertical-align: bottom
+			vertical-align: middle
+		&.btn_green
+			background-color: #6DAE10
+			+gt(#229A00 0%, #2CBD00 100%)
+			border: 1px solid #5D9A07
+			+box-shadow(0.5px 0.9px 1px rgba(70, 115, 6, 0.34), inset 0 0 0 1px rgba(171, 230, 85, 0.27))
+			&:hover
+				+gt(#4AC726 0%, #72E64E 100%)
 	&.btn_mail
 		position: relative
 		height: 49px
@@ -207,6 +215,24 @@
 			+sr(ico-mail-gray)
 		&:hover
 			+background-image(none)
+	&.btn_down
+		padding: 0 8px
+		height: 36px
+		line-height: 34px
+		font-size: 15px
+		text-transform: uppercase
+		color: #5F86BE
+		border: 1px solid #5F86BE
+		background: none
+		+border-radius(4px)
+		+suir
+		+box
+		&:hover
+			color: #fff
+			background: #5F86BE
+		.ico
+			vertical-align: middle
+	// &.btn_white
 	&.h36r4
 		height: 36px
 		line-height: 36px
@@ -343,9 +369,10 @@
 		+sr(earsysoft)
 	&.ico_plateshka
 		+sr(plateshka)
-	&.ico_regulpay
+	&.ico_regulpay 
 		+sr(regulpay)
-
+	&.ico_pdf
+		+sr(ico-pdf)
 
 
 
