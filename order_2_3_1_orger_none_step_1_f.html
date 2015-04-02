@@ -184,7 +184,7 @@
 		</div>
 		<!-- in -->
 		<div class="yellow-block"><a href="#">Войдите</a>, что бы сэкономить время</div>
-		<div class="order__step order__step_gray">
+		<form class="order__step order__step_gray" id="form">
 			<div class="order__topic">1. Личные данные</div>
 			<div class="order__in">
 				<div class="order__title">Ваши данные</div>
@@ -192,13 +192,13 @@
 				<!-- form -->
 				<div class="form">
 					<div class="form__row">
-						<input type="text" placeholder="Ваше имя...">
+						<input type="text" name="firstname" placeholder="Ваше имя...">
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="Ваша фамилия...">
+						<input type="text" name="lastname" placeholder="Ваша фамилия...">
 					</div>
 					<div class="form__row">
-						<select class="select-chosen" multiple data-placeholder="Страна..." tabindex="-1" id="selUMW">
+						<select class="select-chosen" name="country" multiple data-placeholder="Страна..." tabindex="-1" id="country" required>
 							<option value=""></option>
 							<option data-type="Киев" data-user="(90 квартир)">Киев</option>
 							<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
@@ -212,10 +212,10 @@
 						<button class="input-btn"></button>
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="E-mail...">
+						<input type="text" name="email" placeholder="E-mail..." required>
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="Мобильный телефон...">
+						<input type="text" name="phone" placeholder="Мобильный телефон..." required>
 					</div>
 					<div class="form__row"><div class="form__ex">Например, +380675433241</div></div>
 					<div class="choose-people js-open-popup">
@@ -367,7 +367,7 @@
 					</div>
 				</div>
 				<div class="order__row">
-					<button class="btn btn_orange h36r4">отправить запрос</button>
+					<button class="btn btn_orange h36r4 " type="submit">отправить запрос</button>
 				</div>
 			</div>
 			<div class="order__topic is-disabled">2. Подтверждение запроса</div>
@@ -375,7 +375,7 @@
 				3. Способы оплаты
 				<div class="order__topic-text">Для олаты необходимо заполнить личные данные</div>
 			</div>
-		</div>
+		</form>
 	</div>
 	<!-- footer -->
 	<footer class="footer">

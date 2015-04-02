@@ -1,5 +1,13 @@
 .select-chosen
 	display: none
+	&.error
+		& + .chzn-container
+			.chzn-choices .search-field input
+				+suii
+				color: #df0100
+			&:before
+				border-color: #df0100
+				+box-shadow(none)
 .chzn-container
 	position: relative
 	zoom: 1

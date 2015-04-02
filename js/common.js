@@ -470,4 +470,28 @@ head.ready(function() {
 			parent.addClass('is-active');
 		}
 	});
+
+	// validate
+	$("#form").validate({
+		rules: {
+			firstname: "required",
+			lastname: "required",
+			email: "required",
+			country: "required",
+			phone: "required"
+		}
+	});
+	// $('.select-chosen').valid();
+	$('#form').on('submit', function(event) {
+		event.preventDefault();
+		if($('.select-chosen').valid() == true){
+			$('.select-chosen').addClass('error');
+		} 
+		else {
+			$("select-chosen").removeClass('error');
+		}
+	}); 
+	$('.select-chosen').change(function() {
+		$(".select-chosen").removeClass('error');
+	});
 });

@@ -576,6 +576,15 @@ label.block-gray
 			display: none
 	.form__ex
 		font-size: 12px
+input.error 
+	border-color: #df0100
+	+box-shadow(none)
+	+placeholder
+		color: #df0100
+		+suii
+	+placeholder-color(#df0100)
+	& + label.error
+		display: none !important
 
 // forgot-pass
 .forgot-pass
