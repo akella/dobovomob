@@ -201,6 +201,7 @@ label.block-gray input { margin-right: 2px; }
 .toggle .toggle__checkbox:before { position: absolute; content: ""; top: 1px; left: 0; height: 30px; width: 30px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background-color: white; -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75), inset 0 0 5px rgba(255, 255, 255, 0.4); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75), inset 0 0 5px rgba(255, 255, 255, 0.4); box-shadow: 0 0 5px rgba(0, 0, 0, 0.75), inset 0 0 5px rgba(255, 255, 255, 0.4); }
 
 .tabs.ui-widget-content { border: none; background: none; font-size: 13px; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+.tabs.ui-widget-content.tabs_mar { margin-top: 23px; }
 .tabs.ui-widget-content .ui-widget-content { border: none; background: none; }
 .tabs.ui-widget-content .tabs__list { font-size: 0; border: none; }
 .tabs.ui-widget-content .tabs__list li { width: 50%; display: inline-block; vertical-align: top; border: none; }
@@ -634,6 +635,9 @@ label.block-gray input { margin-right: 2px; }
 .date { font-size: 10px; color: #5c6064; line-height: 13px; font-family: "Arial"; }
 
 .reviews.reviews_mod { margin-bottom: 12px; }
+.reviews.reviews_arr { position: relative; }
+.reviews.reviews_arr:before { position: absolute; content: ""; left: 29px; top: -5px; z-index: 1; width: 0px; height: 0px; border-style: solid; border-width: 0 3.5px 6px 3.5px; border-color: transparent transparent white transparent; }
+.reviews.reviews_arr:after { position: absolute; content: ""; left: 28px; top: -7px; width: 0px; height: 0px; border-style: solid; border-width: 0 4.5px 8px 4.5px; border-color: transparent transparent #cac7c5 transparent; }
 .reviews .reviews__item { margin-top: 12px; border-bottom: 1px solid #cac7c5; }
 .reviews .reviews__estimate { padding-left: 14px; height: 28px; line-height: 26px; border-top: 1px solid #cac7c5; -moz-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; -webkit-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; *zoom: 1; }
 .reviews .reviews__estimate:after { content: " "; display: table; clear: both; }
@@ -765,6 +769,8 @@ label.block-gray input { margin-right: 2px; }
 .characteristics .characteristics__left { float: left; }
 .characteristics .characteristics__right { float: right; }
 .characteristics strong { font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; }
+.characteristics a { color: #5f86be; text-decoration: none; }
+.characteristics a:hover { text-decoration: underline; }
 
 .convenience .convenience__row { margin: 12px 0; width: 100%; display: table; }
 .convenience .convenience__col { padding-left: 12px; display: table-cell; }
@@ -826,7 +832,22 @@ label.block-gray input { margin-right: 2px; }
 .content.content_condition .title-2 { padding: 0; margin: 20px 0; text-align: left; }
 .content.content_mod { padding-bottom: 0; }
 .content.content_mod p { margin-bottom: 0; }
-.content p { margin-bottom: 15px; }
+.content.content_char { padding-bottom: 0; font-size: 15px; }
+.content p { margin-bottom: 15px; *zoom: 1; }
+.content p:after { content: " "; display: table; clear: both; }
+.content .content__logo { float: left; margin: 5px 15px 0 7px; }
+.content .content__logo img { display: block; }
+.content .content__ul li { position: relative; margin-top: 5px; line-height: 1.2; padding-left: 22px; }
+.content .content__ul li:first-child { margin-top: 0; }
+.content .content__ul li:before { position: absolute; content: ""; top: 50%; margin-top: -3px; left: 6px; height: 6px; width: 6px; background: black; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+
+.owner { padding: 17px 0 0; font-size: 12px; *zoom: 1; }
+.owner:after { content: " "; display: table; clear: both; }
+.owner .owner__img { float: left; margin: 0 20px 0 15px; height: 62px; width: 62px; overflow: hidden; border: 1px solid #bababa; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+.owner .owner__img img { position: relative; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.owner .owner__row { margin-top: 2px; }
+.owner .owner__row:first-child { margin-top: 0; }
+.owner .owner__row span { color: #8b9094; }
 
 .contact { margin-bottom: 5px; font-size: 15px; line-height: 1.2; }
 .contact .title-2 { padding: 10px 0 5px; text-align: left; }

@@ -767,6 +767,8 @@ label.block-gray
 	background: none 
 	font-size: 13px
 	+suir
+	&.tabs_mar
+		margin-top: 23px
 	.ui-widget-content
 		border: none
 		background: none
@@ -2433,6 +2435,21 @@ label.block-gray
 .reviews
 	&.reviews_mod
 		margin-bottom: 12px
+	&.reviews_arr
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			left: 29px
+			top: -5px
+			z-index: 1
+			+arr(7,6,#fff,t)
+		&:after
+			position: absolute
+			content: ''
+			left: 28px
+			top: -7px
+			+arr(9,8,#cac7c5,t)
 	.reviews__item
 		margin-top: 12px 
 		border-bottom: 1px solid #cac7c5
@@ -2935,6 +2952,11 @@ label.block-gray
 		float: right
 	strong
 		+suib
+	a
+		color: #5f86be
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 
 // convenience
 .convenience
@@ -3141,8 +3163,60 @@ label.block-gray
 		padding-bottom: 0
 		p
 			margin-bottom: 0
+	&.content_char
+		padding-bottom: 0
+		font-size: 15px
 	p
 		margin-bottom: 15px
+		+clr
+	.content__logo
+		float: left
+		margin: 5px 15px 0 7px
+		img
+			display: block
+	.content__ul
+		li
+			position: relative
+			margin-top: 5px
+			line-height: 1.2
+			padding-left: 22px
+			&:first-child
+				margin-top: 0
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				margin-top: -3px
+				left: 6px
+				height: 6px
+				width: 6px
+				background: #000
+				+border-radius(50%)
+
+// owner
+.owner
+	padding: 17px 0 0
+	font-size: 12px
+	+clr
+	.owner__img
+		float: left
+		margin: 0 20px 0 15px
+		height: 62px
+		width: 62px
+		overflow: hidden
+		border: 1px solid #bababa
+		+border-radius(50%)
+		img
+			position: relative
+			top: 50%
+			left: 50%
+			+translate(-50%, -50%)
+	.owner__row
+		margin-top: 2px
+		&:first-child
+			margin-top: 0
+		span
+			color: #8b9094
 
 // contact
 .contact
