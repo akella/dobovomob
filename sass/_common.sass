@@ -1622,6 +1622,7 @@ textarea.error
 			background: #9a9a9a
 .calendar
 	text-align: left
+	border-bottom: 1px solid #E2E2E2
 	.calendar__header
 		position: relative
 		height: 50px
@@ -1664,6 +1665,8 @@ textarea.error
 	.calendar__days
 		font-size: 0
 		line-height: 1
+	.calendar__week
+		border-top: 1px solid #E2E2E2
 	.calendar__th,
 	.calendar__day
 		font-size: 4.5vw
@@ -1688,6 +1691,7 @@ textarea.error
 		background-color: #fff
 		border: 1px solid #E2E2E2
 		cursor: pointer
+		+user-select(none)
 		span
 			text-align: right
 			display: block
@@ -1695,18 +1699,25 @@ textarea.error
 		span
 			position: relative
 			z-index: 2
-		&.is-other-month
+		&.is-other-month,
+		&.is-other-month.is-last-days
 			background-color: #C0C0C0
 			color: #C0C0C0
 			+background-image(none)
 			cursor: default
 		&.is-today
 			border: 2px solid #FFB400
-		&.is-inactive
+		&.is-inactive,
+		&.is-inactive.is-last-days
 			background: #eebaaf
 			cursor: default
 			&.is-selected
+				background: #eebaaf
 				color: #f9f9b7
+				&.first,
+				&.last
+					background: #f9f9b7
+					color: #000
 			&.first
 				background: none
 				&:before
@@ -1716,11 +1727,11 @@ textarea.error
 					right: 0
 					width: 0px
 					height: 0px
+					z-index: 1
 					border-style: solid
 					border-width: 0 0 12vw 15vw
 					border-color: transparent transparent #eebaaf transparent
 			&.last
-				color: #000
 				background: none
 				&:before
 					position: absolute
@@ -1729,6 +1740,7 @@ textarea.error
 					left: 0
 					width: 0px
 					height: 0px
+					z-index: 1
 					border-style: solid
 					border-width: 12vw 15vw 0 0
 					border-color: #eebaaf transparent transparent transparent
@@ -1736,22 +1748,24 @@ textarea.error
 				display: none
 		&.is-selected
 			background: #f9f9b7
-			&.in
-				&:before
-					position: absolute
-					content: ''
-					top: 50%
-					left: 0
-					margin-top: -6px
-					+arr(6,12,#999,r)
-			&.out
-				&:before
-					position: absolute
-					content: ''
-					top: 50%
-					right: 0
-					margin-top: -6px
-					+arr(6,12,#999,l)
+		&.in
+			background: #f9f9b7
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				margin-top: -6px
+				+arr(6,12,#999,r)
+		&.out
+			background: #f9f9b7
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				right: 0
+				margin-top: -6px
+				+arr(6,12,#999,l)
 		&.is-last-days
 			color: #8f8f8f
 			background: #dfdede

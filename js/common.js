@@ -361,10 +361,23 @@ head.ready(function() {
 		$( ".js-people" ).html( $( ".js-input-people:checked" ).val());
 	});
 
+	// like
+	$('.like').on('click', function(){
+		$(this).addClass('is-active');
+	});
+
 	// popup
 	$('.js-open-popup').on('click', function (){
 		$(this).parent().find('.popup').show();
 		$('body').addClass('is-fixed');
+		// calendar init
+		$('.popup').find('.calendar').addClass('is-init');
+		if ($('.calendar').hasClass('is-init')) {
+			var calendar = $('.calendar');
+			$('.calendar').find('.calendar__day.is-today').prevAll('.calendar__day').addClass('is-last-days');
+			$('.calendar').find('.calendar__day').addClass('is-other-month');
+			$('.calendar').find('.calendar__day span').parent().removeClass('is-other-month');
+		}
 	});
 	$('.popup, .popup__close').on('click', function(event){
 		$('.popup').hide();
@@ -374,20 +387,59 @@ head.ready(function() {
 		event.stopPropagation();
 	});
 
-	// click
-	$('.like').on('click', function(){
-		$(this).addClass('is-active');
-	});
-
 	// calendar
 	function calendar() {
 		var calendar = $('.calendar');
 		calendar.each(function(){
+			var day_in = '.calendar__day.in';
+			var out = '.calendar__day.out';
+			// check first last day
+			$('.calendar__day').on("click", function (){
+				var day = $('.calendar__day');
+				var index = $(this).index();
+				var month = $(this).parent('.calendar__days');
+				var all = 'out in is-selected';
+
+				if (month.find(day_in).length){
+					var start_index = month.find(day_in).index();
+					if (index > start_index) {
+						$(this).addClass('out');
+						$(".out").nextAll(day).removeClass('is-selected out');
+					}
+					else if (index < start_index) {
+						day.removeClass(all);
+					}
+				}
+				else {
+					$(this).addClass('in');
+				}
+
+				if (month.find(out).length) {
+					var finish_index = month.find(out).index();
+					if (index > finish_index) {
+						day.removeClass(all);
+					}
+				}
+
+				if (month.find('.calendar__day.is-today').length) {
+					var today_index = month.find('.calendar__day.is-today').index();
+					if (index < today_index) {
+						$(this).removeClass(all);
+					}
+				}
+
+				if (day.hasClass('is-inactive' || 'is-other-month')) {
+					$('.calendar__day.is-inactive, .calendar__day.is-other-month').removeClass(all);
+				}
+
+				month.find(out).prevAll(day).addClass('is-selected');
+				month.find(day_in).prevAll(day).removeClass('is-selected');
+			});
 			// get date
-			var from = $( ".is-selected.in" ).attr('date');
-			var to = $( ".is-selected.out" ).attr('date');
 			// add date
 			$('.js-check-date').bind("click", function(){
+				var from = $(day_in).attr('date');
+				var to = $(out).attr('date');
 				var to_text = $(".datepicker__to-text");
 				var from_text = $(".datepicker__from-text");
 				to_text.html(to);
@@ -518,6 +570,10 @@ head.ready(function() {
 	$('.select-chosen').change(function() {
 		$(".select-chosen").removeClass('error');
 	});
-	var validator = $("#form").data('validator');
-	validator.settings.ignore = ":hidden:not(select)";
+	$('.select-chosen').each(function() {
+		var validator = $("#form").data('validator');
+		validator.settings.ignore = ":hidden:not(select)";
+	});
+
 });
+
