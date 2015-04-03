@@ -921,6 +921,7 @@ input.error + label.error { display: none !important; }
 .order .order__info .yellow-block { padding: 3px 5px 7px 20px; line-height: 1.2; font-size: 12px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 .order .toggle { margin: 15px 0; }
 .order .apartment { margin-bottom: 0; }
+.order .apartment__photo { margin-top: 0; }
 .order .yellow-block { font-size: 16px; margin: 10px 12px; }
 .order .form { margin-top: 13px; }
 .order .form__ex { margin-top: -10px; }
@@ -935,6 +936,10 @@ input.error + label.error { display: none !important; }
 .order .info .edit { text-decoration: none; }
 .order .price-app .price-all { font-size: 16px; }
 .order .title { padding: 15px 0 5px; font-size: 17px; }
+
+.order-error { font-size: 14px; }
+.order-error.yellow-block { padding: 15px 40px 15px 10px; }
+.order-error .order-error__title { margin-bottom: 8px; color: #df0100; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 
 .reservation { padding: 13px; color: black; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background-color: #e2f2fd; font-size: 12px; }
 .reservation strong { font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }

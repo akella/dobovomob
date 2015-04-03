@@ -481,7 +481,7 @@ head.ready(function() {
 			phone: "required"
 		}
 	});
-	// $('.select-chosen').valid();
+	
 	$('#form').on('submit', function(event) {
 		event.preventDefault();
 		if($('.select-chosen').valid() == true){
