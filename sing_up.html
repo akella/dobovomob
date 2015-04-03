@@ -157,7 +157,7 @@
 	<div class="center">
 		<!-- title -->
 		<h3 class="title-2">Создать аккаунт с помощью социальных сетей</h3>
-		<div class="forget-code">
+		<form class="forget-code" id="form">
 			<!-- social -->
 			<div class="social">
 				<div class="social__row">
@@ -175,10 +175,10 @@
 			<!-- form -->
 			<div class="form">
 				<div class="form__row">
-					<input type="text" placeholder="E-mail...">
+					<input type="text" name="email" placeholder="E-mail...">
 				</div>
 				<div class="form__row">
-					<input type="text" placeholder="Пароль...">
+					<input type="text" name="password" placeholder="Пароль...">
 				</div>
 				<div class="form__row">
 					<label class="block-gray">
@@ -186,11 +186,11 @@
 						<span>Запомнить меня</span>
 					</label>
 				</div>
-				<button class="btn btn_green">создать аккаунт</button>
+				<button class="btn btn_green" type="button">создать аккаунт</button>
 			</div>
 			<div class="forget-code__ask">Уже есть аккаунт на dobovo.com?</div>
-			<a href="#" class="title title_blue">Войти &rarr;</a>
-		</div>
+			<button class="btn btn_bg-none" type="submit">Войти &rarr;</button>
+		</form>
 	</div>
 	<!-- footer -->
 	<footer class="footer">

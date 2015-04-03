@@ -24,7 +24,7 @@ head.ready(function() {
 	});
 	
 	//slick
-	$('.slider').slick({
+	$('.js-slider').slick({
 		arrows: false,
 		dots: true,
 		infinite: true,
@@ -233,7 +233,21 @@ head.ready(function() {
 	// tabs
 	$( "#tabs" ).tabs();
 	$('#tabs li a').on('click', function (){
-		$('.slick-slider').slick('reinit');
+		var href = $(this).attr("href");
+		var content = $(this).parents('.tabs').find(href);
+		if (!$(this).hasClass('is-init')) {
+			content.find('.slider').slick({
+				arrows: false,
+				dots: true,
+				infinite: true,
+				speed: 200,
+				cssEase: 'linear',
+				adaptiveHeight: true,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+			$(this).addClass('is-init');
+		};
 	});
 
 	// tab
@@ -477,21 +491,33 @@ head.ready(function() {
 			firstname: "required",
 			lastname: "required",
 			email: "required",
+			password: "required",
 			country: "required",
-			phone: "required"
+			phone: "required",
+			textarea: "required",
+			id: "required",
+			code: "required"
+		}
+	});
+	$("#form1").validate({
+		rules: {
+			id: "required",
+			code: "required"
 		}
 	});
 	
-	$('#form').on('submit', function(event) {
-		event.preventDefault();
-		if($('.select-chosen').valid() == true){
-			$('.select-chosen').addClass('error');
-		} 
-		else {
-			$("select-chosen").removeClass('error');
-		}
-	}); 
+	// $('#form').on('submit', function(event) {
+	// 	event.preventDefault();
+	// 	if(($('.select-chosen').valid()) == false){
+	// 		$('.select-chosen').addClass('error');
+	// 	} 
+	// 	else {
+	// 		$(".select-chosen").removeClass('error');
+	// 	}
+	// }); 
 	$('.select-chosen').change(function() {
 		$(".select-chosen").removeClass('error');
 	});
+	var validator = $("#form").data('validator');
+	validator.settings.ignore = ":hidden:not(select)";
 });

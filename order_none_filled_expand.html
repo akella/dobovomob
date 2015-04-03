@@ -185,19 +185,19 @@
 		<div class="yellow-block"><a href="#">Войдите</a>, что бы сэкономить время</div>
 		<div class="order__step">
 			<div class="order__topic">1. Личные данные</div>
-			<div class="order__in">
+			<form class="order__in" id="form">
 				<div class="order__title">Ваши данные</div>
 				<div class="order__inf">Все поля обязательные для заполнения</div>
 				<!-- form -->
 				<div class="form">
 					<div class="form__row">
-						<input type="text" placeholder="Ваше имя...">
+						<input type="text" name="firstname" placeholder="Ваше имя...">
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="Ваша фамилия...">
+						<input type="text" name="lastname" placeholder="Ваша фамилия...">
 					</div>
 					<div class="form__row">
-						<select class="select-chosen" multiple data-placeholder="Страна..." tabindex="-1" id="selUMW">
+						<select class="select-chosen" name="country" multiple data-placeholder="Страна..." tabindex="-1" id="selUMW">
 							<option value=""></option>
 							<option data-type="Киев" data-user="(90 квартир)">Киев</option>
 							<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
@@ -211,10 +211,10 @@
 						<button class="input-btn"></button>
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="E-mail...">
+						<input type="text" name="email" placeholder="E-mail...">
 					</div>
 					<div class="form__row">
-						<input type="text" placeholder="Мобильный телефон...">
+						<input type="text" name="phone" placeholder="Мобильный телефон...">
 					</div>
 					<div class="form__row"><div class="form__ex">Например, +380675433241</div></div>
 					<div class="choose-people js-open-popup">
@@ -366,7 +366,7 @@
 					</div>
 				</div>
 				<div class="order__row">
-					<button class="btn btn_green-arr">Выбрать способ оплаты</button>
+					<button class="btn btn_green-arr" type="submit">Выбрать способ оплаты</button>
 				</div>
 				<div class="order__row">
 					<a href="#" class="title title_blue">бронировать без предоплаты &rarr;</a>

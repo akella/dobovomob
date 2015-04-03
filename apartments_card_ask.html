@@ -270,15 +270,15 @@
 			</div>
 		</div>
 		<!-- form -->
-		<div class="form">
-			<div class="form__row"><input type="text" placeholder="Имя..."></div>
-			<div class="form__row"><input type="text" placeholder="Email..."></div>
-			<div class="form__row"><textarea placeholder="Вопрос владельцу..."></textarea></div>
+		<form class="form" id="form">
+			<div class="form__row"><input type="text" name="firstname" placeholder="Имя..."></div>
+			<div class="form__row"><input type="text" name="lastname" placeholder="Email..."></div>
+			<div class="form__row"><textarea name="textarea" placeholder="Вопрос владельцу..."></textarea></div>
 			<div class="form__row form__row_bottom">
-				<button class="btn btn_green">отправить вопрос</button>
+				<button class="btn btn_green" type="submit">отправить вопрос</button>
 				<button class="btn btn_white-2">отменить</button>
 			</div>
-		</div>
+		</form>
 	</div>
 	<!-- footer -->
 	<footer class="footer">

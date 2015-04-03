@@ -156,141 +156,143 @@
 	</header>
 	<!-- filter -->
 	<div class="filter filter_bg" id="filter">
-		<h3 class="filter__title">Онлайн бронирование квартир</h3>
-		<div class="filter__text">На сайте 3 914 квартиры, по 46 городам Украины</div>
-		<!-- search -->
-		<div class="search">
-			<div class="search__chosen">
-				<select class="select-chosen" multiple data-placeholder="Выберите город..." tabindex="-1" id="selUMW">
-					<option value=""></option>
-					<option data-type="Киев" data-user="(90 квартир)">Киев</option>
-					<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
-					<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
-					<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
-					<option data-type="Киев" data-user="(90 квартир)">Киев</option>
-					<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
-					<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
-					<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
-				</select>
-				<button class="search__input-btn js-open-town"></button>
-			</div>
-			<button class="search__btn"></button>
-			<!-- drop-town -->
-			<div class="drop-town js-town">
-				<h3 class="drop-town__title">Популярные города</h3>
-				<ul>
-					<li>Киев<span>(120 квартир)</span></li>
-					<li>Одесса<span>(100 квартир)</span></li>
-					<li>Харьков<span>(100 квартир)</span></li>
-					<li>Днепропетровск<span>(100 квартир)</span></li>
-				</ul>
-				<h3 class="drop-town__title">Все города</h3>
-				<ul>
-					<li>Алупка<span>(90 квартир)</span></li>
-					<li>Алупка<span>(100 квартир)</span></li>
-					<li>Алупка<span>(100 квартир)</span></li>
-					<li>Алупка<span>(100 квартир)</span></li>
-				</ul>
-			</div>
-		</div>
-		<!-- tags -->
-		<div class="tags">
-			<div class="tags__item"><a href="#">Киев</a></div>
-			<div class="tags__item"><a href="#">Львов</a></div>
-			<div class="tags__item"><a href="#">Одесса</a></div>
-			<div class="tags__item"><a href="#">Харьков</a></div>
-		</div>
-		<!-- dropdown -->
-		<div class="dropdown">
-			<div class="dropdown__col">
-				<div class="datepicker">
-					<i class="ico ico_from"></i>
-					Заезд
+		<form id="form">
+			<h3 class="filter__title">Онлайн бронирование квартир</h3>
+			<div class="filter__text">На сайте 3 914 квартиры, по 46 городам Украины</div>
+			<!-- search -->
+			<div class="search">
+				<div class="search__chosen">
+					<select class="select-chosen" name="country" multiple data-placeholder="Выберите город..." tabindex="-1" id="selUMW">
+						<option value=""></option>
+						<option data-type="Киев" data-user="(90 квартир)">Киев</option>
+						<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
+						<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
+						<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
+						<option data-type="Киев" data-user="(90 квартир)">Киев</option>
+						<option data-type="Одесса" data-user="(100 квартир)">Одесса</option>
+						<option data-type="Харьков" data-user="(100 квартир)">Харьков</option>
+						<option data-type="Днепропетровск" data-user="(100 квартир)">Днепропетровск</option>
+					</select>
+					<button class="search__input-btn js-open-town"></button>
+				</div>
+				<button class="search__btn"></button>
+				<!-- drop-town -->
+				<div class="drop-town js-town">
+					<h3 class="drop-town__title">Популярные города</h3>
+					<ul>
+						<li>Киев<span>(120 квартир)</span></li>
+						<li>Одесса<span>(100 квартир)</span></li>
+						<li>Харьков<span>(100 квартир)</span></li>
+						<li>Днепропетровск<span>(100 квартир)</span></li>
+					</ul>
+					<h3 class="drop-town__title">Все города</h3>
+					<ul>
+						<li>Алупка<span>(90 квартир)</span></li>
+						<li>Алупка<span>(100 квартир)</span></li>
+						<li>Алупка<span>(100 квартир)</span></li>
+						<li>Алупка<span>(100 квартир)</span></li>
+					</ul>
 				</div>
 			</div>
-			<div class="dropdown__col">
-				<div class="datepicker">
-					<i class="ico ico_to"></i>
-					Выезд
-				</div>
+			<!-- tags -->
+			<div class="tags">
+				<div class="tags__item"><a href="#">Киев</a></div>
+				<div class="tags__item"><a href="#">Львов</a></div>
+				<div class="tags__item"><a href="#">Одесса</a></div>
+				<div class="tags__item"><a href="#">Харьков</a></div>
 			</div>
-			<div class="dropdown__col dropdown__col_people">
-				<div class="people js-open-popup">
-					<i class="ico ico_people"></i>
-					<input class="js-people" type="text" hidden>
-					<div class="people__number js-people">1</div>
-				</div>
-					<!-- popup -->
-					<div class="popup">
-						<div class="popup__in">
-							<div class="popup__header">
-								Укажыте количество людей
-								<button class="popup__close"></button>
-							</div>
-							<ul class="list">
-								<li class="list__item">
-									<label class="js-label-people">
-										1 человек
-										<input class="js-input-people" value="1" name="people" type="radio" checked>
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										2 человек
-										<input class="js-input-people" value="2" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										3 человек
-										<input class="js-input-people" value="3" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										4 человек
-										<input class="js-input-people" value="4" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										5 человек
-										<input class="js-input-people" value="5" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										6 человек
-										<input class="js-input-people" value="6" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										7 человек
-										<input class="js-input-people" value="7" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-								<li class="list__item">
-									<label class="js-label-people">
-										8 и больше человек
-										<input class="js-input-people" value="8" name="people" type="radio">
-										<span></span>
-									</label>
-								</li>
-							</ul>
-						</div>
+			<!-- dropdown -->
+			<div class="dropdown">
+				<div class="dropdown__col">
+					<div class="datepicker">
+						<i class="ico ico_from"></i>
+						Заезд
 					</div>
+				</div>
+				<div class="dropdown__col">
+					<div class="datepicker">
+						<i class="ico ico_to"></i>
+						Выезд
+					</div>
+				</div>
+				<div class="dropdown__col dropdown__col_people">
+					<div class="people js-open-popup">
+						<i class="ico ico_people"></i>
+						<input class="js-people" type="text" hidden>
+						<div class="people__number js-people">1</div>
+					</div>
+						<!-- popup -->
+						<div class="popup">
+							<div class="popup__in">
+								<div class="popup__header">
+									Укажыте количество людей
+									<button class="popup__close"></button>
+								</div>
+								<ul class="list">
+									<li class="list__item">
+										<label class="js-label-people">
+											1 человек
+											<input class="js-input-people" value="1" name="people" type="radio" checked>
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											2 человек
+											<input class="js-input-people" value="2" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											3 человек
+											<input class="js-input-people" value="3" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											4 человек
+											<input class="js-input-people" value="4" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											5 человек
+											<input class="js-input-people" value="5" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											6 человек
+											<input class="js-input-people" value="6" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											7 человек
+											<input class="js-input-people" value="7" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+									<li class="list__item">
+										<label class="js-label-people">
+											8 и больше человек
+											<input class="js-input-people" value="8" name="people" type="radio">
+											<span></span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
 			</div>
-		</div>
-		<div class="filter__inf">2 ночи проживания</div>
-		<button class="btn btn_red">Найти квартиру</button>
+			<div class="filter__inf">2 ночи проживания</div>
+			<button class="btn btn_red" type="submit">Найти квартиру</button>
+		</form>
 	</div>
 	<!-- steps -->
 	<div class="steps">

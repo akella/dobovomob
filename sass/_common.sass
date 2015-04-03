@@ -576,7 +576,10 @@ label.block-gray
 			display: none
 	.form__ex
 		font-size: 12px
-input.error 
+input.error,
+select,
+select.error,
+textarea.error 
 	border-color: #df0100
 	+box-shadow(none)
 	+placeholder
@@ -585,7 +588,6 @@ input.error
 	+placeholder-color(#df0100)
 	& + label.error
 		display: none !important
-
 // forgot-pass
 .forgot-pass
 	padding: 0 15px
