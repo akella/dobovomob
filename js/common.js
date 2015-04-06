@@ -370,14 +370,6 @@ head.ready(function() {
 	$('.js-open-popup').on('click', function (){
 		$(this).parent().find('.popup').show();
 		$('body').addClass('is-fixed');
-		// calendar init
-		$('.popup').find('.calendar').addClass('is-init');
-		if ($('.calendar').hasClass('is-init')) {
-			var calendar = $('.calendar');
-			$('.calendar').find('.calendar__day.is-today').prevAll('.calendar__day').addClass('is-last-days');
-			$('.calendar').find('.calendar__day').addClass('is-other-month');
-			$('.calendar').find('.calendar__day span').parent().removeClass('is-other-month');
-		}
 	});
 	$('.popup, .popup__close').on('click', function(event){
 		$('.popup').hide();
@@ -390,81 +382,134 @@ head.ready(function() {
 	// calendar
 	function calendar() {
 		var calendar = $('.calendar');
-		calendar.each(function(){
-			var day_in = '.calendar__day.in';
-			var out = '.calendar__day.out';
-			// check first last day
-			$('.calendar__day').on("click", function (){
+		$('.js-open-calendar').on('click', function (){
+			$(this).parents('.dropdown').find('.js-popup-calendar').show();
+			$('body').addClass('is-fixed');
+			// calendar init
+			$(this).parents('.dropdown').find('.calendar').addClass('is-init');
+			if (calendar.hasClass('is-init')) {
 				var day = $('.calendar__day');
-				var index = $(this).index();
-				var month = $(this).parent('.calendar__days');
-				var all = 'out in is-selected';
+				var day_in = '.calendar__day.in';
+				var out = '.calendar__day.out';
+				calendar.each(function(){
 
-				if (month.find(day_in).length){
-					var start_index = month.find(day_in).index();
-					if (index > start_index) {
-						$(this).addClass('out');
-						$(".out").nextAll(day).removeClass('is-selected out');
-					}
-					else if (index < start_index) {
-						day.removeClass(all);
-					}
-				}
-				else {
-					$(this).addClass('in');
-				}
+					$('.calendar').slick({
+						dots: false,
+						slidesToShow: 1,
+						infinite: false,
+		  				adaptiveHeight: true
+					});
+					$(".slick-next, .slick-prev").on('click', function() {
+						calendar.find(day).removeClass('out in is-selected');
+					});
+					$('.calendar').on('swipe', function(event, slick, direction){
+						calendar.find(day).removeClass('out in is-selected');
+					});
+					// $(".slick-prev").on('click', function() {
+					// 	calendar.find(day).removeClass('out is-selected in');
+					// });
 
-				if (month.find(out).length) {
-					var finish_index = month.find(out).index();
-					if (index > finish_index) {
-						day.removeClass(all);
-					}
-				}
+					// check first last day
+					$('.calendar__day').on("click", function (){
+						var index = $(this).index();
+						var all = 'out in is-selected';
+						var month = $(this).parent('.calendar__days');
 
-				if (month.find('.calendar__day.is-today').length) {
-					var today_index = month.find('.calendar__day.is-today').index();
-					if (index < today_index) {
-						$(this).removeClass(all);
-					}
-				}
+						if (month.find(day_in).length){
+							var start_index = month.find(day_in).index();
+							if (index > start_index) {
+								$(this).addClass('out');
+								$(".out").nextAll(day).removeClass('is-selected out');
+							}
+							else if (index < start_index) {
+								day.removeClass(all);
+							}
+						}
+						else {
+							$(this).addClass('in');
+						}
 
-				if (day.hasClass('is-inactive' || 'is-other-month')) {
-					$('.calendar__day.is-inactive, .calendar__day.is-other-month').removeClass(all);
-				}
+						if (month.find(out).length) {
+							var finish_index = month.find(out).index();
+							if (index > finish_index) {
+								day.removeClass(all);
+							}
+						}
 
-				month.find(out).prevAll(day).addClass('is-selected');
-				month.find(day_in).prevAll(day).removeClass('is-selected');
-			});
-			// get date
-			// add date
-			$('.js-check-date').bind("click", function(){
-				var from = $(day_in).attr('date');
-				var to = $(out).attr('date');
-				var to_text = $(".datepicker__to-text");
-				var from_text = $(".datepicker__from-text");
-				to_text.html(to);
-				from_text.html(from);
-				// add span from (to)
-				var to_block = to_text.html();
-				var new_to_block = "";
-					to_block = to_block.split(" ");
-					for ( i = 0; i < to_block.length; i++ ) {
-					new_to_block = new_to_block + "<span>" + to_block[i] + "</span>";
-				}
-				to_text.html(new_to_block);
-				// add span from (from)
-				var from_block = from_text.html();
-				var new_from_block = "";
-					from_block = from_block.split(" ");
-					for ( i = 0; i < from_block.length; i++ ) {
-					new_from_block = new_from_block + "<span>" + from_block[i] + "</span>";
-				}
-				from_text.html(new_from_block);
-				// hide popup calendar
-				$('.popup').hide();
-				$('body').removeClass('is-fixed');
-				return false;
-			});
+						if (month.find('.calendar__day.is-today').length) {
+							var today_index = month.find('.calendar__day.is-today').index();
+							if (index < today_index) {
+								$(this).removeClass(all);
+							}
+						}
+
+						if (day.hasClass('is-inactive' || 'is-other-month')) {
+							$('.calendar__day.is-inactive, .calendar__day.is-other-month').removeClass(all);
+						}
+
+						calendar.find(out).prevAll(day).addClass('is-selected');
+						calendar.find(day_in).prevAll(day).removeClass('is-selected');
+
+					});
+
+					// on click next add class in out for index .calendar__day.in day and today
+					// $(".slick-next").on('click', function() {
+					// 	var today_index = calendar.find('.calendar__day.is-today').index();
+					// 	var index = $(this).index();
+					// 	var start_index = calendar.find(day_in).index();
+					// 	var all = 'out in is-selected';
+					// 	$('.calendar__day').on("click", function (){
+					// 		if (index < today_index) {
+					// 			$(this).addClass('out');
+					// 			$(".out").nextAll(day).removeClass('is-selected out');
+					// 		}
+					// 		if (calendar.find(out).length) {
+					// 			var finish_index = calendar.find(out).index();
+					// 			if (index > finish_index) {
+					// 				day.removeClass(all);
+					// 			}
+					// 		}
+					// 		// calendar.find(out).prevAll(day).addClass('is-selected');
+					// 	});
+					// });
+
+					// get date
+					$('.js-check-date').bind("click", function(){
+						var from = $(day_in).attr('date');
+						var to = $(out).attr('date');
+						var to_text = $(".datepicker__to-text");
+						var from_text = $(".datepicker__from-text");
+						to_text.html(to);
+						from_text.html(from);
+
+						// add span from (to)
+						var to_block = to_text.html();
+						var new_to_block = "";
+							to_block = to_block.split(" ");
+							for ( i = 0; i < to_block.length; i++ ) {
+							new_to_block = new_to_block + "<span>" + to_block[i] + "</span>";
+						}
+						to_text.html(new_to_block);
+
+						// add span from (from)
+						var from_block = from_text.html();
+						var new_from_block = "";
+							from_block = from_block.split(" ");
+							for ( i = 0; i < from_block.length; i++ ) {
+							new_from_block = new_from_block + "<span>" + from_block[i] + "</span>";
+						}
+						from_text.html(new_from_block);
+
+						// hide popup calendar
+						$('.popup').hide();
+						$('body').removeClass('is-fixed');
+						return false;
+					});
+				});
+				calendar.find('.calendar__day.is-today').prevAll('.calendar__day').addClass('is-last-days');
+				calendar.find('.calendar__day').addClass('is-other-month');
+				calendar.find('.calendar__day span').parent().removeClass('is-other-month');
+			}
 		});
 	}
 	calendar();

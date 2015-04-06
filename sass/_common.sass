@@ -1621,18 +1621,20 @@ textarea.error
 			width: 16px
 			background: #9a9a9a
 .calendar
+	position: relative
 	text-align: left
 	border-bottom: 1px solid #E2E2E2
 	.calendar__header
 		position: relative
 		height: 50px
-	.calendar__btn-left,
-	.calendar__btn-right
+	.calendar__slide
+		width: 100%
+	.slick-next,
+	.slick-prev
 		position: absolute
-		top: 50%
+		top: 21px
 		width: 36px
 		height: 36px
-		margin-top: -18px
 		background-color: #EDEDED
 		+background-image(linear-gradient(to top, #E0E0E0 0%, #E0E0E0 11%, #F5F5F5 100%))
 		border: 1px solid #E2E2E2
@@ -1642,14 +1644,14 @@ textarea.error
 			content: ''
 			top: 50%
 			margin-top: -8px
-	.calendar__btn-left
+	.slick-prev
 		left: 13px
 		&:before
 			position: absolute
 			left: 13px
 			content: ''
 			+sr(arr-left)
-	.calendar__btn-right
+	.slick-next
 		right: 13px
 		&:before
 			position: absolute
@@ -1700,7 +1702,8 @@ textarea.error
 			position: relative
 			z-index: 2
 		&.is-other-month,
-		&.is-other-month.is-last-days
+		&.is-other-month.is-last-days,
+		&.is-other-month.is-selected
 			background-color: #C0C0C0
 			color: #C0C0C0
 			+background-image(none)
@@ -1781,7 +1784,7 @@ textarea.error
 	span
 		width: 49%
 		font-size: 12px
-		line-height: 21px
+		line-height: 32px
 		display: inline-block
 	i 
 		width: 21px
