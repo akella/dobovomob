@@ -543,25 +543,31 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 
 .description { position: relative; padding: 10px 0 0; overflow-y: hidden; border-top: 1px solid #c0d1d1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .description.is-active .description__inf, .description.is-active .description__block { display: block; }
+.description.is-active .description__text { height: auto; }
+.description.is-active .description__text + .title { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 .description.is-active .title span:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .description.description_gray { padding-top: 0; border-top: none; }
 .description.description_gray.is-active .title.title_blue { border-bottom: none; }
 .description.description_gray .title.title_blue { text-transform: inherit; background: #ededed; }
 .description.description_gray .apartment__photo { margin-top: 0; }
 .description.description_gray .apartment { margin-bottom: 2px; background: #ededed; }
-.description .description__text { padding: 10px 10px 0; font-size: 14px; line-height: 1.2; color: #25292d; }
+.description.description_owner { background: #f8f5f3; padding: 10px 10px 0; margin-top: 20px; border: none; }
+.description.description_owner .title.title_blue { border: none; }
+.description .description__text { padding: 10px 10px 0; height: 68px; overflow-y: hidden; font-size: 14px; line-height: 1.2; color: #25292d; }
 .description .description__text + .title { position: relative; z-index: 2; -moz-box-shadow: 0 -19px 35px white; -webkit-box-shadow: 0 -19px 35px white; box-shadow: 0 -19px 35px white; }
-.description .description__inf { margin-top: 20px; padding: 10px 10px 0; background: #f8f5f3; display: none; }
+.description .description__text p { margin-top: 5px; }
+.description .description__text p:first-child { margin-top: 5px; }
+.description .description__inf { display: none; }
 .description .description__inf .title span:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .description .description__inf .characteristics { padding: 0; }
 .description .description__inf .title.title_blue { border: none; }
 .description .description__header { position: relative; padding-left: 50px; margin-bottom: 15px; }
 .description .description__header strong { color: #25292d; font-size: 16px; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 .description .description__header span { color: #767676; font-size: 11px; }
-.description .description__left { overflow: hidden; }
+.description .description__left { position: relative; top: 6px; overflow: hidden; }
 .description .description__left span { font-size: 12px; }
-.description .description__title { color: #4f81bd; font-size: 15px; line-height: 1; }
-.description .description__right { float: right; padding: 0 10px; width: 80px; text-align: center; border-left: 1px solid #cacaca; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.description .description__title { color: #4f81bd; font-size: 15px; line-height: 1; text-decoration: none; }
+.description .description__right { float: right; padding: 0 10px 2px; width: 80px; text-align: center; border-left: 1px solid #cacaca; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .description .description__right span { line-height: 1; display: block; }
 .description .description__logo { position: absolute; top: 0; left: 0; height: 40px; width: 40px; line-height: 40px; text-align: center; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: #789dcb; }
 .description .description__logo .ico { vertical-align: middle; }

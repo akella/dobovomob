@@ -210,8 +210,16 @@ head.ready(function() {
 	});
 
 	// description
-	$('.js-description-btn').on("click", function () {
-		$('.js-description').toggleClass('is-active');
+	$('.js-description-btn span').on("click", function () {
+		var description = $(this).parents('.description');
+		description.toggleClass('is-active');
+		if (description.hasClass('is-active')) {
+			$(this).text('скрыть');
+		}
+		else {
+			$('.js-description-btn span').text('подробное описание');
+			$('.description_owner .js-description-btn span').text('ПОДРОБНЕЕ О ВЛАДЕЛЬЦЕ');
+		}
 		return false;
 	});
 
@@ -670,6 +678,13 @@ head.ready(function() {
 		$(this).parent().toggleClass('is-active');
 	});
 
+	$('.js-to-change').on('click', function() {
+		var page = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(page).offset().top
+		}, 600);
+	});
+	
 	// add date 
 	function discounts_day(){
 		var day = $(".js-discounts-day");

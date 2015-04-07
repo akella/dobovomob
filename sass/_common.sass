@@ -2072,6 +2072,10 @@ textarea.error
 		.description__inf,
 		.description__block
 			display: block
+		.description__text
+			height: auto
+			& + .title
+				+box-shadow(none)
 		.title
 			span
 				&:before
@@ -2090,8 +2094,17 @@ textarea.error
 		.apartment
 			margin-bottom: 2px
 			background: #ededed
+	&.description_owner
+		background: #f8f5f3
+		padding: 10px 10px 0
+		margin-top: 20px
+		border: none
+		.title.title_blue
+			border: none
 	.description__text
 		padding: 10px 10px 0
+		height: 68px
+		overflow-y: hidden
 		font-size: 14px
 		line-height: 1.2
 		color: #25292D
@@ -2099,10 +2112,11 @@ textarea.error
 			position: relative
 			z-index: 2
 			+box-shadow(0 -19px 35px white)
+		p
+			margin-top: 5px
+			&:first-child
+				margin-top: 5px
 	.description__inf
-		margin-top: 20px
-		padding: 10px 10px 0
-		background: #f8f5f3
 		display: none
 		.title
 			span
@@ -2124,6 +2138,8 @@ textarea.error
 			color: #767676
 			font-size: 11px
 	.description__left
+		position: relative
+		top: 6px
 		overflow: hidden
 		span
 			font-size: 12px
@@ -2131,9 +2147,10 @@ textarea.error
 		color: #4F81BD
 		font-size: 15px
 		line-height: 1
+		text-decoration: none
 	.description__right
 		float: right
-		padding: 0 10px
+		padding: 0 10px 2px
 		width: 80px
 		text-align: center
 		border-left: 1px solid #cacaca
