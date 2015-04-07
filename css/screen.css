@@ -118,8 +118,9 @@ label.block-gray input { margin-right: 2px; }
 .languages label, .currency label { padding-left: 25px; }
 
 .like { position: relative; padding: 0 30px 0 7px; height: 30px; line-height: 30px; color: #48bf0d; font-size: 25px; background-image: -moz-linear-gradient(bottom, #eaeaea 0%, #f8f8f8 99%, #f8f8f8 100%); background-image: -webkit-linear-gradient(bottom, #eaeaea 0%, #f8f8f8 99%, #f8f8f8 100%); background-image: linear-gradient(to top, #eaeaea 0%, #f8f8f8 99%, #f8f8f8 100%); -moz-box-shadow: 0.5px 0.9px 0 #aaafaf; -webkit-box-shadow: 0.5px 0.9px 0 #aaafaf; box-shadow: 0.5px 0.9px 0 #aaafaf; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
-.like:hover, .like.is-active { background-image: -moz-linear-gradient(bottom, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); background-image: -webkit-linear-gradient(bottom, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); background-image: linear-gradient(to top, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); }
-.like:before { position: absolute; content: ""; top: 50%; right: 7px; margin-top: -9px; background: url('../img/icons-sd379ac62d7.png') 0 -2641px no-repeat; background-position: 0 -1321px; width: 13px; height: 17.5px; -moz-background-size: 171px 3351px; -webkit-background-size: 171px 3351px; background-size: 171px 3351px; }
+.like:hover, .like.is-active { color: #787878; background-image: -moz-linear-gradient(bottom, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); background-image: -webkit-linear-gradient(bottom, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); background-image: linear-gradient(to top, #d3d3d3 0%, #ebebeb 99%, #ebebeb 100%); -moz-box-shadow: 0.5px 0.9px 0 #aaafaf; -webkit-box-shadow: 0.5px 0.9px 0 #aaafaf; box-shadow: 0.5px 0.9px 0 #aaafaf; }
+.like:hover:before, .like.is-active:before { background: url("../img/svg/like-hover.svg") no-repeat 0 0; -moz-background-size: 13px 17px; -o-background-size: 13px 17px; -webkit-background-size: 13px 17px; background-size: 13px 17px; width: 13px; height: 17px; display: inline-block; }
+.like:before { position: absolute; content: ""; top: 50%; right: 7px; margin-top: -8px; background: url("../img/svg/like.svg") no-repeat 0 0; -moz-background-size: 13px 17px; -o-background-size: 13px 17px; -webkit-background-size: 13px 17px; background-size: 13px 17px; width: 13px; height: 17px; display: inline-block; }
 
 .input input { padding: 0 10px; height: 34px; font-size: 14px; color: black; width: 100%; background-color: white; display: inline-block; border: 1px solid #cccccc; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .input input:-ms-input-placeholder { color: #949494; font-family: "SegoeUI-Italic", Arial, sans-serif; font-weight: normal; }
@@ -578,6 +579,12 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 
 .apartment { margin-bottom: 14px; padding-bottom: 9px; background-color: #fcf9f7; text-decoration: none; -moz-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; -webkit-box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; box-shadow: 0 1px 1px #b8b4b2, inset 0 -1px 0 white; display: block; }
 .apartment.apartment_mod { margin-bottom: 0; background: #ededed; }
+.apartment.apartment_slider { position: relative; padding-bottom: 0; -moz-box-shadow: 0 1px 1px #b8b4b2, none; -webkit-box-shadow: 0 1px 1px #b8b4b2, none; box-shadow: 0 1px 1px #b8b4b2, none; }
+.apartment.apartment_slider .apartment__photo { margin-bottom: 25px; }
+.apartment.apartment_slider .apartment__bottom { position: absolute; left: 0; top: 210px; }
+.apartment.apartment_slider .slider { padding-bottom: 124px; }
+.apartment.apartment_slider .price { position: absolute; top: -34px; right: 35px; }
+.apartment.apartment_slider .slick-dots { padding: 15px 0; bottom: 0; background: white; -moz-box-shadow: 0 -1px 1px #b8b4b2; -webkit-box-shadow: 0 -1px 1px #b8b4b2; box-shadow: 0 -1px 1px #b8b4b2; }
 .apartment .apartment__bottom, .apartment .apartment__top { *zoom: 1; }
 .apartment .apartment__bottom:after, .apartment .apartment__top:after { content: " "; display: table; clear: both; }
 .apartment .apartment__left { float: left; }

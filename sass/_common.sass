@@ -489,14 +489,18 @@ label.block-gray
 	+suisb
 	&:hover,
 	&.is-active
-		+background-image(linear-gradient(to top, #D3D3D3 0%, #EBEBEB 99%, #EBEBEB 100%))
+		color: #787878
+		+background-image(linear-gradient(to top, lightgrey 0%, #ebebeb 99%, #ebebeb 100%))
+		+box-shadow(0.5px 0.9px 0 #aaafaf)
+		&:before
+			+svg(like-hover, 13, 17)
 	&:before
 		position: absolute
 		content: ''
 		top: 50%
 		right: 7px
-		margin-top: -9px
-		+sr(ico-like)
+		margin-top: -8px
+		+svg(like, 13, 17)
 
 // input
 .input
@@ -2196,6 +2200,27 @@ textarea.error
 	&.apartment_mod
 		margin-bottom: 0
 		background: #ededed
+	&.apartment_slider
+		position: relative
+		padding-bottom: 0
+		+box-shadow(0 1px 1px #B8B4B2, none)
+		.apartment__photo
+			margin-bottom: 25px
+		.apartment__bottom
+			position: absolute
+			left: 0
+			top: 210px
+		.slider
+			padding-bottom: 124px
+		.price
+			position: absolute
+			top: -34px
+			right: 35px
+		.slick-dots
+			padding: 15px 0
+			bottom: 0
+			background: #fff
+			+box-shadow(0 -1px 1px #B8B4B2)
 	.apartment__bottom,
 	.apartment__top
 		@extend %in
