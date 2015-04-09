@@ -240,6 +240,7 @@ head.ready(function() {
 
 	// tabs
 	$( "#tabs" ).tabs();
+
 	$('#tabs li a').on('click', function (){
 		var href = $(this).attr("href");
 		var content = $(this).parents('.tabs').find(href);
@@ -258,6 +259,9 @@ head.ready(function() {
 		};
 	});
 
+	$('.js-clear-history').on('click', function(){
+		$(this).parents('.js-history').addClass('js-hide');
+	});
 	// tab
 	function tab() {
 		$(".js-tab").each(function(){

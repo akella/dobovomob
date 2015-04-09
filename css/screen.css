@@ -34,6 +34,8 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 
 .in, .menu .menu__wrap, .languages .languages__list, .languages .currency__list, .currency .languages__list, .currency .currency__list, .forget-code, .apartment .apartment__bottom, .apartment .apartment__top, .reviews .reviews__recommends + .reviews__block, .more, .stat, .characteristics, .contact, .other-quest, .footer .footer__top { padding: 0 10px; }
 
+.js-hide { display: none; }
+
 .info .info__row:first-child .info__right { color: #5f86be; }
 
 .text-green { color: #48bf0d; }
