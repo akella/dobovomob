@@ -367,6 +367,8 @@ head.ready(function() {
 	});
 	$('.js-label-people').on('click', function (){
 		$( ".js-people" ).html( $( ".js-input-people:checked" ).val());
+		$('.popup').hide();
+		$('body').removeClass('is-fixed');
 	});
 
 	// like
