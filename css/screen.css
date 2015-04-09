@@ -585,6 +585,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .apartment.apartment_slider .slider { padding-bottom: 124px; }
 .apartment.apartment_slider .price { position: absolute; top: -34px; right: 35px; }
 .apartment.apartment_slider .slick-dots { padding: 15px 0; bottom: 0; background: white; -moz-box-shadow: 0 -1px 1px #b8b4b2; -webkit-box-shadow: 0 -1px 1px #b8b4b2; box-shadow: 0 -1px 1px #b8b4b2; }
+.apartment .price-black { top: 15px; bottom: auto; }
 .apartment .apartment__bottom, .apartment .apartment__top { *zoom: 1; }
 .apartment .apartment__bottom:after, .apartment .apartment__top:after { content: " "; display: table; clear: both; }
 .apartment .apartment__left { float: left; }
@@ -606,7 +607,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .apartment .apartment__location:hover { text-decoration: underline; }
 .apartment .apartment__location:before { position: absolute; content: ""; top: -3px; left: 0; background: url('../img/icons-sd379ac62d7.png') 0 -5187px no-repeat; background-position: 0 -2594px; width: 19px; height: 27.5px; -moz-background-size: 171px 3351px; -webkit-background-size: 171px 3351px; background-size: 171px 3351px; }
 .apartment .apartment__inf { margin: 7px 0; color: #656b70; font-size: 14px; font-family: "SegoeUI-Italic", Arial, sans-serif; font-weight: normal; }
-.apartment .apartment-request { position: absolute; bottom: 0; right: 0; padding: 0 12px; height: 25px; font-size: 11px; line-height: 25px; background-color: rgba(255, 251, 120, 0.57); }
+.apartment .apartment-request { position: absolute; top: 176px; right: 0; padding: 0 12px; height: 25px; font-size: 11px; line-height: 25px; z-index: 1; background-color: rgba(255, 251, 120, 0.57); }
 .apartment .apartment__row .apartment__inf, .apartment .apartment__row .rating { color: #656b70; display: inline-block; }
 .apartment .apartment__date { padding-left: 30px; font-size: 14px; }
 .apartment .apartment__date strong { font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }

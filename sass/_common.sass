@@ -2221,6 +2221,9 @@ textarea.error
 			bottom: 0
 			background: #fff
 			+box-shadow(0 -1px 1px #B8B4B2)
+	.price-black 
+		top: 15px
+		bottom: auto
 	.apartment__bottom,
 	.apartment__top
 		@extend %in
@@ -2309,12 +2312,13 @@ textarea.error
 		+suii
 	.apartment-request
 		position: absolute
-		bottom: 0
+		top: 176px
 		right: 0
 		padding: 0 12px
 		height: 25px
 		font-size: 11px
 		line-height: 25px
+		z-index: 1
 		background-color: rgba(#FFFB78, .57)
 	.apartment__row
 		.apartment__inf,
