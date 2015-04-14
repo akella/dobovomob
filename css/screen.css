@@ -449,7 +449,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar .calendar__month { text-align: center; font-size: 18px; line-height: 50px; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .calendar .calendar__week, .calendar .calendar__days { font-size: 0; line-height: 1; }
 .calendar .calendar__week { border-top: 1px solid #e2e2e2; }
-.calendar .calendar__th, .calendar .calendar__day { font-size: 4.5vw; width: 14.28vw; vertical-align: top; display: inline-block; border: 1px solid #e2e2e2; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+.calendar .calendar__th, .calendar .calendar__day { font-size: 4.5vw; width: 13.64vw; vertical-align: top; display: inline-block; border: 1px solid #e2e2e2; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .calendar .calendar__th { height: 27px; line-height: 27px; text-transform: capitalize; text-align: center; background: #fcfcfc; }
 .calendar .calendar__day { position: relative; padding: 2px; height: 12vw; line-height: 1; overflow: hidden; background-color: white; border: 1px solid #e2e2e2; cursor: pointer; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 .calendar .calendar__day span { text-align: right; display: block; }
@@ -660,8 +660,8 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .slider .apartment.slick-active { display: block; }
 .slider .apartment__photo { margin-top: 0; }
 
-.slick-slider .apartment__photo { height: 201px; }
-.slick-slider .apartment__photo img { position: relative; left: 50%; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); height: 100%; display: block; }
+.slick-slider .apartment__photo { height: 201px; background: #464a4b; }
+.slick-slider .apartment__photo img { position: relative; left: 50%; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); height: 100%; width: auto; display: block; }
 
 .date { font-size: 10px; color: #5c6064; line-height: 13px; font-family: "Arial"; }
 
