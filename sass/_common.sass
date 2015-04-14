@@ -121,7 +121,7 @@ label
 
 // hode
 .js-hide
-	display: none
+	display: none !important 
 
 //blue
 %blue
@@ -788,6 +788,9 @@ textarea.error
 	+suir
 	&.tabs_mar
 		margin-top: 23px
+	&.is-clear
+		.tabs__list li
+			width: 100%
 	.ui-widget-content
 		border: none
 		background: none
@@ -1687,8 +1690,8 @@ textarea.error
 		+box
 		+suir
 	.calendar__th
-		height: 27px
-		line-height: 27px
+		height: 5vw
+		line-height: 4.5vw
 		text-transform: capitalize
 		text-align: center
 		background: #fcfcfc

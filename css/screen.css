@@ -34,7 +34,7 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 
 .in, .menu .menu__wrap, .languages .languages__list, .languages .currency__list, .currency .languages__list, .currency .currency__list, .forget-code, .apartment .apartment__bottom, .apartment .apartment__top, .reviews .reviews__recommends + .reviews__block, .more, .stat, .characteristics, .contact, .other-quest, .footer .footer__top { padding: 0 10px; }
 
-.js-hide { display: none; }
+.js-hide { display: none !important; }
 
 .info .info__row:first-child .info__right { color: #5f86be; }
 
@@ -215,6 +215,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 
 .tabs.ui-widget-content { border: none; background: none; font-size: 13px; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .tabs.ui-widget-content.tabs_mar { margin-top: 23px; }
+.tabs.ui-widget-content.is-clear .tabs__list li { width: 100%; }
 .tabs.ui-widget-content .ui-widget-content { border: none; background: none; }
 .tabs.ui-widget-content .tabs__list { font-size: 0; border: none; }
 .tabs.ui-widget-content .tabs__list li { width: 50%; display: inline-block; vertical-align: top; border: none; }
@@ -450,7 +451,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar .calendar__week, .calendar .calendar__days { font-size: 0; line-height: 1; }
 .calendar .calendar__week { border-top: 1px solid #e2e2e2; }
 .calendar .calendar__th, .calendar .calendar__day { font-size: 4.5vw; width: 13.64vw; vertical-align: top; display: inline-block; border: 1px solid #e2e2e2; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
-.calendar .calendar__th { height: 27px; line-height: 27px; text-transform: capitalize; text-align: center; background: #fcfcfc; }
+.calendar .calendar__th { height: 5vw; line-height: 4.5vw; text-transform: capitalize; text-align: center; background: #fcfcfc; }
 .calendar .calendar__day { position: relative; padding: 2px; height: 12vw; line-height: 1; text-align: left; overflow: hidden; background-color: white; border: 1px solid #e2e2e2; cursor: pointer; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 .calendar .calendar__day span { text-align: right; display: block; }
 .calendar .calendar__day .calendar__price, .calendar .calendar__day span { position: relative; z-index: 2; }

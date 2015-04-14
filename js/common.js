@@ -259,8 +259,25 @@ head.ready(function() {
 		};
 	});
 
+	// clear history
 	$('.js-clear-history').on('click', function(){
-		$(this).parents('.js-history').addClass('js-hide');
+		var tabs = $(this).parents('.tabs');
+		$('.js-history').addClass('js-hide');
+		tabs.find('.js-history').next().show();
+		tabs.find('.slider').addClass('is-init');
+		tabs.addClass('is-clear');
+		if (!$(this).hasClass('is-init')) {
+			tabs.find('.slider').slick({
+				arrows: false,
+				dots: true,
+				infinite: true,
+				speed: 200,
+				cssEase: 'linear',
+				adaptiveHeight: true,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		};
 	});
 	// tab
 	function tab() {
