@@ -437,7 +437,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .cost .input:first-child:before { display: none; }
 .cost .input:before { position: absolute; content: ""; top: 50%; left: -27px; height: 1px; width: 16px; background: #9a9a9a; }
 
-.calendar { position: relative; text-align: left; border-bottom: 1px solid #e2e2e2; }
+.calendar { position: relative; text-align: center; border-bottom: 1px solid #e2e2e2; }
 .calendar .calendar__header { position: relative; height: 50px; }
 .calendar .calendar__slide { width: 100%; }
 .calendar .slick-next, .calendar .slick-prev { position: absolute; top: 21px; width: 36px; height: 36px; background-color: #ededed; background-image: -moz-linear-gradient(bottom, #e0e0e0 0%, #e0e0e0 11%, #f5f5f5 100%); background-image: -webkit-linear-gradient(bottom, #e0e0e0 0%, #e0e0e0 11%, #f5f5f5 100%); background-image: linear-gradient(to top, #e0e0e0 0%, #e0e0e0 11%, #f5f5f5 100%); border: 1px solid #e2e2e2; -moz-box-shadow: 0 1px 1px #b8b4b2; -webkit-box-shadow: 0 1px 1px #b8b4b2; box-shadow: 0 1px 1px #b8b4b2; }
@@ -451,7 +451,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar .calendar__week { border-top: 1px solid #e2e2e2; }
 .calendar .calendar__th, .calendar .calendar__day { font-size: 4.5vw; width: 13.64vw; vertical-align: top; display: inline-block; border: 1px solid #e2e2e2; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
 .calendar .calendar__th { height: 27px; line-height: 27px; text-transform: capitalize; text-align: center; background: #fcfcfc; }
-.calendar .calendar__day { position: relative; padding: 2px; height: 12vw; line-height: 1; overflow: hidden; background-color: white; border: 1px solid #e2e2e2; cursor: pointer; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+.calendar .calendar__day { position: relative; padding: 2px; height: 12vw; line-height: 1; text-align: left; overflow: hidden; background-color: white; border: 1px solid #e2e2e2; cursor: pointer; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 .calendar .calendar__day span { text-align: right; display: block; }
 .calendar .calendar__day .calendar__price, .calendar .calendar__day span { position: relative; z-index: 2; }
 .calendar .calendar__day.is-other-month, .calendar .calendar__day.is-other-month.is-last-days, .calendar .calendar__day.is-other-month.is-selected { background-color: silver; color: silver; background-image: none; cursor: default; }
