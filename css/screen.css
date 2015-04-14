@@ -480,7 +480,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar-info .is-selected { background: #f9f9b7; }
 .calendar-info .is-inactive { background: #eebaaf; }
 
-.check-date { padding: 0 0 10px; margin: 0 0 10px; color: #5f86be; text-align: center; text-decoration: none; line-height: 1.2; font-size: 16px; display: block; }
+.check-date { padding: 0 0 10px; margin: 0 0 10px; color: #5f86be; text-align: center; text-decoration: none; line-height: 1.2; font-size: 5vw; display: block; }
 .check-date:hover { text-decoration: underline; }
 
 .search { position: relative; padding-right: 55px; font-size: 0; text-align: left; *zoom: 1; }
@@ -676,7 +676,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .reviews .reviews__estimate span { font-size: 15px; line-height: 1; vertical-align: text-top; display: inline-block; }
 .reviews .reviews__estimate .date { float: right; margin: 8px 10px 0 0; padding-left: 13px; border-left: 1px solid #e5ebeb; }
 .reviews .reviews__block { padding: 0 0 7px 38px; }
-.reviews .reviews__comm { position: relative; margin-top: 6px; padding: 7px 0 12px; font-size: 11px; color: #8b9094; font-family: "Arial"; border-top: 1px solid #ecf0f0; }
+.reviews .reviews__comm { position: relative; margin-top: 6px; padding: 7px 0 12px; font-size: 14px; color: #8b9094; font-family: "Arial"; border-top: 1px solid #ecf0f0; }
 .reviews .reviews__comm:first-child { border-top: none; }
 .reviews .reviews__comm:before { position: absolute; content: ""; top: 11px; left: -22px; background: url('../img/icons-sd379ac62d7.png') 0 -3502px no-repeat; background-position: 0 -1751px; width: 10px; height: 10px; -moz-background-size: 171px 3351px; -webkit-background-size: 171px 3351px; background-size: 171px 3351px; }
 .reviews .reviews__comm.reviews__comm_minus:before { background: url('../img/icons-sd379ac62d7.png') 0 -2785px no-repeat; background-position: 0 -1393px; width: 10px; height: 2px; -moz-background-size: 171px 3351px; -webkit-background-size: 171px 3351px; background-size: 171px 3351px; }
