@@ -482,7 +482,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar-info .is-inactive { background: #eebaaf; }
 
 .calendar-in { padding: 3px 10px 10px; }
-.calendar-in .btn.is-active { background: #48bf0d; }
+.calendar-in .btn.is-active { -webkit-animation: background-image 0.8s infinite; -moz-animation: background-image 0.8s infinite; -ms-animation: background-image 0.8s infinite; -o-animation: background-image 0.8s infinite; animation: background-image 0.8s infinite; }
 
 .check-date { padding: 0 0 10px; margin: 0 0 10px; color: #5f86be; text-align: center; text-decoration: none; line-height: 1.2; font-size: 5vw; display: block; }
 .check-date:hover { text-decoration: underline; }
@@ -1030,6 +1030,16 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
+@-moz-keyframes background-image { 0% { background-image: -moz-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: -webkit-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: linear-gradient(to top, #229a00 0%, #2cbd00 100%); }
+  100% { background-image: -moz-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: -webkit-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: linear-gradient(to top, #4ac726 0%, #72e64e 100%); } }
+@-webkit-keyframes background-image { 0% { background-image: -moz-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: -webkit-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: linear-gradient(to top, #229a00 0%, #2cbd00 100%); }
+  100% { background-image: -moz-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: -webkit-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: linear-gradient(to top, #4ac726 0%, #72e64e 100%); } }
+@-o-keyframes background-image { 0% { background-image: -moz-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: -webkit-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: linear-gradient(to top, #229a00 0%, #2cbd00 100%); }
+  100% { background-image: -moz-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: -webkit-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: linear-gradient(to top, #4ac726 0%, #72e64e 100%); } }
+@-ms-keyframes background-image { 0% { background-image: -moz-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: -webkit-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: linear-gradient(to top, #229a00 0%, #2cbd00 100%); }
+  100% { background-image: -moz-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: -webkit-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: linear-gradient(to top, #4ac726 0%, #72e64e 100%); } }
+@keyframes background-image { 0% { background-image: -moz-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: -webkit-linear-gradient(bottom, #229a00 0%, #2cbd00 100%); background-image: linear-gradient(to top, #229a00 0%, #2cbd00 100%); }
+  100% { background-image: -moz-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: -webkit-linear-gradient(bottom, #4ac726 0%, #72e64e 100%); background-image: linear-gradient(to top, #4ac726 0%, #72e64e 100%); } }
 .btn { width: 100%; color: white; font-size: 21px; text-transform: uppercase; text-decoration: none; cursor: pointer; text-align: center; display: inline-block; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; font-family: "SegoeUI-Bold", Arial, sans-serif; font-weight: normal; }
 .btn.btn_red { font-size: 18px; height: 43px; line-height: 43px; -moz-border-radius: 2.5px; -webkit-border-radius: 2.5px; border-radius: 2.5px; background-image: -moz-linear-gradient(bottom, #f31a42 0%, #ff4f32 100%); background-image: -webkit-linear-gradient(bottom, #f31a42 0%, #ff4f32 100%); background-image: linear-gradient(to top, #f31a42 0%, #ff4f32 100%); }
 .btn.btn_red:hover { background-image: -moz-linear-gradient(bottom, #ff6761 0%, #ff6761 100%); background-image: -webkit-linear-gradient(bottom, #ff6761 0%, #ff6761 100%); background-image: linear-gradient(to top, #ff6761 0%, #ff6761 100%); }
