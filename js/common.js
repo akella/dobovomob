@@ -615,6 +615,13 @@ head.ready(function() {
 							$('.calendar__day.is-inactive, .calendar__day.is-other-month').removeClass(all);
 						}
 
+						if (day.hasClass('in' && 'out')) {
+							$('.js-check-date').addClass('is-active');
+						}
+						else{
+							$('.js-check-date').removeClass('is-active');
+						}
+
 						calendar.find(out).prevAll(day).addClass('is-selected');
 						calendar.find(day_in).prevAll(day).removeClass('is-selected');
 
