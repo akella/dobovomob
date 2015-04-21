@@ -67,8 +67,6 @@ head.ready(function() {
 			var input = $(this).find("input");
 			var plus = $(this).find(".js-plus");
 			var minus = $(this).find(".js-minus");
-			var plus_guests = $(this).find(".js-choose-guests .js-plus");
-			var minus_guests = $(this).find(".js-choose-guests .js-minus");
 			plus.bind("click", function(){
 				var val = +(input.val());
 				if (val >= max_number) {
@@ -90,6 +88,17 @@ head.ready(function() {
 					return false
 				}
 			});
+		});
+	}
+	choose();
+	
+	function choose_people() {
+		var number = $(".js-choose-guests");
+		number.each(function(){
+			var max_number = +($(this).attr("data-max-number"));
+			var input = $(this).find("input");
+			var plus_guests = $(this).find(".js-choose-guests .js-plus");
+			var minus_guests = $(this).find(".js-choose-guests .js-minus");
 			plus_guests.bind("click", function(){
 				var val = +(input.val());
 				if (val >= max_number) {
@@ -116,8 +125,8 @@ head.ready(function() {
 			});
 		});
 	}
-	choose();
-	
+	choose_people();
+
 	// datepicker
 	$('#from').on('click', function(){
 		$(this).parent().parent().parent().addClass('is-active');
@@ -713,6 +722,7 @@ head.ready(function() {
 		$('html, body').animate({
 			scrollTop: $(page).offset().top
 		}, 600);
+		return false;
 	});
 	
 	// add date 

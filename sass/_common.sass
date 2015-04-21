@@ -1339,6 +1339,7 @@ textarea.error
 		+clr
 		&:first-child
 			.info__right
+				text-decoration: none
 				@extend %blue
 		.btn_white-2,
 		.btn_down
@@ -1354,6 +1355,8 @@ textarea.error
 		overflow: hidden
 		.price-app
 			width: 158px
+		.price-app_info
+			width: 130px
 		.price-all
 			width: 70px
 		.price-app,
@@ -1816,6 +1819,8 @@ textarea.error
 	padding: 3px 10px 10px
 	.btn.is-active
 		+animation(background-image .7s infinite)
+		-webkit-animation-iteration-count: 2
+		animation-iteration-count: 2
 
 .check-date
 	padding: 0 0 10px
@@ -2430,6 +2435,12 @@ textarea.error
 			+suir
 	.price-all
 		margin-left: 10px
+	&.price-app_info
+		font-size: 17px
+		.price-app__green
+			+suir
+		span
+			font-size: 20px
 .price-all
 	font-size: 14px
 	color: #25292D
@@ -3030,7 +3041,7 @@ textarea.error
 	.characteristics__in
 		margin-top: 15px
 	.characteristics__item
-		padding: 12px 0
+		padding: 8px 0 9px
 		color: #25292D
 		font-size: 16px
 		border-bottom: 1px solid #cacaca
