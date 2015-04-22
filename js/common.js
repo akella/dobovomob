@@ -559,6 +559,7 @@ head.ready(function() {
 		$('.js-open-calendar').on('click', function (){
 			$(this).parents('.dropdown').find('.js-popup-calendar').show();
 			$('body').addClass('is-fixed');
+			$('.js-check-date').removeClass('is-active');
 			// calendar init
 			$(this).parents('.dropdown').find('.calendar').addClass('is-init');
 			if (calendar.hasClass('is-init')) {
@@ -697,6 +698,9 @@ head.ready(function() {
 		});
 	}
 	calendar();
+	$('.calendar__day').on("click", function (){
+
+	});
 
 	// toggle checkbox
 	function toggle() {
