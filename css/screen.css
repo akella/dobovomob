@@ -57,6 +57,7 @@ label { -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select:
 label.block-gray input { margin-right: 2px; }
 
 .out.out_mod .filter_bg { margin-bottom: 0; }
+.out.out_filter { padding-bottom: 48px; }
 
 .header { position: relative; padding: 0 7px 0 0; background: #f8f5f3; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -293,9 +294,11 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .list .list__item span:after { position: absolute; content: ""; bottom: 0; right: 15px; height: 2px; width: 10px; background: black; -ms-transform: rotate(-135deg); -webkit-transform: rotate(-135deg); transform: rotate(-135deg); display: none; }
 .list .list__link { position: relative; padding: 8px 20px 8px 0; color: black; text-decoration: none; display: block; *zoom: 1; }
 .list .list__link:after { content: " "; display: table; clear: both; }
-.list .list__link span { right: 0; }
+.list .list__link span { right: 0; top: 50%; margin-top: -8px; }
+.list .list__link:hover .list__left { text-decoration: underline; }
 .list .list__left { float: left; width: 197px; line-height: 1.2; }
 .list .list__right { float: right; margin-top: 3px; color: #989898; }
+.list.list_mod .list__item span { background: url('../img/icons-s2654f63a6e.png') 0 -470px no-repeat; background-position: 0 -235px; width: 9px; height: 16px; -moz-background-size: 171px 3436px; -webkit-background-size: 171px 3436px; background-size: 171px 3436px; }
 
 .filter { margin-bottom: 79px; text-align: center; background-color: #f1f1f1; }
 .filter.filter_bg { margin-bottom: 10px; padding: 5px 10px 18px; background: url("../img/bg-filter.png") repeat; }
@@ -336,7 +339,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .filter .filter__change-date { padding: 20px 10px 17px 5px; line-height: 1; border-bottom: 1px solid white; }
 .filter .filter__change-date .btn-dashed { float: right; }
 
-.filter-bottom { padding: 7px 0; font-size: 0; background-color: #a3afaf; background-image: -moz-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: -webkit-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: linear-gradient(to top, #a3afaf 0%, #b8c4c4 100%); }
+.filter-bottom { position: fixed; left: 0; right: 0; bottom: 0; padding: 7px 0; font-size: 0; z-index: 2; background-color: #a3afaf; background-image: -moz-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: -webkit-linear-gradient(bottom, #a3afaf 0%, #b8c4c4 100%); background-image: linear-gradient(to top, #a3afaf 0%, #b8c4c4 100%); }
 .filter-bottom .filter-bottom__col { width: 50%; text-align: center; height: 34px; line-height: 34px; font-size: 13px; text-transform: uppercase; text-decoration: none; color: white; border-left: 1px solid white; display: inline-block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .filter-bottom .filter-bottom__col:first-child { border-left: none; }
 .filter-bottom .filter-bottom__col:hover { text-decoration: underline; }
@@ -605,6 +608,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .apartment .apartment__price-from { float: right; padding: 15px 0 0; font-size: 16px; }
 .apartment .apartment__photo { position: relative; margin: 8px 0; }
 .apartment .apartment__photo img { width: 100%; display: block; }
+.apartment .apartment__photo .apartment__photo { margin: 0; }
 .apartment .apartment__photo .price-black { top: 15px; bottom: auto; }
 .apartment .apartment__title { position: relative; color: #25292d; font-size: 16px; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-family: "SegoeUI-SemiBold", Arial, sans-serif; font-weight: normal; }
 .apartment .apartment__title:hover { text-decoration: underline; }

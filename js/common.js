@@ -70,7 +70,7 @@ head.ready(function() {
 			plus.bind("click", function(){
 				var val = +(input.val());
 				if (val >= max_number) {
-					return false
+					return false;
 				}
 				else {
 					val += 1;
@@ -84,8 +84,8 @@ head.ready(function() {
 					input.val(val);
 				}
 				else {
-					input.val('');
-					return false
+					input.val('1');
+					return false;
 				}
 			});
 		});

@@ -22,7 +22,7 @@ head.ready(function() {
 					'<div class="popup-map__right">'+
 						'<a href="#" class="popup-map__title">Двухуровневая квартира в самом центре столицы</a>'+
 						'<div class="popup-map__id">(AV 2478)</div>'+
-						'<div class="popup-map__address">Двухкомнатная</div>'+
+						'<div class="popup-map__address">ул. В.Василевской 45</div>'+
 						'<div class="popup-map__row">'+
 							'<div class="popup-map__col">'+
 								'<div class="popup-map__price popup-map__price_green"><span>320</span>грн. в сутки</div>'+
