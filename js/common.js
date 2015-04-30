@@ -56,7 +56,14 @@ head.ready(function() {
 
 	// filter open
 	$('.js-open').on('click', function() {
-		$(this).parent().toggleClass('is-active');
+		var this_par = $(this).parent();
+		if (this_par.hasClass('is-active')) {
+			this_par.removeClass('is-active');
+		}
+		else {
+			$('.js-open').parent().removeClass('is-active');
+			this_par.addClass('is-active');
+		}
 	});
 
 	// choose
@@ -127,6 +134,38 @@ head.ready(function() {
 	}
 	choose_people();
 
+	function choose_apartment() {
+		var number = $(".js-choose-apartment");
+		number.each(function(){
+			var max_number = +($(this).attr("data-max-number"));
+			var input = $(this).find("input");
+			var plus = $(this).find(".js-plus");
+			var minus = $(this).find(".js-minus");
+			plus.bind("click", function(){
+				var val = +(input.val());
+				if (val >= max_number) {
+					return false;
+				}
+				else {
+					val += 1;
+					input.val(val);
+				}
+			});
+			minus.bind("click", function(){
+				var val = +(input.val());
+				if (val > 1) {
+					val -= 1;
+					input.val(val);
+				}
+				else {
+					input.val('');
+					return false;
+				}
+			});
+		});
+	}
+	choose_apartment();
+
 	// datepicker
 	$('#from').on('click', function(){
 		$(this).parent().parent().parent().addClass('is-active');
@@ -147,7 +186,7 @@ head.ready(function() {
 			onSelect: function( selectedDate ) {
 				$( "#to" ).datepicker({
 					inline: true,
-					minDate: selectedDate,
+					minDate: selectedDate + 1,
 					dateFormat: 'd MM D',
 					monthNamesShort: ['янв.', 'фев.', 'март.', 'апр.', 'май.', 'июнь.', 'июль.', 'авг.', 'сент.', 'окт.', 'ноя.', 'дек.'],
 					monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
