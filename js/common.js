@@ -244,7 +244,7 @@ head.ready(function() {
 				$(this).parent().parent().parent().removeClass('is-active');
 			}
 		});
-		$(".datepicker__from-text").text('--');
+		// $(".datepicker__from-text").text('--');
 	});
 
 	// cost
@@ -854,6 +854,20 @@ head.ready(function() {
 		var validator = $("#form").data('validator');
 		validator.settings.ignore = ":hidden:not(select)";
 	});
+
+	// show password
+	function show_password() {
+		$('.js-show-password').on('change', function() {
+			if ($(this).is(':checked')) {
+				$(".js-input-password").attr("type", "text");
+			}
+			else {
+				$(".js-input-password").attr("type", "password");
+			}
+		});
+	}
+	show_password();
+
 
 });
 
