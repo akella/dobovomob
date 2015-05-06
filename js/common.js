@@ -186,7 +186,7 @@ head.ready(function() {
 			onSelect: function( selectedDate ) {
 				$( "#to" ).datepicker({
 					inline: true,
-					minDate: selectedDate + 1,
+					minDate: '+1d',
 					dateFormat: 'd MM D',
 					monthNamesShort: ['янв.', 'фев.', 'март.', 'апр.', 'май.', 'июнь.', 'июль.', 'авг.', 'сент.', 'окт.', 'ноя.', 'дек.'],
 					monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
