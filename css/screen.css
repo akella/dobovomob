@@ -489,6 +489,7 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .calendar-info .is-inactive { background: #eebaaf; }
 
 .calendar-in { padding: 3px 10px 10px; }
+.calendar-in.calendar-in_mod { padding: 10px; }
 .calendar-in .btn.is-active { -webkit-animation: background-image 0.7s infinite; -moz-animation: background-image 0.7s infinite; -ms-animation: background-image 0.7s infinite; -o-animation: background-image 0.7s infinite; animation: background-image 0.7s infinite; -webkit-animation-iteration-count: 2; animation-iteration-count: 2; }
 
 .check-date { padding: 0 0 10px; margin: 0 0 10px; color: #5f86be; text-align: center; text-decoration: none; line-height: 1.2; font-size: 5vw; display: block; }
