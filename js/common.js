@@ -258,7 +258,7 @@ head.ready(function() {
 	});
 
 	// description
-	$('.js-description-btn span').on("click", function () {
+	$('.js-description-btn span, .js-details-btn span').on("click", function () {
 		var description = $(this).parents('.description');
 		description.toggleClass('is-active');
 		if (description.hasClass('is-active')) {
@@ -267,6 +267,7 @@ head.ready(function() {
 		else {
 			$('.js-description-btn span').text('подробное описание');
 			$('.description_owner .js-description-btn span').text('ПОДРОБНЕЕ О ВЛАДЕЛЬЦЕ');
+			$('.js-details-btn span').text('Детали заказа');
 		}
 		return false;
 	});
