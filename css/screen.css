@@ -599,6 +599,8 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .apartment.apartment_slider .slider { padding-bottom: 124px; }
 .apartment.apartment_slider .price { position: absolute; top: -34px; right: 35px; }
 .apartment.apartment_slider .slick-dots { padding: 15px 0; bottom: 0; background: white; -moz-box-shadow: 0 -1px 1px #b8b4b2; -webkit-box-shadow: 0 -1px 1px #b8b4b2; box-shadow: 0 -1px 1px #b8b4b2; }
+.apartment.is-wauto .apartment__photo { background: #464a4b; }
+.apartment.is-wauto .apartment__photo img { position: relative; left: 50%; height: 100%; width: auto; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); display: block; }
 .apartment .price-black { top: 15px; bottom: auto; }
 .apartment .apartment__bottom, .apartment .apartment__top { *zoom: 1; }
 .apartment .apartment__bottom:after, .apartment .apartment__top:after { content: " "; display: table; clear: both; }
@@ -1037,6 +1039,23 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .footer .footer__logo { float: left; background: url('../img/icons-s2654f63a6e.png') 0 -1183px no-repeat; background-position: 0 -592px; width: 93px; height: 28px; -moz-background-size: 171px 3436px; -webkit-background-size: 171px 3436px; background-size: 171px 3436px; }
 .footer .footer__copy { float: right; padding: 8px 12px 0 0; color: #8e8e8e; font-family: "Arial"; font-size: 9px; font-weight: normal; }
 
+@media all and (orientation: landscape) { .calendar { margin: 0 auto; width: 75.5vh; }
+  .calendar .calendar__slide { -moz-box-shadow: inset 1px 0 0 #e2e2e2, -1px 0 0 #e2e2e2; -webkit-box-shadow: inset 1px 0 0 #e2e2e2, -1px 0 0 #e2e2e2; box-shadow: inset 1px 0 0 #e2e2e2, -1px 0 0 #e2e2e2; }
+  .calendar .calendar__th, .calendar .calendar__day { font-size: 2.5vh; width: 10.64vh; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "SegoeUI", Arial, sans-serif; font-weight: normal; }
+  .calendar .calendar__th { height: 5vh; line-height: 4.5vh; }
+  .calendar .calendar__day { height: 10vh; }
+  .calendar .calendar__day.is-inactive.first:before, .calendar .calendar__day.is-inactive.is-last-days.first:before { border-width: 0 0 12vh 15vh; }
+  .calendar .calendar__day.is-inactive.last:before, .calendar .calendar__day.is-inactive.is-last-days.last:before { top: auto; bottom: 0; border-width: 12vh 15vh 0 0; }
+  .calendar .calendar__price { font-size: 2vh; }
+  .calendar .slick-next, .calendar .slick-prev { top: 7vh; height: 4vh; width: 4vh; }
+  .calendar .slick-prev:before { content: "<"; top: 50%; left: 50%; width: 9px; height: 9px; margin-top: 3px; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 3vh; line-height: 0.6; text-align: center; color: black; background: none; }
+  .calendar .slick-next:before { content: ">"; top: 50%; left: 50%; width: 9px; height: 9px; margin-top: 3px; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 3vh; line-height: 0.6; text-align: center; color: black; background: none; }
+  .calendar .calendar__month { line-height: 10vh; font-size: 4vh; }
+  .calendar .calendar__header { height: 10vh; }
+  .calendar-info { margin-top: 2px; }
+  .calendar-info span { width: 24%; }
+  .calendar-in .btn.btn_green { height: 9vh; margin: 0 auto; line-height: 8vh; font-size: 4vh; width: auto; padding: 0 7vh; display: block; }
+  .popup .popup__header { height: 10vh; line-height: 10vh; font-size: 4vh; } }
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }

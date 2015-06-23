@@ -2265,6 +2265,16 @@ textarea.error
 			bottom: 0
 			background: #fff
 			+box-shadow(0 -1px 1px #B8B4B2)
+	&.is-wauto
+		.apartment__photo
+			background: #464a4b
+			img
+				position: relative
+				left: 50%
+				height: 100%
+				width: auto
+				+translate(-50%,0)
+				display: block
 	.price-black 
 		top: 15px
 		bottom: auto
@@ -3846,8 +3856,91 @@ textarea.error
 		font-weight: normal
 
 
-
-
+@media all and (orientation:landscape)
+	.calendar
+		margin: 0 auto
+		width: 75.5vh
+		.calendar__slide
+			+box-shadow(inset 1px 0 0 #e2e2e2, -1px 0 0 #e2e2e2)
+		.calendar__th,
+		.calendar__day
+			font-size: 2.5vh
+			width: 10.64vh
+			+box
+			+suir
+		.calendar__th
+			height: 5vh
+			line-height: 4.5vh
+		.calendar__day
+			height: 10vh
+			&.is-inactive,
+			&.is-inactive.is-last-days
+				&.first
+					&:before
+						border-width: 0 0 12vh 15vh
+				&.last
+					&:before
+						top: auto
+						bottom: 0
+						border-width: 12vh 15vh 0 0
+		.calendar__price
+			font-size: 2vh
+		.slick-next,
+		.slick-prev
+			top: 7vh
+			height: 4vh
+			width: 4vh
+		.slick-prev
+			&:before
+				content: '<'
+				top: 50%
+				left: 50%
+				width: 9px
+				height: 9px
+				margin-top: 3px
+				+translate(-50%,-50%)
+				font-size: 3vh
+				line-height: 0.6
+				text-align: center
+				color: #000
+				background: none
+		.slick-next
+			&:before
+				content: '>'
+				top: 50%
+				left: 50%
+				width: 9px
+				height: 9px
+				margin-top: 3px
+				+translate(-50%,-50%)
+				font-size: 3vh
+				line-height: 0.6
+				text-align: center
+				color: #000
+				background: none
+		.calendar__month
+			line-height: 10vh
+			font-size: 4vh
+		.calendar__header
+			height: 10vh
+	.calendar-info 
+		margin-top: 2px
+		span
+			width: 24%
+	.calendar-in
+		.btn.btn_green
+			height: 9vh
+			margin: 0 auto
+			line-height: 8vh
+			font-size: 4vh
+			width: auto
+			padding: 0 7vh
+			display: block
+	.popup
+		.popup__header
+			height: 10vh
+			line-height: 10vh
+			font-size: 4vh
 
 
 

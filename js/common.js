@@ -869,6 +869,5 @@ head.ready(function() {
 	}
 	show_password();
 
-
 });
 
