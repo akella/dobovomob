@@ -184,13 +184,13 @@
 		<!-- dropdown -->
 		<div class="dropdown dropdown_rel">
 			<div class="dropdown__col">
-				<div class="datepicker" id="from">
+				<div class="datepicker js-open-calendar">
 					<i class="ico ico_from"></i>
 					<div class="datepicker__from-text">Заезд</div>
 				</div>
 			</div>
 			<div class="dropdown__col">
-				<div class="datepicker" id="to">
+				<div class="datepicker js-open-calendar">
 					<i class="ico ico_to"></i>
 					<div class="datepicker__to-text">Выезд</div>
 				</div>
@@ -267,6 +267,734 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<div class="popup js-popup-calendar">
+				<div class="popup__in">
+					<div class="popup__header">Выберете дaты заезда и выезда<button class="popup__close"></button></div>
+					<!-- calendar -->
+					<div class="calendar">
+						<div class="calendar__slide js-first-month">
+							<div class="calendar__header">
+								<div class="calendar__month">Март 2015</div>
+							</div>
+							<div class="calendar__week">
+								<div class="calendar__th">пн</div>
+								<div class="calendar__th">вт</div>
+								<div class="calendar__th">ср</div>
+								<div class="calendar__th">чт</div>
+								<div class="calendar__th">пт</div>
+								<div class="calendar__th">сб</div>
+								<div class="calendar__th">вс</div>
+							</div>
+							<div class="calendar__days">
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day" date="1 март вс">
+									<span>1</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="2 март пн">
+									<span>2</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="3 март вт">
+									<span>3</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="4 март чт">
+									<span>4</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="5 март пт">
+									<span>5</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-today" date="6 март сб">
+									<span>6</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="7 март вс">
+									<span>7</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-inactive first" date="8 март пн">
+									<span>8</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-inactive" date="9 март вт">
+									<span>9</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-inactive" date="10 март чт">
+									<span>10</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-inactive last" date="11 март пт">
+									<span>11</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="12 март сб">
+									<span>12</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="13 март вс">
+									<span>13</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="14 март пн">
+									<span>14</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="15 март вт">
+									<span>15</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="16 март ср">
+									<span>16</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="17 март чт">
+									<span>17</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="18 март пт">
+									<span>18</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="19 март сб">
+									<span>19</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="20 март вс">
+									<span>20</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="21 март пн">
+									<span>21</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="22 март вт">
+									<span>22</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="23 март ср">
+									<span>23</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="24 март чт">
+									<span>24</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="25 март пт">
+									<span>25</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="26 март сб">
+									<span>26</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="27 март вс">
+									<span>27</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="28 март пн">
+									<span>28</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="29 март вт">
+									<span>29</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="30 март ср">
+									<span>30</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="31 март чт">
+									<span>31</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-other-month"></div>
+							</div>
+						</div>
+						<div class="calendar__slide">
+							<div class="calendar__header">
+								<div class="calendar__month">Апрель 2015</div>
+							</div>
+							<div class="calendar__week">
+								<div class="calendar__th">пн</div>
+								<div class="calendar__th">вт</div>
+								<div class="calendar__th">ср</div>
+								<div class="calendar__th">чт</div>
+								<div class="calendar__th">пт</div>
+								<div class="calendar__th">сб</div>
+								<div class="calendar__th">вс</div>
+							</div>
+							<div class="calendar__days">
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day" date="1 апр вс">
+									<span>1</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="2 апр пн">
+									<span>2</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="3 апр вт">
+									<span>3</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="4 апр чт">
+									<span>4</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="5 апр пт">
+									<span>5</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="6 апр сб">
+									<span>6</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="7 апр вс">
+									<span>7</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="8 апр пн">
+									<span>8</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="9 апр вт">
+									<span>9</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="10 апр чт">
+									<span>10</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="11 апр пт">
+									<span>11</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="12 апр сб">
+									<span>12</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="13 апр вс">
+									<span>13</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="14 апр пн">
+									<span>14</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="15 апр вт">
+									<span>15</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="16 апр ср">
+									<span>16</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="17 апр чт">
+									<span>17</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="18 апр пт">
+									<span>18</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="19 апр сб">
+									<span>19</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="20 апр вс">
+									<span>20</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="21 апр пн">
+									<span>21</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="22 апр вт">
+									<span>22</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="23 апр ср">
+									<span>23</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="24 апр чт">
+									<span>24</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="25 апр пт">
+									<span>25</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="26 апр сб">
+									<span>26</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="27 апр вс">
+									<span>27</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="28 апр пн">
+									<span>28</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="29 апр вт">
+									<span>29</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="30 апр ср">
+									<span>30</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="31 апр чт">
+									<span>31</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-other-month"></div>
+							</div>
+						</div>
+						<div class="calendar__slide">
+							<div class="calendar__header">
+								<div class="calendar__month">Май 2015</div>
+							</div>
+							<div class="calendar__week">
+								<div class="calendar__th">пн</div>
+								<div class="calendar__th">вт</div>
+								<div class="calendar__th">ср</div>
+								<div class="calendar__th">чт</div>
+								<div class="calendar__th">пт</div>
+								<div class="calendar__th">сб</div>
+								<div class="calendar__th">вс</div>
+							</div>
+							<div class="calendar__days">
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day"></div>
+								<div class="calendar__day" date="1 мая вс">
+									<span>1</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="2 мая пн">
+									<span>2</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="3 мая вт">
+									<span>3</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="4 мая чт">
+									<span>4</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="5 мая пт">
+									<span>5</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="6 мая сб">
+									<span>6</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="7 мая вс">
+									<span>7</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="8 мая пн">
+									<span>8</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="9 мая вт">
+									<span>9</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="10 мая чт">
+									<span>10</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="11 мая пт">
+									<span>11</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="12 мая сб">
+									<span>12</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="13 мая вс">
+									<span>13</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="14 мая пн">
+									<span>14</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="15 мая вт">
+									<span>15</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="16 мая ср">
+									<span>16</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="17 мая чт">
+									<span>17</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="18 мая пт">
+									<span>18</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="19 мая сб">
+									<span>19</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="20 мая вс">
+									<span>20</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="21 мая пн">
+									<span>21</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="22 мая вт">
+									<span>22</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="23 мая ср">
+									<span>23</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="24 мая чт">
+									<span>24</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="25 мая пт">
+									<span>25</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="26 мая сб">
+									<span>26</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="27 мая вс">
+									<span>27</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="28 мая пн">
+									<span>28</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="29 мая вт">
+									<span>29</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="30 мая ср">
+									<span>30</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day" date="31 мая чт">
+									<span>31</span>
+									<div class="calendar__price">
+										<div class="calendar__cur">uah</div>
+										<div class="calendar__val">3415</div>
+									</div>
+								</div>
+								<div class="calendar__day is-other-month"></div>
+							</div>
+						</div>
+					</div>
+					<div class="calendar-info">
+						<span><i class="is-to-day"></i> - Today</span>
+						<span><i></i> - Available dates</span>
+						<span><i class="is-selected"></i> - Selected dates</span>
+						<span><i class="is-inactive"></i> - Not available</span>
+					</div>
+					<div class="calendar-in"><button class="btn btn_green js-check-date">Выбрать даты</button></div>
+					<!-- <a href="#" class="check-date ">Выбрать даты</a> -->
 				</div>
 			</div>
 		</div>

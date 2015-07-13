@@ -1315,7 +1315,6 @@ textarea.error
 	background-color: #A3AFAF
 	+background-image(linear-gradient(to top, #A3AFAF 0%, #B8C4C4 100%))
 	.filter-bottom__col
-		width: 50%
 		text-align: center
 		height: 34px
 		line-height: 34px
@@ -1324,12 +1323,16 @@ textarea.error
 		text-decoration: none
 		color: #fff
 		border-left: 1px solid #fff
-		display: inline-block
+		display: block
 		+box
 		&:first-child
 			border-left: none
 		&:hover
 			text-decoration: underline
+	.filter-bottom__block
+		width: 50%
+		display: inline-block
+		vertical-align: top
 
 // info
 .info
@@ -3157,6 +3160,11 @@ textarea.error
 	&.map_card
 		margin: 10px 0
 		&:before
+			display: none
+	&.map_cont
+		.popup-map
+			display: none
+		.gm-style > div > div + div 
 			display: none
 	.price-black
 		padding: 5px
