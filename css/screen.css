@@ -757,8 +757,9 @@ input.error + label.error, select + label.error, select.error + label.error, tex
 .stat .stat__text { color: #656b70; line-height: 1; }
 .stat .stat__text.stat__text-nights { margin-top: 8px; }
 .stat .stat__text .stat__text-top { font-size: 32px; }
-.stat .stat__comm { position: relative; margin: 6px 0 0 14px; padding-left: 34px; text-align: left; }
+.stat .stat__comm { position: relative; margin: 6px 0 0 15vw; padding-left: 34px; text-align: left; }
 .stat .stat__comm:before { position: absolute; content: ""; top: 0; left: 0; background: url('../img/icons-s2654f63a6e.png') 0 -2150px no-repeat; background-position: 0 -1075px; width: 24.5px; height: 29px; -moz-background-size: 171px 3436px; -webkit-background-size: 171px 3436px; background-size: 171px 3436px; }
+@media only screen and (max-width: 420px) { .stat .stat__comm { margin: 6px 0 0 14px; } }
 .stat .stat__comm:first-child { margin-top: 0; }
 .stat .stat__comm p { width: 75px; }
 .stat .stat__comm .stat__text-top { color: #f52041; }
