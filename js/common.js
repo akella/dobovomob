@@ -4,14 +4,14 @@ head.ready(function() {
 	$('body').on('click', function() {
 		$('.js-town').removeClass('is-active');
 	});
-	$("body").on("click", ".js-open-town", function(event){
-		event.stopPropagation();
-	});
+	// $("body").on("click", ".js-open-town", function(event){
+	// 	event.stopPropagation();
+	// });
 
 	// drop-town
-	$('.js-open-town').on('click', function() {
-		$('.js-town').toggleClass('is-active');
-	});
+	// $('.js-open-town').on('click', function() {
+	// 	$('.js-town').toggleClass('is-active');
+	// });
 
 	// chosen
 	$(".select-chosen").chosen({
